@@ -1,0 +1,82 @@
+<!doctype html>
+<!-- doctype informa ao agente de usuário a versão do htmls que deve ser renderrizada -->
+<html lang="pt-br">
+    <head>
+        <title> Página de exemplo estrutura básica</title>
+        <meta charset="utf-8">
+        <meta name="author" content="Edward">
+        <meta name="description" content="Lista de Documento">
+        <meta name="keywords" content="HTMLS5, Tecnologias">
+        <style>
+            #container {
+                width: 80%;
+                padding: 15px;
+                background-color: #ccc;
+                overflow: auto; /* Gambiarra mais será mostrado de outra forma futuramente */
+            }
+            #container div {
+                width: 150px;
+                height: 50px;
+                border: 2px solid orangered;
+                margin: 5px;
+            }
+
+            #div1 {
+                float: left;
+            }
+
+            #div2 {
+                float: left;
+            }
+
+            #div3 {
+                background-color: yellowgreen;
+                float: left;
+            /* Sempre que utilizar float o clear tem que estar para conseguir alinhar os 
+            container, porém é uma boa prática utilizar both 
+            
+            Elemento com float se convesam !
+            Caso tenha várias div e houver float eles seguem o mesmo padrão
+            */
+            }
+
+            header {
+                background-color: #ccc;
+                height: 50px;
+            }
+
+            nav{
+                width: 25%;
+                height: 50px;
+                background-color: orange;
+                float: left;
+            }
+            
+            main {
+                width: 70%;
+                height: 100px;
+                background-color: yellow;
+                float: right;
+            }
+
+            footer {
+                height: 50px;
+                background-color: blue;
+                clear: both;
+            }
+        </style>
+    </head>
+    <body>
+        <h1> Float </h1>
+        <div id="container">
+            <div id="div1"> div1 </div>
+            <div id="div2"> div2 </div>
+            <div id="div3"> div3 </div>
+        </div>
+        <hr>
+        <header>Header</header>
+        <nav>Nav</nav>
+        <main>Main</main>
+        <footer>Footer</footer>
+    </body>
+</html>

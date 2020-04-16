@@ -1,0 +1,183 @@
+*** HEADER ***
+______________
+
+ Portfolio
+ About us
+ Contact
+
+
+
+
+**** Portfolio ****
+___________________
+New Fashion Everything Never Enough
+
+Lorem ipsum dolor sit amet, consectetur adipiscing elit. Mauris volutpat nisi non ante dictum congue. Cras id odio gravida, posuere velit sed, lacinia mi. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Sed vehicula, ipsum vel congue cursus, mi neque tincidunt enim, egestas porttitor felis neque et risus. Maecenas fringilla hendrerit enim malesuada laoreet. Aenean quis tortor a odio tempus tincidunt. Vivamus rutrum nulla sed metus congue bibendum. Sed ut aliquam purus. Donec odio mauris, commodo sed dignissim vitae, dapibus eget mauris.
+
+
+**** Gallery ****
+
+Vest Romasa 
+Strong & charismatic
+
+
+Jacket Fima
+Strong Sersonality
+
+
+Jacket Black Kira 
+Power Fascinating
+
+
+
+
+**** About ****
+_______________
+Everything Never Enough
+
+Just Fashion
+
+Praesent placerat eros eget lacus ullamcorper, id dapibus ante vestibulum. Curabitur quis condimentum diam. Duis aliquet erat vel laoreet tincidunt. Pellentesque vitae varius ligula. Phasellus in nibh tempus, gravida justo et, suscipit felis. Cras ornare arcu ac sodales tincidunt. Mauris vehicula erat vel ligula porttitor imperdiet. Curabitur nec magna urna. Sed porta ex ex, at pulvinar nibh aliquet quis. Integer dapibus congue vestibulum. Phasellus bibendum lobortis quam, nec sollicitudin nisl volutpat at.
+
+
+
+**** Contact ****
+_________________
+Call me now for design
+012-1234-4567
+
+
+
+**** Footer ****
+________________
+Copyright � fastfashion.com
+
+----
+
+
+
+.hero {
+  background-color: rgb(10, 17, 30);
+}
+
+.hero .img-logo img{
+  height: 100%;
+  float: left;
+  padding: 15px;
+}
+
+.hero .nav-links{
+  text-align: right;
+}
+
+.hero nav li{
+  list-style: none;
+  display: inline-block;
+  padding: 15px;
+}
+
+.hero a{
+  text-decoration: none;
+  text-transform: uppercase;
+  color: gray;
+  letter-spacing: 2px;
+}
+
+.hero a:hover {
+  color: rgb(64, 70, 120);
+}
+
+.hero .img-principal img {
+  width: 100%;
+  margin: 0;
+}
+
+.explanation {
+  padding: 20px;
+  text-align: center;
+}
+
+.explanation h1 {
+  font-size: 30px;
+  font-weight: bold;
+}
+
+p {
+  color: gray;
+}
+
+.explanation p{
+  padding: 10px;
+}
+
+.gallery {
+  padding: 10px;
+  margin-top: 15px;
+  overflow: auto;
+}
+
+.photo {
+  width: 33%;
+  float: left;
+  box-sizing: border-box;
+}
+
+.photo img {
+  width: 100%;
+  display: block;
+}
+
+.photo h4 {
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  color: rgba(113, 112, 112, 0.721);
+}
+
+.about {
+  padding: 80px;
+  color: white;
+  background-image: url("../imagens/bg_detalhe.png");
+  height: 100%;
+  background-attachment: initial;
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: bottom right;
+}
+
+.about h2 {
+  text-transform: uppercase;
+  font-size: 35px;
+}
+
+.about p {
+  color: white;
+  text-align: justify;
+  width: 60%;
+}
+
+.contact {
+  margin: 20px;
+  display: block;
+  text-align: center;
+  width: 100%;
+}
+
+.contact h3 {
+  color: rgb(42, 84, 155);
+  text-transform: uppercase;
+  text-align: center;
+}
+
+.rodape {
+  background-color: rgb(42, 84, 155);
+  font-weight: bold;
+  text-align: center;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  height: 60px;
+  line-height: 60px;
+}
+
+.rodape p {
+  color: aliceblue;
+}

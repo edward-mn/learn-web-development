@@ -1,0 +1,66 @@
+<!doctype html>
+<!-- doctype informa ao agente de usuário a versão do htmls que deve ser renderrizada -->
+<html lang="pt-br">
+    <head>
+        <title> Página de exemplo estrutura básica</title>
+        <meta charset="utf-8">
+        <meta name="author" content="Edward">
+        <meta name="description" content="Lista de Documento">
+        <meta name="keywords" content="HTMLS5, Tecnologias">
+
+        <style>
+            li ul {
+                height: 0;
+                overflow: hidden; /*Esconde o conteúdo que excede o tamanho */
+                transition: height 0.5s; /* Propriedade que estamos animando, Temppo para transição */
+            }
+
+            li:hover {
+                background-color: #ccc;
+            }
+
+            li:hover ul{
+                height: 50px;
+            }
+
+        </style>
+    </head>
+    <body>
+        <header></header>
+        <nav></nav>
+        <main></main>
+        <footer></footer>
+    </body>
+    <ul> <!-- Lista Aninhada -->
+        <li> item 1 </li>
+        <li> item 2 
+            <ul>
+                <li> item 2.1</li>
+                <li> item 2.2 </li>
+            </ul>
+        </li>
+        <li> item 3 </li>
+    </ul>
+
+    <hr>
+
+    <dl> <!-- Lista de Definição -->
+        <dt> HTML </dt>
+        <dd> Linguagem para marcação de hypertexto </dd>
+
+        <dt> CSS </dt>
+        <dd> Linguagem para criação de folha de estilos</dd>
+    </dl>
+
+    <hr>
+
+    <dl>
+        <dt> www </dt>
+        <dt> internet </dt>
+        <dd> Rede mundial de computadores </dd>
+
+        <dt> Javascript </dt>
+        <dd> Linguagem script para internet </dd>
+        <dd> Script para browser </dd>
+    </dl>
+</html>
