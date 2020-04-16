@@ -1,0 +1,89 @@
+<!doctype html>
+<!-- doctype informa ao agente de usuário a versão do htmls que deve ser renderrizada -->
+<html lang="pt-br">
+    <head>
+        <title> Página de exemplo estrutura básica</title>
+        <meta charset="utf-8">
+        <meta name="author" content="Edward">
+        <meta name="description" content="Lista de Documento">
+        <meta name="keywords" content="HTMLS5, Tecnologias">
+
+        <style>
+          body{
+            font-family: sans-serif;
+          }
+
+          table {
+            border-collapse: collapse; /* Remove os espaços entre ela */
+            margin: auto;
+            width: 80%;
+            background-color: beige;
+          }
+
+          caption {
+            font-size: 25px;
+            font-weight: bold;
+            padding: 10px;
+          }
+
+          th {
+            background-color: #bfc361;
+            border: 2px solid chocolate;
+            padding: 15px;
+          }
+
+          td {
+            border: 1px solid black;
+            text-align: center;
+            padding: 10px;
+          }
+
+        </style>
+    </head>
+    <body>
+        <table>
+          <caption> Tabela de preços de cursos </caption>
+
+          <thead>
+            <tr>
+              <th> Área </td>
+              <th> Curso </td>
+              <th> Investimento </td>
+            </tr>
+          </thead>
+
+          <tfoot>
+            <tr>
+              <!-- Colspan: Digo para browser quantas por quantas colunas ela vale, ou qual seria seu tamano em colunas-->
+              <td colspan="3"> Valores sujeitos a alterações sem prévio aviso </td>
+            </tr>
+          </tfoot>
+
+          <tbody>
+            <tr>
+              <!-- Rowspan: Digo para browser quantas por quantas itens ela vale, ou qual seria seu tamano em itens-->
+              <td rowspan="3"> Desenvolvimento Web </td>
+              <td> Html 5 </td>
+              <td> R$ 500,00 </td>
+            </tr>
+            <tr>
+              <td> CSS 3 </td>
+              <td> R$ 250,00 </td>
+            </tr>
+            <tr>
+              <td> Java Script </td>
+              <td> R$ 750,00 </td>
+            </tr>
+            <tr>
+              <td rowspan="2"> Design </td>
+              <td> Adobe Ilustrator </td>
+              <td> R$ 820,00 </td>
+            </tr>
+            <tr>
+              <td> Photoshop </td>
+              <td> R$ 350,00 </td>
+            </tr>
+          </tbody>
+        </table>
+    </body>
+</html>
