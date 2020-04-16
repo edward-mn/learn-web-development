@@ -1,0 +1,75 @@
+<!doctype html>
+<!-- doctype informa ao agente de usuário a versão do htmls que deve ser renderrizada -->
+<html lang="pt-br">
+    <head>
+        <title> Página de exemplo estrutura básica</title>
+        <meta charset="utf-8">
+        <meta name="author" content="Edward">
+        <meta name="description" content="Lista de Documento">
+        <meta name="keywords" content="HTMLS5, Tecnologias">
+
+        <style>
+          .form-login {
+            width: 250px;
+            margin: 50px auto 0;
+            font-family: sans-serif;
+          }
+
+          .form-login fieldset {
+            background-color: #ccc;
+          }
+
+          .form-login legend {
+            background-color: white;
+            display: inline-block;
+            padding: 10px;
+          }
+
+          .form-login label{
+            display: block;
+            margin-top: 20px;
+            margin-bottom: 5px;
+          }
+
+          #user, #pass, .btn {
+            background-color: #ddd;
+            display: block;
+            width: 100%;
+            box-sizing: border-box;
+            padding: 15px;
+            font-size: 18px;
+            border: none;
+          }
+
+          #user:focus, #pass:focus {
+            background-color: white;
+            border: 1px solid black;
+          }
+
+          .btn {
+            margin-top: 20px;
+          }
+
+          #user {
+            margin-bottom: 10px;
+          }
+        </style>
+    </head>
+    <body>
+        <h1> Exemplo utilizando formulários - Login </h1>
+
+        <form action="17_form-login.html" method="POST" class="form-login">
+          <fieldset>  
+            <legend> Login </legend>
+
+            <label for="user"> Digite seu usuário </label>
+            <input type="text" name="user" id="user" autofocus>
+
+            <label for="pass"> Digite sua senha </label>
+            <input type="password" name="pass" id="pass"> 
+
+            <input type="submit" value="Entrar" class="btn">
+          </fieldset>
+        </form>
+    </body>
+</html>
