@@ -1,6 +1,8 @@
 # Learn Web Development 
 ![Edward](https://img.shields.io/badge/Courses-Edward-yellow.svg)  [![github Licenses][License-badge]][License] ![](https://img.shields.io/badge/Linguagem-Ruby-violet.svg)
 
+Repository created for my learning on Web Development (HTML5, CSS3 and JavaScript)
+
 # My CodePen
 - Clique [**aqui**](https://codepen.io/edward-mn)
 
