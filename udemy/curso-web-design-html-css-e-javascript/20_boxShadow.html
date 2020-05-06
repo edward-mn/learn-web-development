@@ -1,0 +1,51 @@
+<!doctype html>
+<!-- doctype informa ao agente de usuário a versão do htmls que deve ser renderrizada -->
+<html lang="pt-br">
+    <head>
+        <title> Página de exemplo estrutura básica</title>
+        <meta charset="utf-8">
+        <meta name="author" content="Edward">
+        <meta name="description" content="Lista de Documento">
+        <meta name="keywords" content="HTMLS5, Tecnologias">
+
+        <style>
+          #box-shadow {
+            background-color: orange;
+            width: 200px;
+            height: 200px;
+            margin: 50px auto;
+
+            border-radius: 50px 100px / 100px 50px;
+            /* Top Esquerdo - Top Direito - Bottom Direito - Bottom Esquerdo */
+
+            box-shadow: 10px 10px 10px 15px #999;
+            /* Deslocamento eixo X, Deslocamento eixo Y, Esfumaçamento,(opicional para tamanho da sombra) ,Cor
+            Eixos X
+             Positivo = Para direita
+             Negativo = Para esquerda
+            Eixos Y
+              Positivo = Para baixo
+              Negativo = Para cima*/
+          }
+
+          #box-shadow1 {
+            background-color: orange;
+            width: 200px;
+            height: 200px;
+            margin: 50px auto;
+
+            border-radius: 50px 100px / 100px 50px;
+
+            box-shadow: 30px 0px 10px -20px black, 10px 10px 0px red, -5px -5px 0 10px blue;
+            /* Sobreposição de sombras, segue o padrão de sombras, primeira sobrepõe as demais e assim por diante */
+          }
+
+        </style>
+    </head>
+    <body>
+        <h1> CSS Efeitos</h1>
+
+        <div id="box-shadow"></div>
+        <div id="box-shadow1"></div>
+    </body>
+</html>
