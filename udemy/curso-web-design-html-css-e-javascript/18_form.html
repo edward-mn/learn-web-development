@@ -63,7 +63,8 @@
             <legend> Dados pessoais </legend>
 
             <label> Email</label>
-            <input type="email">  
+            <input type="email" required maxlength="10">
+            <!-- MaxLengh: Número máximo de caracteres-->   
 
             <label> Número de filhos </label>
             <input type="number" min="0" max="100">
@@ -78,10 +79,62 @@
             </label>
 
             <label for="fem"> Feminio </label>
-            <input type="radio" name="sexo" value="F" id="fem">
+            <input type="radio" name="sexo" value="F" id="fe">
 
-            <input type="submit" value="Entrar" class="btn">
+            <label> Estado </label>
+            <select name="estado">
+              <option value="0"> Selecione...  </option> 
+              <option value="SP"> São Paulo </option> 
+              <option value="RJ"> Rio de Janeiro </option> 
+              <option value="SC"> Santa Catarina </option> 
+            </select>
+
+            <label> Opções </label>
+            <select multiple size="3" name="opcoes">
+              <!-- Multiple: Permite selecionais mais de um
+              Size: Deixa mostrando por padrão a quantidade de opções -->
+              <option value="0"> Selecione...  </option> 
+              <option value="1"> Opção 1 </option> 
+              <option value="2"> Opção 2 </option> 
+              <option value="3"> Opção 3 </option> 
+            </select>
           </fieldset>
+          <fieldset>
+            <legend> Área de interesse </legend>
+            <label>
+              <input type="checkbox" name="html" value="html"> HTML
+            </label>
+
+            <label>
+              <input type="checkbox" name="css" value="css"> CSS
+            </label>
+
+            <label>
+              <input type="checkbox" name="js" value="js"> JavaScript
+            </label>
+          </fieldset>
+          <fieldset>
+            <legend> Mensagem </legend>
+            <textarea style="resize: none;" name="msg" cols="30" rows="10"></textarea>
+            <!-- css in line-->
+            <textarea style="resize: none;" name="contrato" cols="30" rows="10" readonly> Aqui entra o texto de contrato que necessita ser aceito </textarea>
+            <label>
+              <input type="checkbox" checked> Li e Aceito
+            </label>
+            
+            <input type="range" min="0" max="10" step="1">
+            <!-- step: Pulo entre os valores -->
+            <br>
+            <input type="time">
+            <input type="color">
+
+            <input type="hidden" name="expira" value="2020-06-01">
+          </fieldset>
+            <input type="submit" value="Enviar" class="btn">
+            <input type="button" value="Button" class="btn">
+            <input type="reset" value="Limpar Dados" class="btn">
+
+          
         </form>
     </body>
 </html>
