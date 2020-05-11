@@ -1,0 +1,38 @@
+<!doctype html>
+<!-- doctype informa ao agente de usuário a versão do htmls que deve ser renderrizada -->
+<html lang="pt-br">
+    <head>
+        <title> Página de exemplo estrutura básica</title>
+        <meta charset="utf-8">
+        <meta name="author" content="Edward">
+        <meta name="description" content="Lista de Documento">
+        <meta name="keywords" content="HTMLS5, Tecnologias">
+
+        <style>
+          div{
+            width: 100px;
+            height: 100px;
+            background-color: orange;
+            
+            /* Animando mais de uma propriedade */
+            transition-property: width, height;
+            transition-duration: 1s, 2s;
+            transition-timing-function: cubic-bezier(.36,-0.32,.77,1.35); /* Replica caso não houver para segunda */
+            /* https://cubic-bezier.com/ */
+            transition-delay: .2s, .8s;
+          }
+
+          div:hover{
+            width: 400px;
+            height: 400px;
+          }
+        </style>
+    </head>
+    <body>
+        <h1> Estrutura básica </h1>
+ 
+        <div>
+          1
+        </div>
+    </body>
+</html>
