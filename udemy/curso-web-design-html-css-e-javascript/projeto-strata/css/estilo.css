@@ -1,4 +1,60 @@
 body{
   font-family: 'Cairo', sans-serif;
   color: #666;
+  line-height: 2;
+}
+
+a{
+  transition: color .2s linear;
+  text-decoration: none;
+  border-bottom: 1px dotted;
+  /* Se não informar a cor ele pega a cor da fonte */
+}
+
+.main-header{
+  position: fixed;
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 35%;
+  padding: 280px 54px 72px;
+  box-sizing: border-box;
+  background-image: url(../../image/overlay.jpg);
+  background-position: center top;
+  background-size: cover;
+  text-align: right;
+}
+
+.main-content{
+  margin-left: 35%;
+  width: 65%;
+  padding: 124px 54px 72px;
+  box-sizing: border-box;
+  /* Remover a somatória entre os elementos (tira o scroll) */
+}
+
+.main-header-title{
+  font-size: 22px;
+  line-height: 1.5;
+  font-weight: normal;
+  color:rgba(164, 42, 42, 0.666)
+}
+
+.main-header-title h1{
+  font-weight: normal;
+  color: brown;
+}
+
+.main-header-link{
+  color: inherit; 
+}
+
+.main-header-link:hover{
+  color: rgb(103, 103, 103);
+  font-weight: bold;
+  border: none;
+}
+img{
+  width: 50px;
+  height: 50px;
 }
