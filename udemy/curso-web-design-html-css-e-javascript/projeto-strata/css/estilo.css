@@ -124,7 +124,7 @@ li{
 .button-default-stroke{
   background-color: white;
   border-color: #efefef;
-  color: inherit; /* Herdou do P e H ... */
+  color: inherit; /* Herdou da tag P e H ... */
 }
 
 .button-default-small{
@@ -134,6 +134,43 @@ li{
 .button-default-full{
   display: block;
   text-align: center;
+}
+
+.table{
+  border-collapse: collapse;
+  width: 100%;
+  margin: 0 0 2em 0;
+  text-align: left;
+}
+
+.table td{
+  padding: .75em;
+}
+
+.table th{
+  background: #ccc;
+  padding: .75em;
+}
+
+.table tbody tr td{
+  border-top: 1px solid #ccc;
+}
+
+.table tbody tr:first-child td{
+  border-top: 2px solid #666;
+}
+
+.table tbody tr:last-child td{
+  border-bottom: 2px solid #666;
+}
+
+.table tbody tr:nth-child(odd) td{
+  /*Odd: Impares - Even: Pares */
+  background-color: #eee;
+}
+
+.table-alternate tbody td, .table-alternate tbody tr:last-child td, .table-alternate tbody tr:first-child td{
+  border: 1px solid #ddd;
 }
 
 .main-header{
