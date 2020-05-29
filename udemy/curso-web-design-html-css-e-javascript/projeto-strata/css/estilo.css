@@ -111,6 +111,29 @@ li{
   color: #e02a1a;
 }
 
+input, labl, textarea{
+  display: inline-block;
+  width: 100%;
+  box-sizing: border-box;
+}
+
+input, textarea{
+  background: #ccc;
+  padding: 15px;
+  border-radius: 5px;
+  border: 2.5px solid transparent;
+  margin-bottom: 15px;
+}
+
+input:focus, textarea:focus{
+  border: 2.5px solid #e02a1a;
+  outline: none; /* Remove acessibilidade do navegador, deixando como é foi definido no CSS */
+}
+
+textarea{
+  height: 10em;
+}
+
 .button-default{
   background-color: #e02a1a;
   color: white;
@@ -119,6 +142,7 @@ li{
   padding: .75em 1.5em;
   font-size: .8em;
   display: inline-block;
+  width: auto; /* Volta ao tamanho que era antes das formatações */
 }
 
 .button-default-stroke{
@@ -129,6 +153,10 @@ li{
 
 .button-default-small{
   font-size: .65em;
+}
+
+.button-default-big{
+  font-size: 1em;
 }
 
 .button-default-full{
@@ -195,12 +223,32 @@ li{
   /* Remover a somatória entre os elementos (tira o scroll) */
 }
 
+/* Grid */
 .row{
   overflow: auto;
 }
 
 .half-col{
-  width: 50%;
+  width: 48.5%;
+  float: left;
+}
+
+.half-col:first-child{
+  margin-right: 1.5%;
+}
+
+.half-col:last-child{
+  margin-left: 1.5%;
+}
+
+.col-2-3{
+  width: 65%;
+  float: left;
+}
+
+.col-1-3{
+  width: 32%;
+  margin-left: 3%;
   float: left;
 }
 
