@@ -111,19 +111,25 @@ li{
   color: #e02a1a;
 }
 
-input, labl, textarea{
+input, label, textarea, select{
   display: inline-block;
   width: 100%;
   box-sizing: border-box;
 }
 
-input, textarea{
+input, textarea, select{
   background: #ccc;
   padding: 15px;
   border-radius: 5px;
   border: 2.5px solid transparent;
   margin-bottom: 15px;
 }
+
+input[type="radio"], input[type="checkbox"]{
+  /* Formatando apenas propriedades das tags */
+  width: auto; /* Volta a ser como era por padrão */
+}
+
 
 input:focus, textarea:focus{
   border: 2.5px solid #e02a1a;
