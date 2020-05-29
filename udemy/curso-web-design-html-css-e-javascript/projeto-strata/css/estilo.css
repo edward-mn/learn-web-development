@@ -4,6 +4,10 @@ body{
   line-height: 2;
 }
 
+img{
+  max-width: 100%; /* Ajusta o tamanho máximo da própria imagem, ideal para não distorcer imagens */
+}
+
 a{
   color: #e02a1a;
   transition: color .2s linear, border .2s linear;
@@ -170,6 +174,10 @@ textarea{
   text-align: center;
 }
 
+.imagem-link{
+  border: 0;
+}
+
 .table{
   border-collapse: collapse;
   width: 100%;
@@ -229,6 +237,18 @@ textarea{
   /* Remover a somatória entre os elementos (tira o scroll) */
 }
 
+.recent-works-card img{
+  border-radius: 5px;
+  overflow: hidden;
+}
+
+.avatar-img{
+  border-radius: 50%;
+  width: 80px;
+  height: 80px;
+  overflow: hidden;
+}
+
 /* Grid */
 .row{
   overflow: auto;
@@ -276,9 +296,4 @@ textarea{
 
 .main-header-link:hover{
   color: #e02a1a;
-}
-
-.avatar-img{
-  width: 50px;
-  height: 50px;
 }
