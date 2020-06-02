@@ -65,6 +65,14 @@ blockquote{
   padding: .5em 0 .5em 1.5em;
 }
 
+blockquote p{
+  margin-bottom: .5em;
+}
+
+blockquote p:last-child{
+  margin-bottom: 0;
+}
+
 code{
   background-color: #f7f7f7;
   border-radius: .35em;
@@ -88,6 +96,15 @@ ul, ol{
 
 li{
   padding-left: .5em;
+}
+
+.hidden{
+  display: inline-block;
+  width: 0;
+  height: 0;
+  overflow: hidden;
+  visibility: hidden;
+  /* Não deixa visível ao navegador, porém continua acessível ao leitor de tela */
 }
 
 .ul-alternate{
@@ -154,7 +171,7 @@ textarea{
   display: inline-block;
   width: auto; /* Volta ao tamanho que era antes das formatações */
   transition: all .5s;
-  cursor: pointer;
+  cursor: pointer; /* Altera tipo do cursor para ponteiro */
 }
 
 .button-default:hover{
@@ -271,6 +288,45 @@ textarea{
   border-radius: 5px;
 }
 
+.main-footer{
+  position: fixed;
+  bottom: 0;
+  width: 35%;
+  left: 0;
+  padding: 0 54px 72px 0;
+  box-sizing: border-box;
+  text-align: right;
+}
+
+.icon-link{
+  border: none;
+  color: #df5b4d;
+  transition: color .3s linear;
+}
+
+.icon-link:hover{
+  color: #e02a1a;
+}
+.copyright{
+  color: darkgrey;
+  list-style: none;
+}
+
+.copyright li{
+  display: inline-block;
+  border-left: solid 1px rgba(255, 255, 255, 0.25);
+  padding: 0 0 .75em;
+  line-height: 1;
+  font-size: .8em;
+}
+
+.copyright li:first-child{
+  border-left: 0;
+}
+
+.copyright li:first-child{
+  border-right: 0;
+}
 /* Grid */
 .row{
   overflow: auto;
@@ -323,7 +379,7 @@ textarea{
   color:rgba(164, 42, 42, 0.666)
 }
 
-.main-header-title h1{
+.main-header-title h1, .layout-header{
   font-weight: normal;
   color: brown;
 }
