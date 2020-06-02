@@ -1,0 +1,116 @@
+<!doctype html>
+<!-- doctype informa ao agente de usuário a versão do htmls que deve ser renderrizada -->
+<html lang="pt-br">
+    <head>
+        <title> Página de exemplo estrutura básica</title>
+        <meta charset="utf-8">
+        <meta name="author" content="Edward">
+        <meta name="description" content="Lista de Documento">
+        <meta name="keywords" content="HTMLS5, Tecnologias">
+
+        <style>
+          article:nth-child(1) a{
+            color: red;
+          }
+
+          article:nth-child(3) > p{
+            /* O sinal > corresponde a selecionar o filho direto de article - Formate toda tag P que seja filho direto de article.
+            Interessante deixamos 3 por conta da tag <hr>, pois apesar de ser o 2 segundo article, ele vai só vai selecionar caso seja o filho mesmo, ou seja, nesse caso 3*/
+            color: aqua;
+          }
+
+          article:nth-child(5) > h3 + p {
+            /* O sinal + corresponde a selecionar uma tag que vir exatamente a outra - Formate a primeira tag <p> que vem exatamente após um <h3>.*/
+            color: purple;
+          }
+
+          article:nth-child(7) > h3 ~ p {
+            /* O sinal ~ corresponde a selecionar todos os irmãos que vier logo após a tag - Formate todos os irmãos da tag <p> que vem exatamente após um <h3>. */
+            color: orange;
+          }
+
+          article:not(.destaque){
+            /* Pseudo classe Not é condicional igual outras linguagens - Formate todos que não seja tenha a classe .destaque */
+            color: orange;
+          }
+
+          .destaque{
+            background: yellow;
+          }
+
+          /* Seletores de atribuitos */
+          a[href="#"]{
+            opacity: .2; /* Selecionando exatamente a mesma informação sem mais nem menos, no caso só # - Diminuir a opacidade */
+          }
+
+          a[href^="http"]{
+            color: orchid; /* Selecionando todos que comecem com http - Altera a cor para ficar fácil de visualizar */
+          }
+
+          a[title]{
+            color: green; /* Selecionando todos atributos que possuam qualquer a propriedade titile - Altera a cor para ficar fácil de visualizar */
+          }
+
+          a[href$=".pdf"]{
+            text-transform: uppercase;
+          }
+        </style>
+    </head>
+    <body>
+      <article>
+        <h3>
+          Título
+        </h3>
+        <p> Parágrafo <a href="#"> apenas um link com <b>negrito</b></a></p>
+        <p> Parágrafo <a href="#"> apenas um link com <b>negrito</b></a></p>
+        <p> Parágrafo <a href="#"> apenas um link com <b>negrito</b></a></p>
+      </article>
+
+      <hr>
+
+      <article>
+        <h3>
+          Título
+        </h3>
+        <p> Parágrafo <a href="#"> apenas um link com <b>negrito</b></a></p>
+        <p> Parágrafo <a href="#"> apenas um link com <b>negrito</b></a></p>
+        <p> Parágrafo <a href="#"> apenas um link com <b>negrito</b></a></p>
+      </article>
+
+      <hr>
+
+      <article>
+        <h3>
+          Título
+        </h3>
+        <p> Parágrafo <a href="#"> apenas um link com <b>negrito</b></a></p>
+        <p> Parágrafo <a href="#"> apenas um link com <b>negrito</b></a></p>
+        <p> Parágrafo <a href="#"> apenas um link com <b>negrito</b></a></p>
+      </article>
+
+      <hr>
+
+      <article class="destaque">
+        <p> Parágrafo antes do H3 </p>
+        <h3>
+          Título
+        </h3>
+        <p> Parágrafo <a href="#"> apenas um link com <b>negrito</b></a></p>
+        <p> Parágrafo <a href="#"> apenas um link com <b>negrito</b></a></p>
+        <p> Parágrafo <a href="#"> apenas um link com <b>negrito</b></a></p>
+      </article>
+
+      <ul>
+        <li><a href="#">Link falso</a></li>
+        <li><a href="#">Link falso</a></li>
+        <li><a href="http://serfrontend.com" target="_blank">Link externo</a></li>
+        <li><a href="http://serfrontend.com/qq.pdf" target="_blank">Link externo</a></li>
+        <li><a href="23_transition.html" title="Veja exercício anterior">Link interno</a></li>
+      </ul>
+
+        <header></header>
+        <nav></nav>
+        <main></main>
+        <footer></footer>
+    </body>
+</html>
