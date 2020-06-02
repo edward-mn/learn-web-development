@@ -1,0 +1,66 @@
+<!doctype html>
+<!-- doctype informa ao agente de usuário a versão do htmls que deve ser renderrizada -->
+<html lang="pt-br">
+    <head>
+        <title> Página de exemplo estrutura básica</title>
+        <meta charset="utf-8">
+        <meta name="author" content="Edward">
+        <meta name="description" content="Lista de Documento">
+        <meta name="keywords" content="HTMLS5, Tecnologias">
+
+        <style>
+
+          div{
+            border: 3px solid red;
+            padding: 25px;
+            position: relative; /* Adicionamos o position relative pois na div:after, inseri um position absolute, então ele está absoluto relativo a minha div pai */
+            margin: 25px;
+          }
+          
+          /* Pseudo-elementos sempre são elementos de linha, se houver a necessidade devemos alterar o display */
+          div:before{ /* Início */
+            /* Sempre haverá a necessidade de inserir um content até mesmo quando não houver nenhuma informação nele */
+            content: "before: ";
+            background: #ccc;
+            /* Não é selecionável e nem lido pelos motores de busca */
+          }
+
+          div::after{ /* Final */ 
+            content: "";
+            background: red;
+            width: 25px;
+            height: 25px;
+            display: inline-block; /* Transformamos ele em bloco pois é um elemento de linha */
+            position: absolute;
+            bottom: 0;
+            right: 0;
+          }
+        </style>
+    </head>
+    <body>
+
+      <div> Texto principal da div </div>
+      <article>
+        <p> Parágrafo antes do H3 </p>
+        <h3>
+          Título
+        </h3>
+        <p> Parágrafo <a href="#"> apenas um link com <b>negrito</b></a></p>
+        <p> Parágrafo <a href="#"> apenas um link com <b>negrito</b></a></p>
+        <p> Parágrafo <a href="#"> apenas um link com <b>negrito</b></a></p>
+      </article>
+
+      <ul>
+        <li><a href="#">Link falso</a></li>
+        <li><a href="#">Link falso</a></li>
+        <li><a href="http://serfrontend.com" target="_blank">Link externo</a></li>
+        <li><a href="http://serfrontend.com/qq.pdf" target="_blank">Link externo</a></li>
+        <li><a href="23_transition.html" title="Veja exercício anterior">Link interno</a></li>
+      </ul>
+
+        <header></header>
+        <nav></nav>
+        <main></main>
+        <footer></footer>
+    </body>
+</html>
