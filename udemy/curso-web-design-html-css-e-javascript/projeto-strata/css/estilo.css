@@ -147,18 +147,31 @@ textarea{
 .button-default{
   background-color: #e02a1a;
   color: white;
-  border: 2px solid #e02a1a;
+  border: 3px solid #e02a1a;
   border-radius: 5px;
   padding: .75em 1.5em;
   font-size: .8em;
   display: inline-block;
   width: auto; /* Volta ao tamanho que era antes das formatações */
+  transition: all .5s;
+  cursor: pointer;
+}
+
+.button-default:hover{
+  background-color: #df5b4d;
+  border-color: transparent;
 }
 
 .button-default-stroke{
   background-color: white;
   border-color: #efefef;
   color: inherit; /* Herdou da tag P e H ... */
+}
+
+.button-default-stroke:hover{
+  color: #e02a1a;
+  border-color: #e02a1a;
+  background-color: white;
 }
 
 .button-default-small{
