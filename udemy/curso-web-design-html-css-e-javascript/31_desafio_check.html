@@ -42,16 +42,21 @@
             background-color: tomato;
           }
 
+          label input:focus + span{
+            box-shadow: 0 0 0 2px rgba(255, 99, 71, .4);
+          }
+
           input{
             width: 1px;
             height: 1px;
             display: inline-block;
             overflow: hidden;
-            visibility: hidden;
+            /* visibility: hidden; - Preferivel utilizar Opacity: 0, por conta da acessibilidade */
+            opacity: 0;
             margin: 0;
           }
           
-          label span:
+          
         </style>
     </head>
     <body>
