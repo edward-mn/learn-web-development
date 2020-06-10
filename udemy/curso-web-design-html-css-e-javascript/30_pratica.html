@@ -1,0 +1,89 @@
+<!doctype html>
+<!-- doctype informa ao agente de usuário a versão do htmls que deve ser renderrizada -->
+<html lang="pt-br">
+    <head>
+        <title> Página de exemplo estrutura básica</title>
+        <meta charset="utf-8">
+        <meta name="author" content="Edward">
+        <meta name="description" content="Lista de Documento">
+        <meta name="keywords" content="HTMLS5, Tecnologias">
+
+        <style>
+          body{
+            font-family: sans-serif;
+          }
+
+          a[target="_blank"]::after{
+            content: url(image/newWindow.png);
+            display: inline-block;
+            margin-left: 5px;
+          }
+
+          a[href$=".pdf"]::before{
+            content: url(image/pdf-icon.gif);
+            display: inline-block;
+            margin-right: 5px;
+          }
+
+          .chk{
+            display: inline-block;
+            border-radius: 5px;
+            border: 2px solid #bbb;
+            background-color: #ddd;
+            width: 15px;
+            height: 15px;
+            margin-right: 10px;
+          }
+
+          label{
+            height: 15px;
+            display: inline-block;
+          }
+
+          input[type="checkbox"]{
+            /* display: none; - Só não utilizamos por conta da acessibilidade */
+            display: inline-block;
+            width: 1px;
+            height: 1px;
+            overflow: hidden;
+            visibility: hidden;
+            margin: 0;
+          }
+
+          input[type="checkbox"]:checked + label .chk{
+          /* Formata todo checkbox que estiver selecionado que vem imediatamente após uma label com classe chk*/
+            background-color:#555;
+            position: relative;
+          }
+
+          input[type="checkbox"]:checked + label .chk::before{
+            content: "";
+            display: block;
+            position: absolute;
+            top: 0px;
+            right: 4px;
+            bottom: 4px;
+            left: 4px;
+            border: 2px solid white;
+            transform: rotate(45deg);
+            border-top-color: transparent;
+            border-left-color: transparent;
+            box-sizing: border-box;
+          }
+        </style>
+    </head>
+    <body>
+      <h1> Estrutura básica </h1>
+
+      <a href="http://serfrontend.com" target="_blank"> Link externo </a>
+      <br>
+      <a href="qq.pdf"> Download do pdf </a>
+
+      <hr>
+
+      <input type="checkbox" name="qualquer" id="chk">
+      <label for="chk">
+        <span class="chk"></span> Li e aceito o contrato
+      </label>
+    </body>
+</html>
