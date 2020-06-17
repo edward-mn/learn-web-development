@@ -22,9 +22,35 @@
             height: 50px;
           }
 
+          .container{
+            background: white;
+            padding: 15px;
+          }
+
+          .container div{
+            background: #ccc;
+            margin-bottom: 15px;
+            height: 150px;
+          }
+
+          .clearfix::after{ /* Utilizando uma classe com formatação Float */
+            content: "";
+            display: block;
+            clear: both;
+          }
+
           @media screen and (min-width: 800px){
             body{
               background: tomato;
+            }
+
+            .container div{
+              width: 48%;
+              float: left;
+              margin: 1%;
+              /* Outra maneira
+              margin: 15px;
+              width: calc(50% - 30px); - Utilizamos 30px pois é 15px de cada lado */
             }
           }
 
@@ -37,7 +63,7 @@
 
       <div class="teste"></div>
 
-      <div class="container">
+      <div class="container clearfix">
         <div> 1 </div>
         <div> 2 </div>
       </div>
