@@ -1,0 +1,56 @@
+<!doctype html>
+<!-- doctype informa ao agente de usuário a versão do htmls que deve ser renderrizada -->
+<html lang="pt-br">
+    <head>
+        <title> Página de exemplo estrutura básica</title>
+        <meta charset="utf-8">
+        <meta name="author" content="Edward">
+        <meta name="description" content="Lista de Documento">
+        <meta name="keywords" content="HTMLS5, Tecnologias">
+        <meta name="viewport" content="width=device-width">
+
+        <style>
+          /* propriedade EM sempre referente ao valor da propriedade pai também */
+          /* propriedade REM sempre referente ao elemento Root ou HTML */
+          html{
+            font-size: 32px;
+          }
+
+          body{
+            font: 16px sans-serif; /* Resumindo a formatação da fonte */
+          }
+
+          h1{
+            text-align: center;
+          }
+
+          div{
+            border: 1px solid black;
+            padding: 1em; /* Equivale o valor do font-size, ou seja, nesse caso nosso padding está medindo "16px" */
+            /* width: 320px; Para descobrir esse valor em EM pegamos o valor de width / pelo font-size do pai - 320 / 16 = 20em */
+            width: 20em;
+            /* margin: 100px auto; 100 / 16 = 6.25em */
+            margin: 6.25em auto;
+            font-size: 2em; /* Neste caso está multiplicando os 16px da font do body */
+          }
+
+          p{
+            margin: 0;
+            line-height: 1.5;
+            font-size: 1.25em; /* 16 * 1.25 = 20px */
+          }
+
+          a{
+            /* font-size: 24px; 24 / 20px (do pai tag p) = 1.2em */
+            font-size: 1.2em;
+            /* font-size: 1rem; - 1rem seria referente ao valor do tamanho do root HTML, nese caso seria igual a 32px */
+          }
+        </style>
+    </head>
+    <body>
+        <h1> Unidades de Medidas </h1>
+        <div>
+          <p> Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged.<a href="#"> It was popularised in the 1960s </a> with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum. </p>
+        </div>
+    </body>
+</html>
