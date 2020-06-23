@@ -1,0 +1,39 @@
+@charset "UTF-8";
+
+html{
+  font-family: sans-serif;
+}
+
+h1, h2, h3 , h4, h5, h6{
+  font-family: "Oxygen";
+}
+
+.top-header{
+  text-align: center; /* Funciona pois imagem é elemento de linha */
+}
+
+.top-header-logo{
+  margin: .5em;
+}
+
+.top-nav{
+  background-color: #612674;
+  text-align: center;
+}
+
+.top-nav ul{
+  margin: 0;
+  padding: 1em 0;
+  list-style: none;
+}
+
+.top-nav a{
+  color: white;
+  text-decoration: none;
+  padding: 1em; /* padding só é aplicado em elementos de bloco */
+  display: block;
+}
+
+.top-nav a:hover{
+  background-color: #7c3792;
+}
