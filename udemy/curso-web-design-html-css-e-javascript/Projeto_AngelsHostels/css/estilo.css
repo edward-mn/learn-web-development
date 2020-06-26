@@ -8,7 +8,7 @@ h1, h2, h3 , h4, h5, h6{
   font-family: "Oxygen";
 }
 
-.clear-fix::after{
+.clear-fix::after, .row::after{
   content: "";
   display: block;
   clear: both; 
@@ -184,5 +184,17 @@ h1, h2, h3 , h4, h5, h6{
   
   .top-content-title, .top-content-subtitle{
     color: white;
+  }
+
+  /* Grids */
+
+  .col-1_4{
+    width: 44%;
+    margin: 3%;
+    float: left;
+  }
+
+  .main-content-article .button{
+    float: right;
   }
 }
