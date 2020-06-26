@@ -202,9 +202,31 @@ h1, h2, h3 , h4, h5, h6{
 @media screen and (min-width: 62.5em){ /* 1000px / 16 = 62,5em */
   .top-content{
     background: #521a66 url(../images/bg_topo_1198x670.jpg); /* cor e imagem */
-    height: 2em;
+    height: 5em;
     padding: 15em;
     background-size: cover;
   }
+}
 
+@media screen and (min-width: 64em){ /* 1024 /16 = 64em */
+  .top-content{
+    background-image: url(../images/bg_topo_1600x1374.jpg);
+    padding: 19em 15em 15em;
+    background-position: center top;
+  }
+
+  .col-1_4{
+    width: 23%;
+    margin: 1%;
+  }
+
+  .col-1_2{
+    width: 48%;
+    margin: 1%;
+    float: left;
+  }
+
+  .main-content-article .button{
+    float: none;
+  }
 }
