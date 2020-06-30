@@ -1,0 +1,22 @@
+<!doctype html>
+<!-- doctype informa ao agente de usuário a versão do htmls que deve ser renderrizada -->
+<html lang="pt-br">
+    <head>
+        <title> Página de exemplo estrutura básica</title>
+        <meta charset="utf-8">
+        <meta name="author" content="Edward">
+        <meta name="description" content="Lista de Documento">
+        <meta name="keywords" content="HTMLS5, Tecnologias">
+    </head>
+    <body>
+      <h1> Áudio </h1>
+
+      <!-- <audio src="media/mozart_trompa.mp3" controls></audio> Assim obrigamos os browsers a lerem apenas arquivos de formato .mp3-->
+
+      <audio controls> <!-- autoplay, loop são um dos atributos que podemos deixar como padrão, mas muitos browsers deixa eles bloqueados por acessibilidade -->
+        <source src="media/mozart_trompa.mp3" type="audio/mp3">
+        <source src="media/mozart_trompa.ogg" type="audio/ogg">
+        <p> Sey browser não suporta este recurso </p>
+      </audio>
+    </body>
+</html>
