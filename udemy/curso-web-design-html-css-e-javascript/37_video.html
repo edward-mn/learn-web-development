@@ -1,0 +1,22 @@
+<!doctype html>
+<!-- doctype informa ao agente de usuário a versão do htmls que deve ser renderrizada -->
+<html lang="pt-br">
+    <head>
+        <title> Página de exemplo estrutura básica</title>
+        <meta charset="utf-8">
+        <meta name="author" content="Edward">
+        <meta name="description" content="Lista de Documento">
+        <meta name="keywords" content="HTMLS5, Tecnologias">
+    </head>
+    <body>
+      <h1> Vídeo </h1>
+
+      <video controls>
+        <!-- autoplay, loop, muted são um dos atributos que podemos deixar como padrão, mas muitos browsers deixa eles bloqueados por acessibilidade -->
+        <source src="media/video.mp4" type="video/mp4">
+        <source src="media/video.ogv" type="video/ogv">
+        <source src="media/video.webm" type="video/webm">
+        <p> O seu browser não suporta tags vídeo </p> <!-- Fall back, caso não seja possível utilizar nenhum desses recursos será apresentado o texto -->
+      </video>
+    </body>
+</html>
