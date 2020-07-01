@@ -1,0 +1,85 @@
+<!doctype html>
+<!-- doctype informa ao agente de usuário a versão do htmls que deve ser renderrizada -->
+<html lang="pt-br">
+    <head>
+        <title> Página de exemplo estrutura básica</title>
+        <meta charset="utf-8">
+        <meta name="author" content="Edward">
+        <meta name="description" content="Lista de Documento">
+        <meta name="keywords" content="HTMLS5, Tecnologias">
+        <meta name="viewport" content="width=device-width">
+
+        <style>
+          #grupo-cores{
+            padding: 15px;
+            background-image: url(image/tile.png);
+            counter-reset: contador; /* Criando contatdor */
+          }
+
+          #grupo-cores div{
+            width: 80%;
+            height: 150px;
+            border: 10px solid rgba(0, 0, 0, .5);
+            margin: 20px auto;
+            padding: 15px;
+            counter-increment: contador; /* Incrementando contador */
+          }
+
+          #grupo-cores div::before{
+            content: "[" counter(contador) "]"; /* Mostrando contato em cada div dinâmicamente - Resultado que irá antes do começo da div [ Número ] */
+          }
+
+        </style>
+    </head>
+    <body>
+      
+      <h2> Backgrounds, cores e gradientes </h2>
+      <p> Names, hexadecimais, RGB, RGBa, HSL, HSLa </p>
+
+      <div id="grupo-cores">
+        <div class="cores">
+          <p> Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam </p>
+        </div>
+
+        <div class="cores">
+          <p> Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam </p>
+        </div>
+
+        <div class="cores">
+          <p> Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam </p>
+        </div>
+
+        <div class="cores">
+          <p> Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam </p>
+        </div>
+
+        <div class="cores">
+          <p> Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam </p>
+        </div>
+
+        <div class="cores">
+          <p> Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam </p>
+        </div>
+
+        <div class="cores">
+          <p> Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam </p>
+        </div>
+
+        <div class="cores">
+          <p> Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam </p>
+        </div>
+
+        <div class="cores">
+          <p> Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam </p>
+        </div>
+
+        <div class="cores">
+          <p> Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam </p>
+        </div>
+
+        <div class="cores">
+          <p> Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam </p>
+        </div>
+      </div>
+    </body>
+</html>
