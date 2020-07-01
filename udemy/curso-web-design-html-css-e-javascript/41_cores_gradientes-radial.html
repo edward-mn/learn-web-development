@@ -29,6 +29,87 @@
             content: "[" counter(contador) "]"; /* Mostrando contato em cada div dinâmicamente - Resultado que irá antes do começo da div [ Número ] */
           }
 
+          #grupo-cores div:nth-child(2){
+            background-color: bisque;
+            /* background-clip = formatação referente a borda */
+            background-clip: content-box;
+          }
+
+          #grupo-cores div:nth-child(3){
+            background-color: rgb(50%, 50%, 0%);
+            background-clip: content-box;
+          }
+
+          #grupo-cores div:nth-child(4){
+            background-color: rgba(50%, 50%, 0%, .5);
+            background-clip: content-box;
+          }
+
+          #grupo-cores div:nth-child(4){
+          /* hsl ( É dado em grau onde a cor se encontra - Tom da cor, Saturação - Nivel da cor, Luminosidade da cor - (0 = preto, 100% - branco, 50% - Cor pura)) */
+            background-color: hsl(0deg, 22%, 50%);
+            background-clip: content-box;
+          }
+
+          #grupo-cores div:nth-child(5){
+            background-color: hsla(0deg, 22%, 50%, .5);
+            background-clip: content-box;
+          }
+
+          #grupo-cores div:nth-child(6){
+          /* linear-gradient - Basicamente é de uma cor para outra - Do azul para o vermelho 
+          Podemos também alterar o lado da transição - to bottom left, to top righ, 68deg */
+            background-image: linear-gradient(68deg, blue, transparent), linear-gradient(to bottom left, red, transparent);
+            background-clip: content-box, border-box;
+          }
+
+          #grupo-cores div:nth-child(7){
+            background-image: radial-gradient(red, blue);
+          }
+
+          #grupo-cores div:nth-child(8){
+          /* linear-gradient - Basicamente é de uma cor para outra porém mais uniforme e também podemos dizer o tipo de transição e cores - Em circulo mude do azul para o vermelho */
+            background-image: radial-gradient(circle red, blue);
+          }
+
+          #grupo-cores div:nth-child(9){
+          /* linear-gradient - Também podemos colocar quantas cores quisermos, e também a porcentagem do preenchimento cores */
+            background-image: radial-gradient(circle red 30%, blue 10%, orange 15%, rgba(50, 10, 200, .5), green 50%);
+          }
+
+          #grupo-cores div:nth-child(10){
+          /* linear-gradient - Também podemos mudar o ponto de origem dele 
+          Explicando at - 20% da imagem sendo preenchida e os 50% é dado através do eixo X */
+            background-image: radial-gradient(closest-side at 20% 90% red 30%, blue 10%, orange 15%, rgba(50, 10, 200, .5), green 50%);
+          }
+
+          #grupo-cores div:nth-child(11){
+          /* linear-gradient - Também podemos mudar o ponto de origem dele */
+            background-image: radial-gradient(farthest-side at 20% 90% red 30%, blue 10%, orange 15%, rgba(50, 10, 200, .5), green 50%);
+          }
+
+          #grupo-cores div:nth-child(12){
+          /* Alterando para mais próximo do lado */
+            background-image: radial-gradient(closest-corner at 20% 90% red 30%, blue 10%, orange 15%, rgba(50, 10, 200, .5), green 50%);
+          }
+
+          #grupo-cores div:nth-child(13){
+          /* Alterando para mais longe do lado */
+            background-image: radial-gradient(farthest-corner at 20% 90% red 30%, blue 10%, orange 15%, rgba(50, 10, 200, .5), green 50%);
+          }
+
+          #grupo-cores div:nth-child(15){
+          /* Duplicando linear gradiente */
+            background-image: repeating-linear-gradient(red 0%, yellow 10%, blue 20%); /* soma da porcentagem deve totalizar 100%, caso não de ela será somado até que chegue aos 100% */
+          }
+
+          #grupo-cores div:nth-child(16){
+          /* Duplicando radial gradiente */
+            background-image: repeating-radial-gradient(red 0%, transparent 10%, blue 20%), linear-gradient(rgba(100%, 0%, 0%, .5)); /* soma da porcentagem deve totalizar 100%, caso não de ela será somado até que chegue aos 100% */
+            background-attachment: scroll, fixed;
+          }
+
+
         </style>
     </head>
     <body>
@@ -37,6 +118,26 @@
       <p> Names, hexadecimais, RGB, RGBa, HSL, HSLa </p>
 
       <div id="grupo-cores">
+        <div class="cores">
+          <p> Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam </p>
+        </div>
+
+        <div class="cores">
+          <p> Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam </p>
+        </div>
+
+        <div class="cores">
+          <p> Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam </p>
+        </div>
+
+        <div class="cores">
+          <p> Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam </p>
+        </div>
+
+        <div class="cores">
+          <p> Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam </p>
+        </div>
+
         <div class="cores">
           <p> Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam </p>
         </div>
