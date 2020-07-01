@@ -109,7 +109,13 @@
             background-attachment: scroll, fixed;
           }
 
-
+          #grupo-cores div:nth-child(17){
+            /* Colocando uma sombra superior na div */
+            background-image: radial-gradient(closest-corner at 50% 15%, black, transparent), url(image/avatar.png);
+            background-size: cover;
+            background-position: center -30px, center bottom;
+            background-repeat: no-repeat;
+          }
         </style>
     </head>
     <body>
@@ -118,6 +124,10 @@
       <p> Names, hexadecimais, RGB, RGBa, HSL, HSLa </p>
 
       <div id="grupo-cores">
+        <div class="cores">
+          <p> Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam </p>
+        </div>
+
         <div class="cores">
           <p> Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam </p>
         </div>
