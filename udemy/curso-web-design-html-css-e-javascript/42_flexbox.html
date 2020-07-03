@@ -1,0 +1,108 @@
+<!doctype html>
+<!-- doctype informa ao agente de usuário a versão do htmls que deve ser renderrizada -->
+<html lang="pt-br">
+    <head>
+        <title> Página de exemplo estrutura básica</title>
+        <meta charset="utf-8">
+        <meta name="author" content="Edward">
+        <meta name="description" content="Lista de Documento">
+        <meta name="keywords" content="HTMLS5, Tecnologias">
+        <meta name="viewport" content="width=device-width">
+
+        <style>
+          .flexbox{
+            height: 250px;
+            border: 1px solid red;
+            display: flex; /* Indica que o container possui um display flex */
+            margin-bottom: 15px;
+          }
+
+          .flexbox div{
+            background-color: orange;
+            width: 300px;
+            margin: 15px;
+          }
+
+          .flexbox:nth-child(4){
+            /* flex-direction: row; /* Dizemos a direção o container flex - Row = Padrão */
+            /* flex-wrap: wrap; /* O que fazer quando não caber na tela - no-wrap = Padrão (não quebre linha) vale para altura e largura*/
+            flex-flow: row nowrap; /* flex-flow = (flex-direction, flex-wrap ) */
+          }
+
+          .flexbox:nth-child(5){
+            justify-content: space-between;
+          }
+
+          .flexbox:nth-child(5) div{
+            width: 40px;
+          }
+
+          .flexbox:nth-child(5){
+            align-items: center;
+            justify-content: center;
+          }
+
+          .flexbox:nth-child(6) div{
+            width: 40px;
+          }
+
+          .flexbox:nth-child(7){
+            align-items: baseline; /* Alinha de acordo com a linha imaginária da fonte */
+            justify-content: center;
+          }
+
+          .flexbox:nth-child(8){
+            justify-content: center;
+            flex-wrap: wrap;
+            align-content: center; /* Só faz sentido quando tenho mais de uma linha, ou seja, diferente deve ser diferente de flex-wrap: nowrap, pois ele irá formatar o grupo */
+          }
+
+          .flexbox:nth-child(8) div{
+            width: 100px;
+          }
+
+          /* align-item = Alinhar no eixo vertical, justify-content = Alinhar no eixo horizontal (Pensar assim até esse momento) */
+
+        </style>
+    </head>
+    <body>
+      <h2> Display Flex </h2>
+      <p> Acomodar ou distribuir elementos de modo fácil </p>
+      <p> Ajuda a centralizar na vertical </p>
+
+      <div class="flexbox"> <!-- Flex container -->
+        <div class="div1"> 1 </div> <!-- Flex itens -->
+        <div class="div2"> 2 </div> <!-- Flex itens -->
+        <div class="div3"> 3 </div> <!-- Flex itens -->
+        <div class="div4"> 4 </div> <!-- Flex itens -->
+      </div>
+
+      <div class="flexbox"> <!-- Flex container -->
+        <div class="div1"> 1 </div> <!-- Flex itens -->
+        <div class="div2"> 2 </div> <!-- Flex itens -->
+        <div class="div3"> 3 </div> <!-- Flex itens -->
+        <div class="div4"> 4 </div> <!-- Flex itens -->
+      </div>
+
+      <div class="flexbox"> <!-- Flex container -->
+        <div class="div1"> 1 </div> <!-- Flex itens -->
+        <div class="div2"> 2 </div> <!-- Flex itens -->
+        <div class="div3"> 3 </div> <!-- Flex itens -->
+        <div class="div4"> 4 </div> <!-- Flex itens -->
+      </div>
+
+      <div class="flexbox"> <!-- Flex container -->
+        <div class="div1"> 1 </div> <!-- Flex itens -->
+        <div class="div2" style="font-size: 4em;"> 2 </div> <!-- Flex itens -->
+        <div class="div3"> 3 </div> <!-- Flex itens -->
+        <div class="div4"> 4 </div> <!-- Flex itens -->
+      </div>
+
+      <div class="flexbox"> <!-- Flex container -->
+        <div class="div1"> 1 </div> <!-- Flex itens -->
+        <div class="div2"> 2 </div> <!-- Flex itens -->
+        <div class="div3"> 3 </div> <!-- Flex itens -->
+        <div class="div4"> 4 </div> <!-- Flex itens -->
+      </div>
+    </body>
+</html>
