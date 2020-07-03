@@ -37,6 +37,8 @@
             width: 40px;
           }
 
+          /* align-item = Alinhar no eixo vertical, justify-content = Alinhar no eixo horizontal (Pensar assim até esse momento) */
+
           .flexbox:nth-child(5){
             align-items: center;
             justify-content: center;
@@ -61,7 +63,60 @@
             width: 100px;
           }
 
-          /* align-item = Alinhar no eixo vertical, justify-content = Alinhar no eixo horizontal (Pensar assim até esse momento) */
+          .flexbox:nth-child(9){
+            justify-content: center;
+            align-items: center;
+          }
+
+          .flexbox:nth-child(9) div{
+            background: yellow;
+            flex-basis: 50px; /* Relacionado a largura do elemento */ 
+            height: 50px;
+          }
+
+          .flexbox:nth-child(10){
+            justify-content: center;
+            align-items: center;
+          }
+
+          .flexbox:nth-child(10) div{
+            background: tomato;
+            flex-basis: 100px; /* Relacionado a largura do elemento */ 
+            height: 50px;
+          }
+
+          /* flex-grow - Destribui o espaço que sobra */
+          .flexbox:nth-child(10) div:nth-child(2){
+            flex-grow: 2; /* Pega o espaço sobrando e destribui de acordo com a porção que foi definida no elemento e atribui para o segundo elemento */
+          }
+
+          .flexbox:nth-child(10) div:nth-child(4){
+            flex-grow: 1; /* Pega o espaço sobrando e destribui de acordo com a porção que foi definida no elemento e atribui para o quarto elemento */
+          }
+
+          .flexbox:nth-child(11) div{
+            background: red;
+            flex-basis: 100px; /* Relacionado a largura do elemento */ 
+            height: 50px;
+          }
+
+          /* flex-shrink - Destribui o espalo que excede */
+          .flexbox:nth-child(11) div:nth-child(2){
+            flex-shrink: 5; /* Pega o espaço excede e subtrai de acordo com a porção que foi definida no elemento e atribui para o segundo elemento */
+          }
+
+          .flexbox:nth-child(11) div:nth-child(4){
+            flex-shrink: 3; /* Pega o espaço excede e subtrai de acordo com a porção que foi definida no elemento e atribui para o segundo elemento */
+          }
+
+          .flexbox:nth-child(12) div{
+            background-color: #ccc;
+          }
+
+          .flexbox:nth-child(12) div:nth-child(4){
+            background-color: #ccc;
+            flex: 0 1 100px; /* flex: grow shrink basis */
+          }
 
         </style>
     </head>
@@ -94,6 +149,34 @@
       <div class="flexbox"> <!-- Flex container -->
         <div class="div1"> 1 </div> <!-- Flex itens -->
         <div class="div2" style="font-size: 4em;"> 2 </div> <!-- Flex itens -->
+        <div class="div3"> 3 </div> <!-- Flex itens -->
+        <div class="div4"> 4 </div> <!-- Flex itens -->
+      </div>
+
+      <div class="flexbox"> <!-- Flex container -->
+        <div class="div1"> 1 </div> <!-- Flex itens -->
+        <div class="div2"> 2 </div> <!-- Flex itens -->
+        <div class="div3"> 3 </div> <!-- Flex itens -->
+        <div class="div4"> 4 </div> <!-- Flex itens -->
+      </div>
+
+      <div class="flexbox"> <!-- Flex container -->
+        <div class="div1"> 1 </div> <!-- Flex itens -->
+        <div class="div2"> 2 </div> <!-- Flex itens -->
+        <div class="div3"> 3 </div> <!-- Flex itens -->
+        <div class="div4"> 4 </div> <!-- Flex itens -->
+      </div>
+
+      <div class="flexbox"> <!-- Flex container -->
+        <div class="div1"> 1 </div> <!-- Flex itens -->
+        <div class="div2"> 2 </div> <!-- Flex itens -->
+        <div class="div3"> 3 </div> <!-- Flex itens -->
+        <div class="div4"> 4 </div> <!-- Flex itens -->
+      </div>
+
+      <div class="flexbox"> <!-- Flex container -->
+        <div class="div1"> 1 </div> <!-- Flex itens -->
+        <div class="div2"> 2 </div> <!-- Flex itens -->
         <div class="div3"> 3 </div> <!-- Flex itens -->
         <div class="div4"> 4 </div> <!-- Flex itens -->
       </div>
