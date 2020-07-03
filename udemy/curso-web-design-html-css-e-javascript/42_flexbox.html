@@ -118,6 +118,31 @@
             flex: 0 1 100px; /* flex: grow shrink basis */
           }
 
+          .flexbox:nth-child(13) div{
+            background-color: #aaa;
+          }
+
+          .flexbox:nth-child(13) div:nth-child(2){
+            order: -1; /* Alterando a posição */
+          }
+
+          .flexbox:nth-child(13) div:nth-child(4){
+            order: -1; /* Alterando a posição */
+          }
+
+          .flexbox:nth-child(14){
+            background-color: blue;
+            align-items: flex-start;
+          }
+
+          .flexbox:nth-child(14) div:nth-child(2){
+            align-self: center; /* Alinahndo individualmente */
+          }
+
+          .flexbox:nth-child(14) div:nth-child(1){
+            align-self: stretch; /* Alinhando individualmente */
+          }
+
         </style>
     </head>
     <body>
@@ -149,6 +174,20 @@
       <div class="flexbox"> <!-- Flex container -->
         <div class="div1"> 1 </div> <!-- Flex itens -->
         <div class="div2" style="font-size: 4em;"> 2 </div> <!-- Flex itens -->
+        <div class="div3"> 3 </div> <!-- Flex itens -->
+        <div class="div4"> 4 </div> <!-- Flex itens -->
+      </div>
+
+      <div class="flexbox"> <!-- Flex container -->
+        <div class="div1"> 1 </div> <!-- Flex itens -->
+        <div class="div2"> 2 </div> <!-- Flex itens -->
+        <div class="div3"> 3 </div> <!-- Flex itens -->
+        <div class="div4"> 4 </div> <!-- Flex itens -->
+      </div>
+
+      <div class="flexbox"> <!-- Flex container -->
+        <div class="div1"> 1 </div> <!-- Flex itens -->
+        <div class="div2"> 2 </div> <!-- Flex itens -->
         <div class="div3"> 3 </div> <!-- Flex itens -->
         <div class="div4"> 4 </div> <!-- Flex itens -->
       </div>
