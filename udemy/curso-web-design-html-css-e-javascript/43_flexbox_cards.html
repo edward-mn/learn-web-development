@@ -1,0 +1,61 @@
+<!doctype html>
+<!-- doctype informa ao agente de usuário a versão do htmls que deve ser renderrizada -->
+<html lang="pt-br">
+    <head>
+        <title> Página de exemplo estrutura básica</title>
+        <meta charset="utf-8">
+        <meta name="author" content="Edward">
+        <meta name="description" content="Lista de Documento">
+        <meta name="keywords" content="HTMLS5, Tecnologias">
+        <meta name="viewport" content="width=device-width">
+
+        <style>
+          .cardContainer{
+            display: flex;
+          }
+
+          .cardFlex{
+            border: 1px solid black;
+            width: 30%;
+            padding: 10px;
+            margin: 1%;
+            display: flex;
+            flex-direction: column;
+          }
+
+          .cardFlex p{
+            flex-grow: 1; /* Parágrafo recebe todo espaço que excede para deixar os botões todos alinhados independete do texto dos cards */
+          }
+
+          .cardContainer button{
+            align-self: flex-end; /* Alinhando apenas o botão */
+          }
+        </style>
+    </head>
+    <body>
+
+      <h2> Display Flex </h2>
+      <p> Acomodar ou destribuir elementos de modo fácil</p>
+      <p> Ajuda a centralizar na vertical </p>
+
+      <section class="cardContainer">
+        <article class="cardFlex">
+          <h3> Título </h3>
+          <p> Lorem ipsum dolor sit amet, consectetur adipiscing elit, ut labore et dolore magna aliqua. Ut enim ad minim veniam </p>
+          <button> Vai </button>  
+        </article>
+
+        <article class="cardFlex">
+          <h3> Título </h3>
+          <p> Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam </p>
+          <button> Vai </button>  
+        </article>
+
+        <article class="cardFlex">
+          <h3> Título </h3>
+          <p> Lorem ipsum dolor sit amet, consectetur adipiscing elit </p>
+          <button> Vai </button>  
+        </article>
+      </section>
+    </body>
+</html>
