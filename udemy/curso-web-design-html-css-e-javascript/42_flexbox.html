@@ -143,6 +143,18 @@
             align-self: stretch; /* Alinhando individualmente */
           }
 
+          .flexbox:nth-child(15){
+            justify-content: center; /* cros axis vira main axis - Eixo horizontal para vertical*/
+            align-items: flex-end; /* main axis vira cross axis - Eixo vertical para horizontal*/
+            flex-direction: column; /* Ele que irá mandar na posição do content e items */
+            height: 500px;
+          }
+
+          .flexbox:nth-child(15) div{
+            background-color: plum;
+            flex-basis: 60px; /* Também é invertido pelo flex-direction - Largura para Espessura */
+          }
+
         </style>
     </head>
     <body>
@@ -174,6 +186,13 @@
       <div class="flexbox"> <!-- Flex container -->
         <div class="div1"> 1 </div> <!-- Flex itens -->
         <div class="div2" style="font-size: 4em;"> 2 </div> <!-- Flex itens -->
+        <div class="div3"> 3 </div> <!-- Flex itens -->
+        <div class="div4"> 4 </div> <!-- Flex itens -->
+      </div>
+
+      <div class="flexbox"> <!-- Flex container -->
+        <div class="div1"> 1 </div> <!-- Flex itens -->
+        <div class="div2"> 2 </div> <!-- Flex itens -->
         <div class="div3"> 3 </div> <!-- Flex itens -->
         <div class="div4"> 4 </div> <!-- Flex itens -->
       </div>
