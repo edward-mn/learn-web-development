@@ -50,11 +50,21 @@
             /* grid-row-start: 1;
             grid-row-end: 2; */
             grid-row: 1 / 2; /* Otimizando a alteração da posíção das linhas */
+            /* Começa na linha l vai até o 2 */
             /* grid-column-start: 1;
             grid-column-end: 4; */
-            grid-column: 2 / -1; /* Sempre o -1 será o inicio da linha - Otimizando a alteração da posíção das colunas*/
-
+            grid-column: 2 / -1; /* Sempre o -1 será o fim da linha - Otimizando a alteração da posíção das colunas*/
+            /* Começa na coluna 2 e vai até o fim */
           }
+
+          .gridItem:nth-child(2){
+            grid-row: 1 / span 2; /* span - Funciona como se fosse até o 3, ou seja, grid-row: 1 / 3 */
+          }
+
+          .gridItem:nth-child(6){
+            grid-column: 1 / -1; /* Coluna 1 até o final */
+          }
+
         </style>
     </head>
     <body>
