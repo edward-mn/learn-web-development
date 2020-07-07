@@ -37,11 +37,23 @@
             display: grid;
             /* grid-template-columns: 100px 100px 100px; Passando 3 valores pois queremos 3 colunas*/
             /* Fr - Fração = No caso ele está ira fracionar  o espaço das 3 colunas para ficarem uniformes */
-            grid-template-columns: repeat(3, 1fr); /* Otimizando a criação do template, as 3 colunas irá possuir 100px*/
-            grid-template-rows: 100px 100px; /* Definindo o tamanho das linhas (2 linhas)*/
+            grid-template-columns: repeat(3, 1fr) 100px; /* Otimizando a criação do template, as 3 colunas irá possuir 100px*/
+            grid-template-rows: 100px 100px 100px; /* Definindo o tamanho das linhas (2 linhas)*/
             /* grid-row-gap: 30px; Espaço entre as linhas */
             /* grid-column-gap: 10px; Espaço entre as colunas */
             grid-gap: 30px 10px; /* Otimizando - grid-gap: row column */
+          }
+
+          .gridItem:nth-child(1){
+            background-color: bisque;
+            /* Alterando a posição do item da grid */
+            /* grid-row-start: 1;
+            grid-row-end: 2; */
+            grid-row: 1 / 2; /* Otimizando a alteração da posíção das linhas */
+            /* grid-column-start: 1;
+            grid-column-end: 4; */
+            grid-column: 2 / -1; /* Sempre o -1 será o inicio da linha - Otimizando a alteração da posíção das colunas*/
+
           }
         </style>
     </head>
