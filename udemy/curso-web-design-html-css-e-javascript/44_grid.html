@@ -33,9 +33,11 @@
 
           /* GRID */
           .gridContainer{
+            width: 100%;
             display: grid;
             /* grid-template-columns: 100px 100px 100px; Passando 3 valores pois queremos 3 colunas*/
-            grid-template-columns: repeat(3, 90px); /* Otimizando a criação do template, as 3 colunas irá possuir 100px*/
+            /* Fr - Fração = No caso ele está ira fracionar  o espaço das 3 colunas para ficarem uniformes */
+            grid-template-columns: repeat(3, 1fr); /* Otimizando a criação do template, as 3 colunas irá possuir 100px*/
             grid-template-rows: 100px 100px; /* Definindo o tamanho das linhas (2 linhas)*/
             /* grid-row-gap: 30px; Espaço entre as linhas */
             /* grid-column-gap: 10px; Espaço entre as colunas */
