@@ -34,10 +34,12 @@
           /* GRID */
           .gridContainer{
             display: grid;
-            grid-template-columns: 100px 100px 100px; /* Passando 3 valores pois queremos 3 colunas*/
-            grid-template-rows: 100px 200px; /* Definindo o tamanho das linhas (2 linhas)*/
-
-            grid-template-columns: repeat(2, 75px) 100px; /* Otimizando a criação do template, as 2 primeiras colunas irá possuir 75px e a última 100px*/
+            /* grid-template-columns: 100px 100px 100px; Passando 3 valores pois queremos 3 colunas*/
+            grid-template-columns: repeat(3, 90px); /* Otimizando a criação do template, as 3 colunas irá possuir 100px*/
+            grid-template-rows: 100px 100px; /* Definindo o tamanho das linhas (2 linhas)*/
+            /* grid-row-gap: 30px; Espaço entre as linhas */
+            /* grid-column-gap: 10px; Espaço entre as colunas */
+            grid-gap: 30px 10px; /* Otimizando - grid-gap: row column */
           }
         </style>
     </head>
