@@ -1,0 +1,75 @@
+<!doctype html>
+<!-- doctype informa ao agente de usuário a versão do htmls que deve ser renderrizada -->
+<html lang="pt-br">
+    <head>
+        <title> Página de exemplo estrutura básica</title>
+        <meta charset="utf-8">
+        <meta name="author" content="Edward">
+        <meta name="description" content="Lista de Documento">
+        <meta name="keywords" content="HTMLS5, Tecnologias">
+        <meta name="viewport" content="width=device-width">
+
+        <style>
+          .gridContainer{
+            width: 90%;
+            background: #ccc;
+            margin: 30px auto;
+          }
+
+          .gridItem{
+            background-color: orange;
+            padding: 15px;
+            font-family: sans-serif;
+          }
+
+          /* GRID */
+
+          .gridContainer{
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            grid-template-rows: 100px 50px 1fr 50px;
+            grid-gap: 20px;
+          }
+
+          .header{
+            grid-column: 1 / -1;
+          }
+
+          .nav{
+            grid-column: 1 / 3;
+          }
+
+          .aside{
+            grid-row: 2 / -1;
+            grid-column: 3 / 4;
+          /* Caso queira que o aside sobreponha utilizamos o z-indez - z-index: 1 */
+          }
+
+          .main{
+            grid-column: 1 / 3;
+            min-height: 200px;
+          }
+
+          .footer{
+            grid-column: 1 / -1;
+            grid-row: 4 / 5;
+            background: rgba(255, 0, 0, .5);
+          /* Sobre ponto uma coluna */
+          }
+        </style>
+    </head>
+    <body>
+        <h2> Grid Layout </h2>
+
+        <div class="gridContainer">
+          <header class="header gridItem"> header </header>
+          <nav class="nav gridItem"> nav </nav>
+          <aside class="aside gridItem"> aside </aside>
+          <main class="main gridItem">
+            main
+          </main>
+          <footer class="footer gridItem"> footer </footer>
+        </div>
+
+    </body>
+</html>
