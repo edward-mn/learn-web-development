@@ -1,0 +1,78 @@
+<!doctype html>
+<!-- doctype informa ao agente de usuário a versão do htmls que deve ser renderrizada -->
+<html lang="pt-br">
+    <head>
+        <title> Página de exemplo estrutura básica</title>
+        <meta charset="utf-8">
+        <meta name="author" content="Edward">
+        <meta name="description" content="Lista de Documento">
+        <meta name="keywords" content="HTMLS5, Tecnologias">
+        <meta name="viewport" content="width=device-width">
+
+        <style>
+          .gridContainer{
+            width: 90%;
+            background: #ccc;
+            margin: 30px auto;
+          }
+
+          .gridItem{
+            background-color: orange;
+            padding: 15px;
+            font-family: sans-serif;
+          }
+
+          /* GRID */
+
+          .gridContainer{
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            grid-template-rows: 100px 50px 1fr 50px;
+            grid-gap: 20px;
+
+            grid-template-areas: 
+              "header   header  header" /* colocamos 3 vezes pois temos 3 colunas */
+              "nav      nav     aside"
+              "main     main    aside"
+              "footer   footer  aside"; /* Caso queira uma célula vazia utilizamos o . */
+          /* Definimos como queremos o layout - Também removes a complexidade dos magic numbers, podendo alterar os nomes e assim o layout também será alterado */
+          }
+
+          .header{
+          /* Apontamos a qual parte o header pertence do layout criado através do grid-template-areas */
+            grid-area: header; 
+          }
+
+          .nav{
+            grid-area: nav;
+          }
+
+          .aside{
+            grid-area: aside;
+          }
+
+          .main{
+            grid-area: main;
+            min-height: 200px;
+          }
+
+          .footer{
+            grid-area: footer;
+          }
+        </style>
+    </head>
+    <body>
+        <h2> Grid Layout </h2>
+
+        <div class="gridContainer">
+          <header class="header gridItem"> header </header>
+          <nav class="nav gridItem"> nav </nav>
+          <aside class="aside gridItem"> aside </aside>
+          <main class="main gridItem">
+            main
+          </main>
+          <footer class="footer gridItem"> footer </footer>
+        </div>
+
+    </body>
+</html>
