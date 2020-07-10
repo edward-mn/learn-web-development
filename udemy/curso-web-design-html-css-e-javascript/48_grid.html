@@ -29,34 +29,34 @@
             /* Dando nome para as linhas imaginárias da grid */
             grid-template-rows: [header-start] 100px [header-end nav-start] 50px [nav-end main-start] 1fr [main-end footer-start] 50px [footer-end]; 
             /* Dando nome para as colunas imaginárias da grid */
-            grid-template-columns: [col1-start] 1fr [con1-end col2-start] 1fr [col2-end col3-start] 1fr [col3-end];
+            grid-template-columns: repeat(3, [col-start] 1fr [col-end]); /* Otimizando a usabilidade do repeat com definição do nome paras as colunas - por padrão ele irá colocar col-start 1 ... col-end 3 */
             grid-gap: 20px;
           }
 
           /* Ponto negativo de usar é que sempre devemos definir grid-column e grid-row */
           .header{
-            grid-column: col1; /*Quando definimos o sufixo com start e and podemos omiti-los disso "col1-start / col3-end;" para isto "col1 */
+            grid-column: col-start 1 / col-end 3; /*Quando definimos o sufixo com start e and podemos omiti-los disso "col1-start / col3-end;" para isto "col1 */
             grid-row: header;
           }
 
           .nav{
-            grid-column: col1-start / col2-end;
+            grid-column: col-start 1 / col-end 3;
             grid-row: nav;
           }
 
           .aside{
-            grid-column: col3;
-            grid-row: nav-start / footer-end; /* Mesclando as células */
+            grid-column: col-start 3 / col-end 3;
+            grid-row: main-start / footer-end; /* Mesclando as células */
           }
 
           .main{
-            grid-column: col1-start / col3-start; /* Neste casos não podemos omitir pois são informações diferentes, ou seja, não são da mesma coluna */
+            grid-column: col-start 1 / col-start 3; /* Neste casos não podemos omitir pois são informações diferentes, ou seja, não são da mesma coluna */
             grid-row: main;
             min-height: 200px;
           }
 
           .footer{
-            grid-column: col1-start / col3-end;
+            grid-column: col-start / span 3; /* span = mescla com 3 */
             grid-row: footer;
             background: rgba(255, 0, 0, .5);
           /* sobrepondo uma coluna */
