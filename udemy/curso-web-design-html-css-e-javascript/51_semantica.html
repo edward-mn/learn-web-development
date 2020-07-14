@@ -1,0 +1,36 @@
+<!doctype html>
+<!-- doctype informa ao agente de usuário a versão do htmls que deve ser renderrizada -->
+<html lang="pt-br">
+    <head>
+        <title> Semântica </title>
+        <meta charset="utf-8">
+        <meta name="author" content="Edward">
+        <meta name="description" content="Lista de Documento">
+        <meta name="keywords" content="HTMLS5, Tecnologias">
+        <meta name="viewport" content="width=device-width">
+    </head>
+    <body>
+      <h1> Mais sobre semântica </h1>
+                        <!-- kbd = Keyboard (sigla vinculado a teclas do teclado -->
+      <p> Por favor, aperte <kbd> CTRL </kbd> + <kbd> F5 </kbd> Para recarregar essa página </p>
+                      <!-- abbr = Abreviation (sigla vinculado a abreviações de hipertexto -->
+      <h2> Evento sobre <abbr title="Linguagem de marcação de hipertexto"> HTML </abbr> e <abbr title="Folhas de estilo em cascata"> CSS </abbr> </h2>
+                      <!-- time = Especificamos para o agente de usuário (browser) que isso é uma data, deixando mais semanticamente correto -->
+      <p> O evento vai ser no dia <time> 15 de setembro de 2018 </time> </p>
+                      <!-- Especificamos para o agente de usuário (browser) a data internacional, ou seja, agora independente do que estiver escrito, o importante será o  atributo "datetime" -->
+      <p> O evento vai ser dia <time datetime="2020-09-15"> 15/09/2020 </time> </p>
+                      <!-- Especificamos para o agente de usuário (browser) a data internacional e horário -->
+      <p> O evento vai ser dia <time datetime="2020-09-15T20:00:00"> 15/09/2020 - 20:00 </time> </p>
+                      <!-- Especificamos para o agente de usuário (browser) a data internacional,horário e fuso horário -->
+      <p> O evento vai ser em <time datetime="2020-09-15T20:00:00-03:00"> 2020, 15 de setembro - 20:00 </time> </p>
+
+      <!-- Algo interessante de utilizar de forma correta, pois futuramente é possível interação do divece com o site desenvolvido, como adicionar um lembrete no calendário, etc -->
+
+      <h2> Confirme sua presença </h2>
+      <p> O agendamento está marcado para <time  datetime="18:00"> 18h00 </time> </p>
+          <!-- del - "Deletar" o conteúdo para os leitores de tela, porém visível para leitura * ins - "Insert" informações para o leitor de tela e também fica visível -->
+      <p> Aprender semântica HTML e <del> complicado </del> <ins> fácil </ins> </p>
+                  <!-- Alteramos o idioma somente no nome do evento para soar correto -->
+      <p> O evento <span lang="en-us"> JS Conference </span> será em Agosto </p>
+    </body>
+</html>
