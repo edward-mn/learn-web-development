@@ -1,0 +1,50 @@
+<!doctype html>
+<!-- doctype informa ao agente de usuário a versão do htmls que deve ser renderrizada -->
+<html lang="pt-br">
+    <head>
+        <title> Meu CSS não funciona </title>
+        <meta charset="utf-8">
+        <meta name="author" content="Edward">
+        <meta name="description" content="Lista de Documento">
+        <meta name="keywords" content="HTMLS5, Tecnologias">
+        <meta name="viewport" content="width=device-width">
+
+        <style> 
+        /* Especificidade = Ordem que irá seguir: Agente browser, Agente do usuário, folha de estilo - Ordem(último sempre tem mais especificidade), tag + ID (o#unico), tag + Classe (p.destaque), ID, Classe, tag
+        site - http://hisakoevans.com/web-tutorial/page23.html */
+          .destaque{
+            color: red;  /* Especificidade - Classe é mais específico - Formate somenta a classe não a tag no geral */
+          }
+
+          #unico{
+            color: blue;
+          }
+
+          p.destaque{
+            color: brown;
+          }
+
+          p[lang]{
+            color: cadetblue;
+          }
+
+          p{
+            color: green !important;
+          /* Irá sobreescrever praticamente tudo que foi declaro em qualquer tag p - Mas não deve ser utilizado */
+          }
+
+          
+        </style>
+    </head>
+    <body>
+        <h1> Meu CSS Não funciona </h1>  
+
+        <p style="color: yellow;"> Com estilo inline </p>
+
+        <p lang="pt-br" classe="destaque"> Testando atributo </p>
+      
+        <p class="destaque"> Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam </p>
+
+        <p id="unico"> Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam </p>
+    </body>
+</html>
