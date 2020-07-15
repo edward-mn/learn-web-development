@@ -29,8 +29,24 @@
           }
 
           p{
+            color: green;
+          }
+
+          p #id{
             color: green !important;
           /* Irá sobreescrever praticamente tudo que foi declaro em qualquer tag p - Mas não deve ser utilizado */
+          }
+
+          .jumbotron{
+            background-color: rgba(0, 0, 0, .5);
+          }
+
+          .jumbotron__text{ /* Formatando todo paragrafo que está contido dentro da div com id jumbotron */
+            color: white;
+          }
+
+          .jumbotron__title{
+            color: red;
           }
 
           
@@ -39,6 +55,15 @@
     <body>
         <h1> Meu CSS Não funciona </h1>  
 
+        <!-- div#jumbotron>h2{subtitulo}+p{paragrafo}*2 - Resultado abaixo -->
+        <div class="jumbotron"> <!-- Block element modifier - http://getbem.com/introduction/ -->
+        <!-- Alteramos para classe, para que seja possível utilizar em mais partes do site, se tornando reutilizável -->
+          <h2 class="jumbotron__title">subtitulo</h2> <!-- BEM na definição das classes, para evitar definição de regras complexas futuras -->
+          <p class="jumbotron__text">paragrafo</p>
+          <p class="jumbotron__text">paragrafo</p>
+        </div>
+
+
         <p style="color: yellow;"> Com estilo inline </p>
 
         <p lang="pt-br" classe="destaque"> Testando atributo </p>
@@ -46,5 +71,7 @@
         <p class="destaque"> Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam </p>
 
         <p id="unico"> Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam </p>
+
+        <p id="id"> Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam </p>
     </body>
 </html>
