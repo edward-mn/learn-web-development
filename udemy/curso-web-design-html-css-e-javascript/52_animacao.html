@@ -1,0 +1,109 @@
+<!doctype html>
+<!-- doctype informa ao agente de usuário a versão do htmls que deve ser renderrizada -->
+<html lang="pt-br">
+    <head>
+        <title> Página de exemplo estrutura básica</title>
+        <meta charset="utf-8">
+        <meta name="author" content="Edward">
+        <meta name="description" content="Lista de Documento">
+        <meta name="keywords" content="HTMLS5, Tecnologias">
+        <meta name="viewport" content="width=device-width">
+
+        <style>
+
+          @keyframes anda{
+          /* Criando animação */
+            0%{
+              transform: translateX(0); 
+              background-color: yellow;
+            }
+
+            100%{
+              transform: translateX(400px);
+              background-color: blue;
+            }
+          }
+
+          #anima-time div{
+            width: 50px;
+            height: 25px;
+            border: 3px solid red;
+          }
+
+          #anima-time div:nth-child(1){
+          /* Aplicando a animação criada
+            animation: anda 2s linear */
+            animation-name: anda;
+            animation-duration: 2s;
+            animation-timing-function: linear;
+            /* ease-in = INicio - Acelera
+               ease-out = finOUT - Desacelera */
+          }
+
+          #anima-time div:nth-child(2){
+            animation-name: anda;
+            animation-duration: 2s;
+            animation-timing-function: ease-in-out;
+            animation-iteration-count: infinite; /* Vai continuar infinitamente */
+            animation-direction: alternate; /* Alterna ente os lados para aplica a animação */
+            /* animation: anda 2s ease-in-out infinite alternate; - Short declaration */
+          }
+
+          #anima-time div:nth-child(3){
+            animation-name: anda;
+            animation-duration: 2s;
+            animation-timing-function: ease-in-out;
+            animation-delay: 1s;
+            animation-iteration-count: infinite; /* Vai continuar infinitamente */
+            animation-direction: alternate; /* Alterna ente os lados para aplica a animação */
+            /* animation: anda 2s ease-in-out 1s infinite alternate; - Short declaration */
+          }
+
+          #anima-time div:nth-child(4){
+            background-color: red;
+
+            animation-name: anda;
+            animation-duration: 2s;
+            animation-timing-function: ease-in-out;
+            animation-delay: 1s;
+            animation-iteration-count: 2; /* Vai continuar infinitamente */
+            animation-direction: alternate; /* Alterna ente os lados para aplica a animação */
+            /*Insere antes ou depois da animação começar */
+            animation-fill-mode: both; 
+            /* backwards - Já aplica as regras no inicio que já foram definidas no @keyframes 
+               fowards - Já aplica as regras no final que já foram definidas no @keyframes 
+               both - Irá aplicar tanto no inicio quanto no final as regras que já foram definidas no @keyframes 
+            */
+            /* animation: anda 2s ease-in-out 1s infinite alternate both; - Short declaration */
+          }
+          #anima-time div:nth-child(5){
+            background-color: red;
+
+            animation-name: anda;
+            animation-duration: 2s;
+            animation-timing-function: ease-in-out;
+            animation-iteration-count: infinite; /* Vai continuar infinitamente */
+            animation-direction: alternate; /* Alterna ente os lados para aplica a animação */
+            animation-fill-mode: both; 
+            animation-play-state: running;
+            /* animation: anda 2s ease-in-out 1s infinite alternate; - Short declaration */
+          }
+
+          #anima-time div:nth-child(5):hover{
+            animation-play-state: paused; /* Pausando o elemento em animação através do hover */
+          }
+
+        </style>
+    </head>
+    <body>
+      <h2> Animação </h2>
+
+      <div id="anima-time">
+        <div> 1 </div>
+        <div> 2 </div>
+        <div> 3 </div>
+        <div> 4 </div>
+        <div> 5 </div>
+      </div>
+    </body>
+</html>
