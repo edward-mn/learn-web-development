@@ -1,0 +1,50 @@
+<!doctype html>
+<!-- doctype informa ao agente de usuário a versão do htmls que deve ser renderrizada -->
+<html lang="pt-br">
+    <head>
+        <title> Meu CSS não funciona </title>
+        <meta charset="utf-8">
+        <meta name="author" content="Edward">
+        <meta name="description" content="Lista de Documento">
+        <meta name="keywords" content="HTMLS5, Tecnologias">
+        <meta name="viewport" content="width=device-width">
+
+        <style>
+          body, html{
+            height: 100%;
+            margin: 0;
+          }
+
+          header{
+            height: 100%;
+          }
+          #externa{
+            background-color: yellow;
+            width: 80%;
+            height: 100%; 
+          /* Só vai funcionar colocar em porcentagem caso o tamanho (height) do elemento pai seja definido */
+          }
+
+          #interna{
+            background-color: orange;
+            width: 50%;
+            height: 100%;
+          }
+
+          #fora{
+            background-color: orchid;
+          /* Medidas que não necessariamente precisam que o pai esteja definido o height */
+            width: 80vh;
+            height: 80vw;
+          }
+        </style>
+    </head>
+    <body>
+        <header>
+          <div id="externa"> externa
+            <div id="interna"> interna </div>
+          </div>
+        </header>
+        <div id="fora">Fora</div>
+    </body>
+</html>
