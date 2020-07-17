@@ -47,6 +47,7 @@
 
           #slide-interno{
             width: 100%;
+            will-change: transform; /* Dizemos para o browser para ele se preparar pois o elemento #slide-interno sofrerá uma mudança na sua propriedade transform */
             animation: slide 15s infinite cubic-bezier(.28,-0.68,.68,1.48);
           }
 
