@@ -26,7 +26,7 @@
         var nSorteado = parseInt(Math.random() * 2);
         alert("Sorteio foi: " +nSorteado);
         // se o numero sorteado for 0, ganha quem escolher o numero MENOR - se o numero sorteado for 1, ganha quem escolher o numero MAIOR //
-        if((nSorteado === 0 && nJogador1 < nJogador2) || (nSorteado === 1 && nJogador1 > nJogador2)){
+        if((nSorteado === 0 && nJogador1 < nJogador2) || (nSorteado === 1 && nJogador1 > nJogador2)){ // Parentesses é opicional por conta da precedência, deixei para questão de visibilidade //
             alert('ganhou o jogador 1');
         } else {
             alert('ganhou o jogador 2');
