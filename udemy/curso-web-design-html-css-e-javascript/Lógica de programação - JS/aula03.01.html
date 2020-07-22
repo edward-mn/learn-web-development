@@ -1,0 +1,23 @@
+<!doctype html>
+<!-- doctype informa ao agente de usuário a versão do htmls que deve ser renderrizada -->
+<html lang="pt-br">
+    <head>
+        <title> Logica de Programação Javascript </title>
+        <meta charset="utf-8">
+    </head>
+    <body>
+        <h2> Repetindo ações </h2>
+
+        <script>
+          var numero = parseFloat(prompt("Digite um número"));
+          var indice = 1;
+
+          while(indice <= 1000){
+          // Não é aconselhável utilizar o document.write - adicinamos a tag br para quebrar linha entre os resultados //
+            document.write(numero + " * " + indice + " = " + (numero * indice) + " <br>");
+            indice++;
+          }
+          document.write("Fim");
+        </script>
+    </body>
+</html>
