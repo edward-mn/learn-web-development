@@ -1,0 +1,26 @@
+<!doctype html>
+<!-- doctype informa ao agente de usuário a versão do htmls que deve ser renderrizada -->
+<html lang="pt-br">
+    <head>
+        <title> Logica de Programação Javascript </title>
+        <meta charset="utf-8">
+    </head>
+    <body>
+        <h2> Repetindo ações </h2>
+
+        <script>
+          var numero = parseFloat(prompt("Digite um número"));
+          var indice = 1;
+
+          for(var i = 1; i <= 1000; i++ ){
+            document.write(numero + " * " + indice + " = " + (numero * indice) + " <br>");
+            indice++;
+
+            // Verificando se o i é um múltiplo de 10, caso for adiciona um separador //
+            if(i % 10 === 0 && indice > 0){
+              document.write(" <hr> ");
+            } 
+          }
+        </script>
+    </body>
+</html>
