@@ -1,0 +1,29 @@
+<!doctype html>
+<!-- doctype informa ao agente de usuário a versão do htmls que deve ser renderrizada -->
+<html lang="pt-br">
+    <head>
+        <title> Logica de Programação Javascript </title>
+        <meta charset="utf-8">
+    </head>
+    <body>
+        <h2> Switch ... Case </h2>
+
+        <script>
+          var n = parseInt(prompt("Digite um número?"));
+
+          // Declarando switch //
+          switch(n){
+            case 1:
+              alert("boa escolha");
+              break; // Saindo dos case //
+            case 2:
+              alert("Legal");
+              break;
+            case 3:
+              alert("Caramba");
+            default: // Definindo uma mensagem default, caso seja apresentado algo diferente de 1, 2 ou 3 //
+              alert("Escolha de 1 a 3");
+          }
+        </script>
+    </body>
+</html>
