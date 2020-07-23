@@ -1,0 +1,23 @@
+<!doctype html>
+<!-- doctype informa ao agente de usuário a versão do htmls que deve ser renderrizada -->
+<html lang="pt-br">
+    <head>
+        <title> Logica de Programação Javascript </title>
+        <meta charset="utf-8">
+    </head>
+    <body>
+        <h2> Repetindo ações </h2>
+
+        <script>
+          /* Os anos bissextos são múltiplos de 4, não múltiplos de 100 (1900 não é bissexto) e múltiplos de 400 (2000 é bissexto). */
+          for(var i = 1; i <= 2020; i++ ){ // Negamos qualquer expressão colocando ! antes da expressão //
+            if (i % 4 === 0 && i % 100 !== 0 || i % 400 === 0){
+              /*Imprima todos os número >= 1004 e seja múltiplo de 4*/ 
+              document.write(i + " <br> ");
+            } else {
+              document.write(i + " - Não é bissexto <br>");
+            }
+          }
+        </script>
+    </body>
+</html>
