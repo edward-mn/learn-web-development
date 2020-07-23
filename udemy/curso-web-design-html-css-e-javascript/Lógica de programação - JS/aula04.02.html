@@ -1,0 +1,42 @@
+<!doctype html>
+<!-- doctype informa ao agente de usuário a versão do htmls que deve ser renderrizada -->
+<html lang="pt-br">
+    <head>
+        <title> Logica de Programação Javascript </title>
+        <meta charset="utf-8">
+    </head>
+    <body>
+        <h2> Lógica de Programação com Javascript </h2>
+
+        <button onclick="mostrarTabuada()"> Criar Tabuada </button>
+        <button onclick="limparTabuada()"> Limpar Tabuada </button>
+
+        <div id="output"></div>
+
+        <!-- Sempre o script deve estar dentro da tag body -->
+        <script>
+          
+          
+
+          function mostrarTabuada(){ // Definindo uma função //
+            var n = parseInt(prompt("Digite um número para tabuada"));
+
+            limparTabuada();
+
+            for(i =  1; i <= 100; i++){
+              mensagem +=  n + " X " + (n * i) + " <br> ";  
+            }
+            output.innerHTML = mensagem;
+          }
+
+          function limparTabuada(){
+            mensagem = "";
+            output.innerHTML = mensagem;
+          }
+
+          var output = document.querySelector("#output"); 
+          var mensagem = "";
+          
+        </script>
+    </body>
+</html>
