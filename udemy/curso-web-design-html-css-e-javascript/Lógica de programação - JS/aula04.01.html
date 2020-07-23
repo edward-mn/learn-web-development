@@ -1,0 +1,31 @@
+<!doctype html>
+<!-- doctype informa ao agente de usuário a versão do htmls que deve ser renderrizada -->
+<html lang="pt-br">
+    <head>
+        <title> Logica de Programação Javascript </title>
+        <meta charset="utf-8">
+    </head>
+    <body>
+        <h2> Lógica de Programação com Javascript </h2>
+
+        <div id="output">asdfs</div>
+
+        <!-- Sempre o script deve estar dentro da tag body -->
+        <script>
+        // Acessando a informação inserida la no mundo HTML, estamos utilizando o querySelector pois ele consegue selecinar algo no HMTL que contenha o id  output //
+          var output = document.querySelector("#output"); 
+          var mensagem = "";
+
+          for(var i = 0; i <= 1001; i++){ // Determino primeiro tudo que deve ser feito e só depois devo atribuir //
+            mensagem += "i: " + i + " <br> ";
+          }
+
+          // Visualizando no Chrome o conteudo - Inspecionar -> Console //
+          console.log(output);
+
+          // Insere informações dentro do HTML - Manipulando informações do HMTL, mas não é uma boa prática pois pode causar lentidão //
+          output.innerHTML = mensagem;
+
+        </script>
+    </body>
+</html>
