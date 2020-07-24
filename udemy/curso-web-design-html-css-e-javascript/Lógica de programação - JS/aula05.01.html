@@ -1,0 +1,70 @@
+<!doctype html>
+<!-- doctype informa ao agente de usuário a versão do htmls que deve ser renderrizada -->
+<html lang="pt-br">
+    <head>
+        <title> Logica de Programação Javascript </title>
+        <meta charset="utf-8">
+    </head>
+    <body>
+        <h2> Mini calculadora </h2>
+
+        <button onclick="iniciarCalculo('+')"> + </button>
+        <button onclick="iniciarCalculo('-')"> - </button>
+        <button onclick="iniciarCalculo('/')"> / </button>
+        <button onclick="iniciarCalculo('*')"> * </button>
+
+        <div id="output"></div>
+
+        <script>
+          var numeroInicial = parseFloat(prompt("Digite um número"));
+          escreve(numeroInicial);
+
+          function escreve(mensagem){ // Função void //
+            var output = document.querySelector("#output");
+            output.innerHTML = mensagem;
+          }
+
+          function iniciarCalculo(operacao){ // Função void //
+            var numero1 = parseFloat(document.querySelector("#output").textContent); // Convertemos para texto pois vamos trabalhar com essa informação de forma matemática //
+
+            var numero2 = parseFloat(prompt("Digite outro número"));
+
+            try{ // Tratando as exceções //
+              var msg = calcular(operacao, numero1, numero2);
+            } catch(e){ // e = error //
+              alert(e);
+              return; // Sai da função //
+            }
+            
+            escreve(msg);
+          }
+          
+          function calcular(operacao, numero, numero2){
+            if(operacao !== '+' && operacao !== '-' && operacao !== '/' && operacao !== '*'){
+              throw new Error("Digite uma operacao válida"); // Mostrando erro no console - Para a aplicação e tratando através do bloco try//
+            } 
+
+            if ( isNaN(numero) || isNaN(numero2)){ // isNaN = Is not a nunber, no caso utilizamos isso para ter certeza se a informação pode ou não ser convertida para número //
+              throw new Error("Digite um número válido"); // Mostrando erro no console - Para a aplicação e tratando através do bloco try//
+            }
+
+            var numeroCalculado = null // Definindo que ele possui nada //
+            switch(operacao){
+              case '+':
+                numero += numero2;
+                break;
+              case '-':
+                numero -= numero2;
+                break;
+              case '*':
+                numero *= numero2;
+                break;
+              case '/':
+                numero /= numero2;
+            }
+            return numeroCalculado;
+          }
+        </script>
+    </body>
+</html>
+
