@@ -1,0 +1,69 @@
+<!doctype html>
+<!-- doctype informa ao agente de usuário a versão do htmls que deve ser renderrizada -->
+<html lang="pt-br">
+    <head>
+        <title> Logica de Programação Javascript </title>
+        <meta charset="utf-8">
+    </head>
+    <body>
+        <h2> Mini calculadora </h2>
+
+        <button onclick="calcular('+')"> + </button>
+        <button onclick="calcular('-')"> - </button>
+        <button onclick="calcular('/')"> / </button>
+        <button onclick="calcular('*')"> * </button>
+
+        <div id="output"></div>
+
+        <script>
+          var numeroInicial = parseFloat(prompt("Digite um número"));
+          escreve();
+
+          function escreve(){
+            var output = document.querySelector("#output");
+            output.innerHTML = numeroInicial;
+          }
+
+          function outroNumero(){
+            return numeroFinal = parseFloat(prompt("Digite outro número"));
+          }
+          
+          function calcular(operacao){
+            switch(operacao){
+              case '+':
+                numeroInicial += outroNumero();
+                break;
+              case '-':
+                numeroInicial -= outroNumero();
+                break;
+              case '*':
+                numeroInicial *= outroNumero();
+                break;
+              case '/':
+                numeroInicial /= outroNumero();
+            }
+             /*
+              if(operacao === '+'){
+                numeroInicial += outroNumero();
+                escreve();
+              }
+              else if(operacao === '-'){
+                numeroInicial -= outroNumero();
+                escreve();
+              }
+              else if(operacao === '*'){
+                numeroInicial *= outroNumero();
+                escreve();
+              }
+              else if(operacao === '/'){
+                numeroInicial /= outroNumero();
+                escreve();
+              }
+              else {
+                alert("Selecione uma opepração!!");
+              }
+            */
+          }
+        </script>
+    </body>
+</html>
