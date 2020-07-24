@@ -1,0 +1,55 @@
+<!doctype html>
+<!-- doctype informa ao agente de usuário a versão do htmls que deve ser renderrizada -->
+<html lang="pt-br">
+    <head>
+        <title> Logica de Programação Javascript </title>
+        <meta charset="utf-8">
+    </head>
+    <body>
+        <h2> Mini calculadora </h2>
+
+        <button onclick="iniciarCalculo('+')"> + </button>
+        <button onclick="iniciarCalculo('-')"> - </button>
+        <button onclick="iniciarCalculo('/')"> / </button>
+        <button onclick="iniciarCalculo('*')"> * </button>
+
+        <div id="output"></div>
+
+        <script>
+          var numeroInicial = parseFloat(prompt("Digite um número"));
+          escreve(numeroInicial);
+
+          function escreve(mensagem){ // Função void //
+            var output = document.querySelector("#output");
+            output.innerHTML = mensagem;
+          }
+
+          function iniciarCalculo(operacao){ // Função void //
+            var numero1 = document.querySelector("#output").textContent; // Convertemos para texto pois vamos trabalhar com essa informação de forma matemática //
+
+            var numero2 = parseFloat(prompt("Digite outro número"));
+
+            var msg = calcular(operacao, numero1, numero2);
+            escreve(msg);
+          }
+          
+          function calcular(operacao, numero, numero2){
+            var numeroCalculado = null // Definindo que ele possui nada //
+            switch(operacao){
+              case '+':
+                numero += numero2;
+                break;
+              case '-':
+                numero -= numero2;
+                break;
+              case '*':
+                numero *= numero2;
+                break;
+              case '/':
+                numero /= numero2;
+            }
+            return numeroCalculado;
+          }
+        </script>
+    </body>
+</html>
