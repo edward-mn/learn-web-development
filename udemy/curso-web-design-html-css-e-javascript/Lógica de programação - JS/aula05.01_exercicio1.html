@@ -1,0 +1,58 @@
+<!doctype html>
+<!-- doctype informa ao agente de usuário a versão do htmls que deve ser renderrizada -->
+<html lang="pt-br">
+    <head>
+        <title> Logica de Programação Javascript </title>
+        <meta charset="utf-8">
+    </head>
+    <body>
+        <h2> Return function values </h2>
+
+        <button onclick="valores()"> Mostrar Área em um alert </button>
+        <div id="output"></div>
+
+        <script>
+          function valores(){
+            var largura = parseFloat(prompt("Digite a Largura"));
+            var altura = parseFloat(prompt("Digite a Altura"));
+
+            try{
+              var area = calcularArea(largura, altura);
+              console.log(area);
+            } catch(e){
+              area = e;
+            }
+
+            alert("'A área total foi: " + area);
+          }
+
+          mostrarArea();
+
+          function mostrarArea(){
+            var largura = parseFloat(prompt("Digite a Largura"));
+            var altura = parseFloat(prompt("Digite a Altura"));
+
+            try{
+              var area = calcularArea(largura, altura);
+              console.log(area);
+            } catch(e){
+              area = e;
+            }
+            document.querySelector('#output').innerHTML = 'A área total foi: '+ area;
+          }
+
+          function calcularArea(lad_di, lad_esq){
+            if(lad_di === undefined || lad_esq === undefined){
+              throw new Error("Para calcular os valores precisam ser definidos");
+            }
+
+            if(isNaN(lad_di) || isNaN(lad_esq)){
+              throw new Error("Para calcular a área é necessário 2 números");
+            } 
+
+            return lad_di * lad_esq;
+          }
+
+        </script>
+    </body>
+</html>
