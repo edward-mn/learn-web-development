@@ -15,15 +15,19 @@
       // Mostrar na tela a soma dos números pares do array numbers
 
       var output = document.querySelector('#output'); 
-      var value = 0;
+      var ResultSoma = somaOsPares(numbers);
+      output.innerHTML = 'A soma dos números pares foi: ' + ResultSoma;
+
+      function somaOsPares(array){
+        var value = 0;
     
-      for(var i = 0; i < numbers.length; i++){
-        if( numbers[i] % 2 !== 1){
-          value += numbers[i];
+        for(var i = 0; i < array.length; i++){
+          if( !isNaN(array[i]) && array[i] % 2 !== 1){
+            value += array[i];
+          }
         }
+
+        return value;
       }
-
-      output.innerHTML = value;
-
     </script>
 </html>
