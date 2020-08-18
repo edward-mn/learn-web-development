@@ -1,0 +1,29 @@
+<!doctype html>
+<!-- doctype informa ao agente de usuário a versão do htmls que deve ser renderrizada -->
+<html lang="pt-br">
+    <head>
+        <title> Logica de Programação Javascript </title>
+        <meta charset="utf-8">
+    </head>
+    <body>
+        <h2> Lógica de Programação com Javascript </h2>
+        <div id="output"></div>
+    </body>
+
+    <script>
+      var numbers = new Array(25, 30, 45, 28, 0, 12, 78,64);
+      // Mostrar na tela a soma dos números pares do array numbers
+
+      var output = document.querySelector('#output'); 
+      var value = 0;
+    
+      for(var i = 0; i < numbers.length; i++){
+        if( numbers[i] % 2 !== 1){
+          value += numbers[i];
+        }
+      }
+
+      output.innerHTML = value;
+
+    </script>
+</html>
