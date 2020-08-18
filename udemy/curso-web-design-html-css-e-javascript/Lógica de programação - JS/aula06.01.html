@@ -1,0 +1,32 @@
+<!doctype html>
+<!-- doctype informa ao agente de usuário a versão do htmls que deve ser renderrizada -->
+<html lang="pt-br">
+    <head>
+        <title> Logica de Programação Javascript </title>
+        <meta charset="utf-8">
+    </head>
+    <body>
+        <h2> Iterar sobre arrays </h2>
+
+        <div id="output"></div>
+        <script>
+          var produtos = new Array('caneta', 'lapis', 'tesoura', 'borracha','caderno', 'livro');
+
+          produtos.push('compasso', 'cartolina');
+
+          var output = document.querySelector('#output');
+
+          var msg = '';
+
+          for(var i = 0; i < produtos.length; i++ ){
+            msg += 'produto ' + (i + 1) + ': ' + produtos[i] + '<br>';
+          }
+
+          output.innerHTML = msg;
+          /*
+          output.innerHTML = produtos; // Convertendo implicitamente 
+          output.innerHTML = produtos.toString(); // Convertendo explicitamente
+          */
+        </script>
+    </body>
+</html>
