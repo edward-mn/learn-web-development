@@ -1,0 +1,47 @@
+<!doctype html>
+<!-- doctype informa ao agente de usuário a versão do htmls que deve ser renderrizada -->
+<html lang="pt-br">
+    <head>
+        <title> Logica de Programação Javascript </title>
+        <meta charset="utf-8">
+    </head>
+    <body>
+        <h2> Objeto e Propriedades do objeto </h2>
+        <div id="output"></div>
+    </body>
+    <script>
+      function newProduto(){
+        var produto = new Object();
+        var InfoProduto = '';
+
+        var nomeProduto = prompt('Digite o nome do produto');
+        produto.nome = nomeProduto; // Acessando uma propriedade
+
+        var valorProduto = parseFloat(prompt('Digite o valor do produto'));
+        produto.valor = valorProduto; // Acessando uma propriedade
+
+        var quantidadeProduto = parseInt(prompt('Digite o quantidade do produto'));
+        produto.quantidade = quantidadeProduto; // Acessando uma propriedade
+
+        produto.comprar = function(qtd){
+          if(!qtd){ // Se não passei qtd
+            qtd = 1;
+          }
+          // this nada mais é que o objeto Produto nesse caso
+          console.log('Comprou ' + this.produto);
+          console.log(this.quantidade);
+          return this.quantidade -= qtd;
+        }
+
+
+        InfoProduto += 'Nome: ' + produto.nome + '<br>';
+        InfoProduto += 'Valor: ' + produto.valor + '<br>';
+        InfoProduto += 'Quantidade: ' + produto.quantidade + '<br>';
+        InfoProduto += 'Quantidade atualizada: ' + produto.comprar();
+
+        return InfoProduto;
+      }
+
+      document.querySelector('#output').innerHTML = newProduto();
+    </script>
+</html>
