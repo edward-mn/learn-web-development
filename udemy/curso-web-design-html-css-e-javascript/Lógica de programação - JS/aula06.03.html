@@ -1,0 +1,29 @@
+<!doctype html>
+<!-- doctype informa ao agente de usuário a versão do htmls que deve ser renderrizada -->
+<html lang="pt-br">
+    <head>
+        <title> Logica de Programação Javascript </title>
+        <meta charset="utf-8">
+    </head>
+    <body>
+        <h2> Array de objetos </h2>
+        <div id="output"></div>
+    </body>
+
+    <script>
+      var produtos = [ // Sintaxe literal
+        {'nome': 'caneta', 'preco': 2},
+        {'nome': 'lapis', 'preco': 1.3},
+        {'nome': 'borracha', 'preco': 0.5},
+      ];
+
+      var msg = '';
+
+      for(var i = 0; i < produtos.length; i++){
+        msg += '<h2> Produto: ' + produtos[i].nome + '</h2>';
+        msg += '<p> Preço: ' + produtos[i].preco + '</p><hr>';
+      }
+
+      document.querySelector('#output').innerHTML = msg;
+    </script>
+</html>
