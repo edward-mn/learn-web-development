@@ -1,0 +1,53 @@
+<!doctype html>
+<!-- doctype informa ao agente de usuário a versão do htmls que deve ser renderrizada -->
+<html lang="pt-br">
+    <head>
+        <title> Logica de Programação Javascript </title>
+        <meta charset="utf-8">
+    </head>
+    <body>
+        <h2> Array de objetos </h2>
+        <div id="output"></div>
+    </body>
+    <script>
+      var usersLiteral = [ // Sintaxe literal
+        {'nome': 'Edward', 'email': 'edward.teste@teste.com'},
+        {'nome': 'Fabiola', 'email': 'fabiola.teste@teste.com'},
+        {'nome': 'Roger', 'email': 'roger.teste@teste.com'},
+      ];
+
+      var user1 = new Object();
+      user1.nome = 'Edward';
+      user1.email = 'edward.teste@teste.com';
+
+      var user2 = new Object();
+      user2.nome = 'Fabiola';
+      user2.email = 'fabiola.teste@teste.com';
+
+      var user3 = new Object();
+      user3.nome = 'Roger';
+      user3.email = 'roger.teste@teste.com';
+
+      var usersFormal = new Array(user1, user2, user3);
+
+      var msg = '';
+
+      // loop for
+      for(var i = 0; i < usersLiteral.length; i++){
+        msg += '<h2> Nome: ' + usersLiteral[i].nome + '</h2>';
+        msg += '<p> E-mail: ' + usersLiteral[i].email + '</p><hr>';
+      }
+
+      msg += '<hr>';
+
+      // loop while
+      var x = 0;
+      while(usersFormal[x]){
+        msg += '<h2> Nome: ' + usersFormal[x].nome + '</h2>';
+        msg += '<p> E-mail: ' + usersFormal[x].email + '</p><hr>';
+        x++;
+      }
+
+      document.querySelector('#output').innerHTML = msg;
+    </script>
+</html>
