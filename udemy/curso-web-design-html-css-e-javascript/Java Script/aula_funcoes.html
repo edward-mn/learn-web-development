@@ -1,0 +1,70 @@
+<!doctype html>
+<!-- doctype informa ao agente de usuário a versão do htmls que deve ser renderrizada -->
+<html lang="pt-br">
+    <head>
+        <title> Curso - Javascript </title>
+        <meta charset="utf-8">
+
+        <script>
+          function somar(n1, n2){
+            return n1 + n2;
+          }
+
+          var soma = somar(10, 20);
+          console.log('Resultado: ', soma);
+
+          somar.teste = 'propriedade da função';
+          console.log('Resultado: ', somar.teste);
+
+          var teste = function paramFunction(f){  // Função anonima 
+            f();// acessando a funcao passada por parametro 
+          }
+
+          teste(function(){ //Definindo a funcao passada por parametro
+            console.log('Funcao passada por parametro');
+          });
+
+          console.log('---------');
+
+          var x = 0;
+
+          function mostraX(){ // escopo local
+            var x = 10;
+            var y = 20; // Variaveis sem a nomenclatura var tornan-se globais
+            console.log('Mostra x local: ', x);
+            console.log('Mostra y local: ', y);
+          } 
+
+          mostraX();
+
+          console.log('Mostra x global: ', x); // escopo global
+          // console.log('Mostra y global: ', y); // escopo global`- undefined
+
+          // IIFE - (Immediately-invoked function expression) - Funções auto-executáveis
+          (function(){
+            'use strict'; // Obrigamos a declaracao correta das variaveis
+            var isValid = false;
+            console.log(isValid);
+
+            function somar(){
+              console.log(arguments); // Representa todos os valores que foram passando
+              var result = 0;
+              var x = 0;
+
+              while(arguments[x]){
+                result += arguments[x];
+                x++;
+              }
+              console.log('Result: ', result);
+            }
+
+            somar(20, 30, 10, 10);
+          })();
+          
+        </script>
+
+    </head>
+    <body>
+        <h2> Funções Literais, Classes e Callback </h2>
+    </body>
+</html>
