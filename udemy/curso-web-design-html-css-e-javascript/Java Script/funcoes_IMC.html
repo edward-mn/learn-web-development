@@ -1,0 +1,55 @@
+<!doctype html>
+<!-- doctype informa ao agente de usuário a versão do htmls que deve ser renderrizada -->
+<html lang="pt-br">
+    <head>
+        <title> Curso - Javascript </title>
+        <meta charset="utf-8">
+
+        <script>
+        // Conseguimos efetuar callbacks, pois as funçoes são tratados como objetos de primeira classe, ou seja, tudo que podemos fazer com números, bolleans, etc, conseguimos fazer com functions 
+          (function(){
+            function calcularIMC(peso, altura, callbackFunction){
+              // IMC = peso / altura^2
+              var valorIMC = peso / Math.pow(altura, 2);
+
+              if(callbackFunction && typeof callbackFunction === 'function'){
+                return callbackFunction(valorIMC);
+              }
+
+              return valorIMC;
+            }
+
+            function mostrarClassificacao(imc){
+              console.log(imc);
+
+              if(imc < 16.9){
+                imc = 'Muito abaixo do peso';
+              } else if(imc <= 18.3){
+                imc = 'Abaixo do peso';
+              } else if(imc <= 24.8){
+                imc = 'Peso normal';
+              } else if(imc <= 29.8){
+                imc = 'Acima do peso';
+              } else if(imc <= 34.8){
+                imc = 'Obesidade Grau I';
+              } else if(imc <= 39.9){
+                imc = 'Obesidade Grau II';
+              } else if(imc > 40){
+                imc = 'Obesidade Grau III';
+              } else {
+                imc = 'IMC incompátivel';
+              }
+
+              console.log(imc);
+              return imc;
+            }
+
+            mostrarClassificacao(calcularIMC(71.500, 1.87)); // Sem callback
+            calcularIMC(85.300, 1.72, mostrarClassificacao); // Com callback
+          })();
+        </script>
+    </head>
+    <body>
+        <h2> Exercício - IMC </h2>
+    </body>
+</html>
