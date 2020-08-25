@@ -1,0 +1,24 @@
+<!doctype html>
+<!-- doctype informa ao agente de usuário a versão do htmls que deve ser renderrizada -->
+<html lang="pt-br">
+    <head>
+        <title> Curso - Javascript </title>
+        <meta charset="utf-8">
+    </head>
+    <body>
+        <h2> Dom Problema - Javascript </h2>
+        <input type="text" name="name" id="txtNome">
+        <button onclick="escreve()">Só clica</button>
+        <div id="msg"></div>
+
+        <script>
+          var txtNome = document.querySelector('#txtNome');;
+
+          function escreve(){
+            var nome = txtNome.value; // Acessando o valor do input
+            document.querySelector('#msg').textContent = "Bem-vindo, " + nome;
+            txtNome.value = '';
+          }
+        </script>
+    </body>
+</html>
