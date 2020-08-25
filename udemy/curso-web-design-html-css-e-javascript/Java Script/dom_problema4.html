@@ -1,0 +1,26 @@
+<!doctype html>
+<!-- doctype informa ao agente de usuário a versão do htmls que deve ser renderrizada -->
+<html lang="pt-br">
+    <head>
+        <title> Curso - Javascript </title>
+        <meta charset="utf-8">
+    </head>
+    <body>
+        <h2> Dom Problema - Javascript </h2>
+        <input type="text" name="name" id="txtNome">
+        <script>
+          // $ - Significa var referente ao DOM
+          var $txt = document.querySelector('#txtNome');
+
+          var nome = 'Edward';
+          var sobrenome = 'Moreira do Nascimento';
+
+          // .value = Setamos e Puxamos o valor
+          document.querySelector('#txtNome').value = nome + sobrenome;
+
+          if($txt.value !== null || $txt.value !== ''){ // Verificando se o input possui info e desabilitando 
+            document.getElementById('txtNome').disabled = true;
+          }
+        </script>
+    </body>
+</html>
