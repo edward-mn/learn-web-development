@@ -1,0 +1,41 @@
+<!doctype html>
+<!-- doctype informa ao agente de usuário a versão do htmls que deve ser renderrizada -->
+<html lang="pt-br">
+    <head>
+        <title> Curso - Javascript </title>
+        <meta charset="utf-8">
+
+        <script>
+          document.getElementById('pmain').textContent = 'Alterando ID tag p via js'; // Id retorna apenas o objeto
+
+          document.getElementsByClassName('paragrafos')[0].textContent = 'Alterando Class tag via js'; // Class retorna coleção de objetos e temos que dizar qual índice queremos alterar
+
+          document.getElementsByTagName('p')[0].textContent = 'Alterando Class tag via js'; // Tag retorna coleção de objetos e temos que dizar qual índice queremos alterar
+
+          // Coleçao de objetos = Node list 
+
+          document.querySelector('#idmain h2').textContent = 'Alterando h2 dentro do idmain via js';
+
+          document.querySelector('#idmain h2').textContent = 'Alterando h2 dentro do idmain via js';
+
+          document.querySelectorAll('p')[0].textContent = 'Alterando todos os p via js';
+        </script>
+    </head>
+    <body>
+        <h1> DOM - Javascript </h1>
+
+        <main class='cmain' id='idmain'>
+          <h2>subtitulo</h2>
+          <p id='pmain'>Lorem ipsum tortor ad pretium volutpat blandit turpis, semper ante integer ad lacus ipsum nisl lorem, nisl pellentesque eleifend ut ultricies blandit.
+          </p>
+        </main>
+
+        <section class='csection' id='idsection'>
+          <h3>subtitulo</h3>
+          <p class='paragrafos'>Lorem ipsum tortor ad pretium volutpat blandit turpis, semper ante integer ad lacus ipsum nisl lorem, nisl pellentesque eleifend ut ultricies blandit.
+          </p>
+          <p class='paragrafos'>Lorem ipsum tortor ad pretium volutpat blandit turpis, semper ante integer ad lacus ipsum nisl lorem, nisl pellentesque eleifend ut ultricies blandit.
+          </p>
+        </section>
+    </body>
+</html>
