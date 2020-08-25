@@ -1,0 +1,19 @@
+<!doctype html>
+<!-- doctype informa ao agente de usuário a versão do htmls que deve ser renderrizada -->
+<html lang="pt-br">
+    <head>
+        <title> Curso - Javascript </title>
+        <meta charset="utf-8">
+    </head>
+    <body>
+        <h2> Dom Problema - Javascript </h2>
+        <div id="msg"></div>
+
+        <script>
+          (function(){
+            var nome = prompt('Qual seu nome?');
+            document.querySelector('#msg').textContent = "Bem-vindo, " + nome;
+          })()
+        </script>
+    </body>
+</html>
