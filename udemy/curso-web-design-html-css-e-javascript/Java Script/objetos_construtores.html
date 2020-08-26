@@ -1,0 +1,33 @@
+<!doctype html>
+<!-- doctype informa ao agente de usuário a versão do htmls que deve ser renderrizada -->
+<html lang="pt-br">
+    <head>
+        <title> Curso - Javascript </title>
+        <meta charset="utf-8">
+    </head>
+    <body>
+        <h2> Objetos Construtures - Javascript </h2>
+
+        <script>
+        // Criando função Construtora responsável na criação da instância para o objeto 
+          function Caneta(preco, cor){
+            // Propriedades privadas definimos como var
+            var color = cor || 'black';
+            this.preco = preco || 1;
+            this.mudarCor = function(cor){
+              if(cor !== 'red' && cor !== 'blue' && cor !== 'black'){
+                return;
+              }
+              color = cor;
+            }
+
+            this.pegaCor = function(){
+              return color;
+            }
+          }
+
+          // Criando um objeto catena já definido
+          var caneta1 = new Caneta();
+        </script>
+    </body>
+</html>
