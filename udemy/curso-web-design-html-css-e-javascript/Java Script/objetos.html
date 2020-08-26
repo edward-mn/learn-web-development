@@ -45,6 +45,30 @@
           mudaN(n);
           console.log(n);
 
+          console.log('----');
+
+          function mudarCor(cor){
+          // This referencia o mesmo objeto dependendo de quem for chamar, no caso quem chamou foi caneta1 logo this = caneta1
+            console.log(this);
+            this.cor = cor;
+          }
+
+          // Objeto literal
+          var caneta1 = {
+            cor: 'red',
+            mudarCor: mudarCor,
+          }
+
+          var caneta2 = {
+            cor: 'blue',
+            mudarCor: mudarCor,
+          }
+
+          caneta1.mudarCor('green');
+          console.log(caneta1);
+          caneta1.mudarCor('yellow');
+          console.log(caneta2);
+
         </script>
     </body>
 </html>
