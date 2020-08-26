@@ -9,11 +9,11 @@
         <h2> Objetos Construtures - Javascript </h2>
 
         <script>
-        (function(window){
+        var Caneta = (function(window){
           'use strict';
             console.log(this);
           // Criando função Construtora responsável na criação da instância para o objeto 
-          window.Caneta = function(preco, cor){
+          function myCaneta(preco, cor){
             // Informações privadas do obj
             var color = cor || 'black';
 
@@ -31,9 +31,7 @@
             }
           }
 
-          // Criando um objeto catena já definido
-          var caneta1 = new Caneta();
-          // var caneta2 = Caneta(); // use strict mostrando o problema do this referenciar o window e não Caneta
+          return myCaneta; // Retornando o objeto Caneta;
         })(window)
         </script>
     </body>
