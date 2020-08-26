@@ -1,0 +1,37 @@
+<!doctype html>
+<!-- doctype informa ao agente de usuário a versão do htmls que deve ser renderrizada -->
+<html lang="pt-br">
+    <head>
+        <title> Curso - Javascript </title>
+        <meta charset="utf-8">
+    </head>
+    <body>
+        <h1> DOM - Change P tags - Javascript </h1>
+
+        <main class='cmain' id='idmain'>
+          <h2>subtitulo</h2>
+          <p class='paragrafos'>Lorem ipsum tortor ad pretium volutpat blandit turpis, semper ante integer ad lacus ipsum nisl lorem, nisl pellentesque eleifend ut ultricies blandit.
+          </p>
+          <p class='paragrafos'>Lorem ipsum tortor ad pretium volutpat blandit turpis, semper ante integer ad lacus ipsum nisl lorem, nisl pellentesque eleifend ut ultricies blandit.
+          </p>
+          <p class='paragrafos'>Lorem ipsum tortor ad pretium volutpat blandit turpis, semper ante integer ad lacus ipsum nisl lorem, nisl pellentesque eleifend ut ultricies blandit.
+          </p>
+        </main>
+
+        <script>
+          (function(){
+            'use stric';
+            var info = "Este site foi hackeado por Fulaninho";
+            var tagPs = document.querySelectorAll('p');
+            console.log(tagPs);
+
+            var x = 0;
+            while(tagPs[x]){
+              tagPs[x].textContent = info;
+              console.log(tagPs[x].textContent);
+              x++;
+            }
+          })();
+        </script>
+    </body>
+</html>
