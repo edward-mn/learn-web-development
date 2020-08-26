@@ -15,6 +15,36 @@
           // Objeto do ambiente de hospedagem
           alert('Sem origem');
           window.alert('Com origem');
+
+          // Objeto data
+          var hoje = new Date(); // typeof(hoje) = object - porém ele possui métodos de uma classe do tipo data
+
+          // Array object
+          var x = [0];
+
+          // Objeto passado por referência e não por valor
+          function mudaArr(y){
+            var y = x; // Modificando y para ser um array e apontando para mesmo local na memória
+            y.push(2);
+            console.log('Muda X: ', y);
+            console.log(x);
+            console.log(y);
+          }
+
+          // Sempre vai resultar no mesmo valor, pois o dado primitivo de array é passado por referência e não por valor
+          mudaArr(x);
+          console.log('----');
+          
+          var n = 0;
+          function mudaN(n){
+            var n2 = n;
+            console.log(++n2);
+          }
+
+          // Mudando apenas o valor nesse caso
+          mudaN(n);
+          console.log(n);
+
         </script>
     </body>
 </html>
