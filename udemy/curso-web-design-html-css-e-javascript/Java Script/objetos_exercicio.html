@@ -1,0 +1,33 @@
+<!doctype html>
+<!-- doctype informa ao agente de usuário a versão do htmls que deve ser renderrizada -->
+<html lang="pt-br">
+    <head>
+        <title> Curso - Javascript </title>
+        <meta charset="utf-8">
+    </head>
+    <body>
+        <h2> Curso - Javascript </h2>
+
+        <script>
+          var pessoa1 = {
+            nome: 'Edward',
+            sobrenome: 'Moreira',
+          }
+
+          var pessoa2 = {
+            nome: 'Roger',
+            sobrenome: 'Lima',
+          }
+
+          var pessoa3 = {
+            nome: 'Vagner',
+            sobrenome: 'Castro',
+          }
+
+          // Acessando variável e propredade via window
+          for(var i = 1; i <= 3; i++){
+            console.log("nome: " + window["pessoa" + i].nome + " sobrenome: " + window["pessoa" + i].sobrenome);
+          }
+        </script>
+    </body>
+</html>
