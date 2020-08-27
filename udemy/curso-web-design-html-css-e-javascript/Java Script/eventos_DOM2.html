@@ -1,0 +1,35 @@
+<!doctype html>
+<!-- doctype informa ao agente de usuário a versão do htmls que deve ser renderrizada -->
+<html lang="pt-br">
+    <head>
+        <title> Curso - Javascript </title>
+        <meta charset="utf-8">
+    </head>
+    <body>
+      <div class="container">
+        <h2> Eventos - Dom 2 - Javascript </h2>
+        <!-- Nem se quer é executado -->
+        <button id="btn1" onclick="alert('Inline');">botao 1</button>
+      </div>
+
+      <script>
+        // Utilizando eventos DOM nível 2 ( removemos o on antes do método )
+        btn1.addEventListener('click', function(){
+          alert('Clicou com Dom - 2')
+        });
+
+        btn1.addEventListener('click', function(){
+          alert('Clicou com Dom - 2 - com outro evento')
+        });
+        // Maior vantagem é que podemos adicionar mais de um evento manipulando o Dom nível 2
+
+        btn1.onclick = function(){
+          alert('Olá'); // pula esse evendo pois só lé apenas 1 vez DOM nível 1
+        }
+
+        btn1.onclick = function(){
+          alert('Mundo');
+        }
+      </script>
+    </body>
+</html>
