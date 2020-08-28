@@ -1,0 +1,40 @@
+<!doctype html>
+<!-- doctype informa ao agente de usuário a versão do htmls que deve ser renderrizada -->
+<html lang="pt-br">
+    <head>
+        <title> Curso - Javascript </title>
+        <meta charset="utf-8">
+    </head>
+    <body>
+        <h2> Propagação - Javascript </h2>
+
+        <div class="container">
+          <h1>propagação...</h1>
+
+          <div id="d1" style="background-color: tomato; padding: 25px;" >
+            texto da div
+            <span style="background-color: yellow;">texto da span</span>
+          </div>
+        </div>
+
+        <script>
+          var $d1 = document.querySelector("#d1");
+          var $d1Span = document.querySelector("#d1 span");
+
+          // Efeito bubbling de propagação, ou seja, chama também os eventos dos pais
+          $d1.addEventListener('click', function(){
+            console.log('click no $d1'); // Filho 1
+          }, true); // passando terceiro parâmetro para alterar a ordem da propagação
+
+          $d1Span.addEventListener('click', function(){
+            console.log('click no $d1Span'); // Filho 2
+          }, true); // passando terceiro parâmetro para alterar a ordem da propagação
+
+          document.addEventListener('click', function(){
+            console.log('click no document'); // Pai
+          }, true); // passando terceiro parâmetro para alterar a ordem da propagação
+
+          // Colocando true, informações que a ordem de progração será inversa ao padrão
+        </script>
+    </body>
+</html>
