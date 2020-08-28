@@ -6,7 +6,7 @@
         <meta charset="utf-8">
     </head>
     <body>
-        <h2> Propagação - Javascript </h2>
+        <h2> Propagação - Evento Objeto - Javascript </h2>
 
         <div class="container">
           <h1>propagação...</h1>
@@ -22,16 +22,24 @@
           var $d1Span = document.querySelector("#d1 span");
 
           // Efeito bubbling de propagação, ou seja, chama também os eventos dos pais
-          $d1.addEventListener('click', function(){
+          $d1.addEventListener('click', function(evt){
             console.log('click no $d1'); // Filho 1
+            evt.stopPropagation(); // Para de propagar o próximo evento dependendo da ordem
           }, true); // passando terceiro parâmetro para alterar a ordem da propagação
 
           $d1Span.addEventListener('click', function(){
             console.log('click no $d1Span'); // Filho 2
           }, true); // passando terceiro parâmetro para alterar a ordem da propagação
 
-          document.addEventListener('click', function(){
+          // Passando um parâmetro dentro da função ele se torna um objeto evento
+          document.addEventListener('click', function(evt){
             console.log('click no document'); // Pai
+
+            // Assim conseguimos visualizar todos as propriedades presentes nele
+            console.log(evt); 
+            console.log(evt.currentTarget); // Elemento a qual o evento foi atrelado (próprio document)
+            console.log(evt.target);  // Quem desparou o evento
+            console.log(this); // Basicamente é o evento/objeto atual, ou seja, quase igual ao evt.currentTarget
           }, true); // passando terceiro parâmetro para alterar a ordem da propagação
 
           // Colocando true, informações que a ordem de progração será inversa ao padrão
