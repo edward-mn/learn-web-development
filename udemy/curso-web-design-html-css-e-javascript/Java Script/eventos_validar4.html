@@ -7,15 +7,22 @@
     <body>
         <h2> Validando Login - textarea - Javascript </h2>
 
-        <textarea name="msg" id="msg" cols='50' rows="10"></textarea>
-        <br>
-        Restam <span id="resta"></span> caracteres
+        <textarea name="msg" id="msg" cols='50' rows="10" maxLength="100"></textarea>
+
+        <!-- Aplicando o método Progressive Enhacement -->
+        <div style="display: none;" id="restaContainer">
+          Restam <span id="resta"></span> caracteres
+        </div>
         <script>
           (function(){
             'user strict';
-            const maxima = 100;
             var $txtMsg = document.getElementById('msg');
+            var $restaContainer = document.getElementById('restaContainer');
             var $resta = document.getElementById('resta');
+            const maxima = $txtMsg.maxLength;
+
+            // Alterando CSS via JS - display inline
+            $restaContainer.style.display = 'block';
 
             $resta.textContent = maxima;
 
