@@ -1,0 +1,34 @@
+<!doctype html>
+<html lang="pt-br">
+    <head>
+        <title> Curso - Javascript </title>
+        <meta charset="utf-8">
+    </head>
+    <body>
+        <h2> Validando Login - textarea - Javascript </h2>
+
+        <textarea name="msg" id="msg" cols='50' rows="10"></textarea>
+        <br>
+        Restam <span id="resta"></span> caracteres
+        <script>
+          (function(){
+            'user strict';
+            const maxima = 100;
+            var $txtMsg = document.getElementById('msg');
+            var $resta = document.getElementById('resta');
+
+            $resta.textContent = maxima;
+
+            $txtMsg.addEventListener('input', checkLength); // Ideal pois pega qualquer inserção de dados
+
+            // Ideal pois pega qualquer inserção de dados
+            function checkLength(e){
+              // console.log('input value: ', this.value);
+              var numeroLetrasDigitadas = this.value.length; // Acessando o tamanho do que foi digitado
+              $resta.textContent = maxima - numeroLetrasDigitadas;
+            }
+
+          })()
+        </script>
+    </body>
+</html>
