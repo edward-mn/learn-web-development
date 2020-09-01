@@ -1,0 +1,37 @@
+<!doctype html>
+<html lang="pt-br">
+    <head>
+        <title> Curso - Javascript </title>
+        <meta charset="utf-8">
+
+    </head>
+    <body>
+        <h2> Eventos - Validar Checkbox - Javascript </h2>
+
+        <form action="#">
+          <textarea cols="50" rows="10" readonly>Contrato de serviços prestados.
+          </textarea>
+          <br>
+          <label>
+            <input type="checkbox" id="chk" checked> Li e aceito os termos desse contrato
+          </label>
+          <br>
+          <input type="submit" value="Continuar" id="btn">
+        </form>
+
+        <script>
+          var $btn = document.getElementById("btn");
+          var $chk = document.getElementById("chk");
+
+          toggleBtn();
+
+          $chk.addEventListener('change', function(){
+            toggleBtn();
+          })
+
+          function toggleBtn(){
+            return $btn.disabled = !$chk.checked;
+          }
+        </script>
+    </body>
+</html>
