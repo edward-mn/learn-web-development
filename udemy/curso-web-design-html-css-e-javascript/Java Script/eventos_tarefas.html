@@ -1,0 +1,34 @@
+<!doctype html>
+<html lang="pt-br">
+    <head>
+        <title> Curso - Javascript </title>
+        <meta charset="utf-8">
+    </head>
+    <body>
+        <h2> Curso - Tarefas - Javascript </h2>
+        <input type="text" id="txtTask">
+        <button id="btn"> Cadastrar tarefas </button>
+        <ul>
+          <li>Estudar Javascript - DOM</li>
+          <li>Estudar Eventos em Javascript</li>
+          <li>Jogar video-game</li>
+        </ul>
+
+        <script>
+          (function(){
+            'use strict';
+            var $ul = document.querySelector('ul');
+            var $txtTask = document.querySelector('#txtTask');
+            var $btn = document.querySelector('#btn');
+
+            $btn.addEventListener('click', function(){
+              var task = '<li>' + $txtTask.value + '</li>';
+              $ul.innerHTML += task; // Devemos colocar += se não só será apresentado o último valor da li
+
+              $txtTask.value = '';
+              $txtTask.focus();
+            });
+          })();
+        </script>
+    </body>
+</html>
