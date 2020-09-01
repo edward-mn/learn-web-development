@@ -1,0 +1,68 @@
+<!doctype html>
+<html lang="pt-br">
+    <head>
+        <title> Curso - Javascript </title>
+        <meta charset="utf-8">
+
+        <style>
+          .done{
+            text-decoration: line-through;
+            color: #555;
+          }
+
+          li{
+            cursor: pointer;
+          }
+        </style>
+    </head>
+    <body>
+        <h2> Curso - Tarefas - Javascript </h2>
+        <input type="text" id="txtTask">
+        <button id="btn"> Cadastrar tarefas </button>
+        <ul>
+          <li>Estudar Javascript - DOM</li>
+          <li>Estudar Eventos em Javascript</li>
+          <li>Jogar video-game</li>
+        </ul>
+
+        <script>
+          (function(){
+            'use strict';
+            var $ul = document.querySelector('ul');
+            var $lis = $ul.querySelectorAll('li');
+            var $txtTask = document.querySelector('#txtTask');
+            var $btn = document.querySelector('#btn');
+            const keyEnterValue = 13;
+
+            $btn.addEventListener('click', addTask);
+            $txtTask.addEventListener('keyup', function(e){ // Validando se o usuário apertou a tecla enter
+              if(e.keyCode === keyEnterValue){
+                addTask();
+              }
+            });
+
+            $ul.addEventListener('click', function(e){
+            // Delegando Eventos - Verificando qual elemento foi clicado e Para performizar a aplicação
+              if(e.target.nodeName === 'LI'){ //nodeName retorna o nome do elemento, no caso a tag
+                toogleDone(e.target); // Passando a LI por parâmetro
+              }
+            })
+
+            function toogleDone(li){
+              li.classList.toggle('done'); // Adicionando a classe na LI passada por parâmetro
+            };
+
+            function addTask(){
+              var li = document.createElement('li'); 
+              var text = document.createTextNode($txtTask.value); 
+
+              li.appendChild(text);
+              $ul.appendChild(li);
+
+              $txtTask.value = '';
+              $txtTask.focus();
+            };
+          })();
+        </script>
+    </body>
+</html>
