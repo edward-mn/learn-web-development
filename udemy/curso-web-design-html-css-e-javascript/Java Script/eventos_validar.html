@@ -1,0 +1,36 @@
+<!doctype html>
+<html lang="pt-br">
+    <head>
+        <title> Curso - Javascript </title>
+        <meta charset="utf-8">
+    </head>
+    <body>
+        <h2> Validando Login - Javascript </h2>
+
+        <form action="#">
+          <label for="txtUser">Usuário:</label>
+          <input type="text" id="txtUser" name="user"><br>
+          <label for="txtPass">Senha</label>
+          <input type="password" id='txtPass' name='pass'><br>
+          <button type="button" id="btn">Logar</button>
+        </form>
+
+        <script>
+          (function(){
+            'user strict';
+            var $txtUser = document.getElementById('txtUser');
+            var $txtPass = document.getElementById('txtPass');
+            var $btn = document.getElementById('btn');
+
+            $btn.addEventListener('click', function(){
+              // alert('clicou no botão');
+              // Utilizamos sempre a propriedade value para validar valores pois $txtUser sempre será um objeto, ou seja, != de vázio
+              if(!$txtUser.value || !$txtPass.value){ // Não vazio
+              // Não há a necessidade para de validar $txtPass.value === "", pois por padrão string vazia já é false
+                alert('Preencha todos os campos');
+              }
+            });
+          })()
+        </script>
+    </body>
+</html>
