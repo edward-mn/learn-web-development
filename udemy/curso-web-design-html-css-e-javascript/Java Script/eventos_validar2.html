@@ -1,0 +1,36 @@
+<!doctype html>
+<html lang="pt-br">
+    <head>
+        <title> Curso - Javascript </title>
+        <meta charset="utf-8">
+    </head>
+    <body>
+        <h2> Validando Login - Submit - Javascript </h2>
+
+        <!-- method = 'POST' serve para não deixamos visível as informações digitada na url -->
+        <form action="#" method="POST">
+          <label for="txtUser">Usuário:</label>
+          <input type="text" id="txtUser" name="user"><br>
+          <label for="txtPass">Senha</label>
+          <input type="password" id='txtPass' name='pass'><br>
+          <button type="submit" id="btn">Logar</button>
+        </form>
+
+        <script>
+          (function(){
+            'user strict';
+            var $form = document.querySelector('form');
+            var $txtUser = document.getElementById('txtUser');
+            var $txtPass = document.getElementById('txtPass');
+
+            // Deixando o envio do formulário e não no click do botão
+            $form.addEventListener('submit', function(e){
+              if(!$txtUser.value || !$txtPass.value){ // Não vazio
+                alert('Preencha todos os campos');
+                e.preventDefault(); // Previne o comportamento padrão, ou seja, não permite o envio do formulário seja enviado
+              }
+            });
+          })()
+        </script>
+    </body>
+</html>
