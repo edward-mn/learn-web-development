@@ -1,0 +1,52 @@
+<!doctype html>
+<html lang="pt-br">
+    <head>
+        <title> Curso - Javascript </title>
+        <meta charset="utf-8">
+
+    </head>
+    <body>
+        <h2> Delegação de Eventos - Javascript </h2>
+
+        <div class="container">
+          <!-- h1{Delegação de Eventos}+ul>li{lista $}*3 -->
+          <h1>Delegação de Eventos</h1>
+          <ul>
+            <li>lista 1</li>
+            <li>lista 2</li>
+            <li>lista 3</li>
+          </ul>
+        </div>
+
+        <script>  
+          var $ul = document.querySelector('ul');
+          var $lis = document.querySelectorAll('li');
+
+          // Pegando todas Lis
+          var x = 0;
+          while($lis[x]){
+            $lis[x].addEventListener('click', function(e){
+              e.stopImmediatePropagation();
+              console.log('clicou na li');
+            });
+            x++;
+          };
+
+          // Acessando as Lis através da UL
+          $ul.addEventListener('click', function(e){
+            e.stopPropagation();
+            console.log(this); // This e CurrentTarget = Objeto a qual o evento está vinculado
+            console.log(e.currentTarget); // This e CurrentTarget = Objeto a qual o evento está vinculado
+            console.log(e.target); // Objeto a qual disparou o evento
+
+            //nodeName = nome da tag
+            console.log(e.target.nodeName);
+
+            if(e.target.nodeName === 'LI'){
+              alert('Clicou na LI');
+            }
+          });
+
+        </script>
+    </body>
+</html>
