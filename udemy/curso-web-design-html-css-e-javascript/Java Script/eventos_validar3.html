@@ -1,0 +1,42 @@
+<!doctype html>
+<html lang="pt-br">
+    <head>
+        <title> Curso - Javascript </title>
+        <meta charset="utf-8">
+    </head>
+    <body>
+        <h2> Validando Login - textarea - Javascript </h2>
+
+        <textarea name="msg" id="msg" cols='50' rows="10"></textarea>
+        <script>
+          (function(){
+            'user strict';
+            var $txtMsg = document.getElementById('msg');
+
+            $txtMsg.addEventListener('keypress', keypress); // Funciona quando inserimos alguma Letra, Número, Caracterer Especial não entra nesse evento
+            $txtMsg.addEventListener('keyup', keyup); 
+            $txtMsg.addEventListener('keydown', keydown);
+            $txtMsg.addEventListener('input', input); // Ideal pois pega qualquer inserção de dados
+
+            // Objeto a qual foi atrelado ao evento, nesse caso o próprio textarea
+            function keypress(e){
+              console.log('Keypress value: ', this.value);  
+            };
+
+            function keyup(e){
+              console.log('Keyup value: ', this.value);
+            };
+
+            function keydown(e){
+              console.log('keydown value: ', this.value);
+            };
+
+            // Ideal pois pega qualquer inserção de dados
+            function input(e){
+              console.log('input value: ', this.value);
+            }
+
+          })()
+        </script>
+    </body>
+</html>
