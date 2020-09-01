@@ -1,0 +1,73 @@
+<!doctype html>
+<html lang="pt-br">
+    <head>
+        <title> Curso - Javascript </title>
+        <meta charset="utf-8">
+
+        <style>
+          .done{
+            text-decoration: line-through;
+            color: #555;
+          }
+
+          li{
+            cursor: pointer;
+          }
+        </style>
+    </head>
+    <body>
+        <h2> Curso - Tarefas - Javascript </h2>
+        <input type="text" id="txtTask">
+        <button id="btn"> Cadastrar tarefas </button>
+        <ul>
+          <li>Estudar Javascript - DOM</li>
+          <li>Estudar Eventos em Javascript</li>
+          <li>Jogar video-game</li>
+        </ul>
+
+        <script>
+          (function(){
+            'use strict';
+            var $ul = document.querySelector('ul');
+            var $lis = $ul.querySelectorAll('li');
+            var $txtTask = document.querySelector('#txtTask');
+            var $btn = document.querySelector('#btn');
+            const keyEnterValue = 13;
+
+            $btn.addEventListener('click', addTask);
+            $txtTask.addEventListener('keyup', function(e){ // Validando se o usuário apertou a tecla enter
+              if(e.keyCode === keyEnterValue){
+                addTask();
+              }
+            });
+
+            for(var i = 0; i < $lis.length; i++){
+              addEvent($lis[i]);
+            };
+
+            function toogleDone(){
+              this.classList.toggle('done');
+            }
+
+            function addTask(){
+              var li = document.createElement('li'); // Criando um novo documento (Ainda está na memória)
+              var text = document.createTextNode($txtTask.value); // Consegue criar um texto temporário para inserirmo no DOM
+
+              li.appendChild(text); // Acresentando o texto dentro da li
+              $ul.appendChild(li);
+
+              $txtTask.value = '';
+              $txtTask.focus();
+
+              // Criamos essa função para que ela refaça o loop
+              addEvent(li);
+            };
+
+            function addEvent(li){
+              li.addEventListener('click', toogleDone);
+            }
+
+          })();
+        </script>
+    </body>
+</html>
