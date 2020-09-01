@@ -21,18 +21,25 @@
             var $resta = document.getElementById('resta');
             const maxima = $txtMsg.maxLength;
 
-            // Alterando CSS via JS - display inline
-            $restaContainer.style.display = 'block';
-
-            $resta.textContent = maxima;
-
+            mostraContainerResta();
+            mostraCaracteresRestantes(maxima);
             $txtMsg.addEventListener('input', checkLength); // Ideal pois pega qualquer inserção de dados
 
             // Ideal pois pega qualquer inserção de dados
             function checkLength(e){
               // console.log('input value: ', this.value);
               var numeroLetrasDigitadas = this.value.length; // Acessando o tamanho do que foi digitado
-              $resta.textContent = maxima - numeroLetrasDigitadas;
+              mostraCaracteresRestantes(maxima - numeroLetrasDigitadas);
+            }
+
+            function mostraCaracteresRestantes(numero){
+              // typeof(numero) = number;
+              $resta.textContent = numero;
+            }
+
+            function mostraContainerResta(){
+              // Alterando CSS via JS - display inline
+              $restaContainer.style.display = 'block';
             }
 
           })()
