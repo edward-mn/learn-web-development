@@ -1,0 +1,27 @@
+<!doctype html>
+<html lang="pt-br">
+    <head>
+        <title> Curso - Javascript </title>
+        <meta charset="utf-8">
+    </head>
+    <body>
+        <h2> Strings - Javascript </h2>
+
+        <script>
+          var teste = "minha string linda";
+
+          console.log(teste.length); // Retorna número de caracteres
+          console.log(teste.replace('i', 'I')); // Primeiro parâmetro letra que será trocada, segundo parâmetro string que será aplicada (Somente no primeiro) = minha -> mInha
+          console.log(teste.replace(/i/g, 'I')); // Utilizando regex para alterar todos i para I
+          console.log(teste.indexOf(' ')); // Irá retornar a posição do primeiro caracter buscada, no caso 5 - Caso não exista = -1
+          console.log(teste.lastIndexOf(' ')); // Irá retornar a posição do ultimo caracter buscada, no caso 5
+          console.log(teste.slice(5)); // corta a string = " string linda"
+          console.log(teste.slice(5, 10)); // Pega do quinto até o 9 = " stri"
+          console.log(teste.substring(5)); // Mesmo comportamento do slice
+          console.log(teste.substring(10, 5)) // Consegue fazer a inversão automática, já que o slice não consegue
+          console.log(teste.split(" ")); // Retorna um array levando em consideração o valor passada por parâmetro = ["minha", "string", "linda"]
+          console.log(teste.toUpperCase());
+          console.log(teste.toLowerCase());
+        </script>
+    </body>
+</html>
