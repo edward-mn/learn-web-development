@@ -8,3 +8,16 @@ function calcularMedia(){
   }
   return total / qtd;
 };
+
+function sortear(numero){
+  if(isNaN(numero)){
+    alert("Digite número válidos");
+  }
+
+  var _numero = numero || 1;
+  var numeroSorteado = Math.random();
+  
+  numeroSorteado = Math.floor(numeroSorteado * _numero);
+
+  return numeroSorteado
+}
