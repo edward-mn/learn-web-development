@@ -1,0 +1,29 @@
+<!doctype html>
+<!-- doctype informa ao agente de usuário a versão do htmls que deve ser renderrizada -->
+<html lang="pt-br">
+    <head>
+        <title> Curso - Javascript </title>
+        <meta charset="utf-8">
+
+        <script>
+          // Sempre iremos evitar criar var no escopo global, para isso fazemos IIFE
+
+          (function(){
+            window.addEventListener('load', init);
+
+            function init(){
+              var media1 = calcularMedia(2, 3, 5);
+              console.log('Media1: ', media1.toFixed(2));
+              var media2 = calcularMedia(2, 0, 1, 10, 9);
+              console.log('Media2: ', media2.toFixed(2));
+            // Poderia aplicar direto no beluga.js, porém prefiri apelicar somente aqui
+            };
+          })();
+        </script>
+
+    </head>
+    <body>
+        <h2> Exercício - 2 Casas - Calcular Média </h2>
+        <script src="DOM_Bootstrap/beluga.js";></script>
+    </body>
+</html>
