@@ -1,0 +1,28 @@
+<!doctype html>
+<html lang="pt-br">
+    <head>
+        <title> Curso - Javascript </title>
+        <meta charset="utf-8">
+    </head>
+    <body>
+        <h2> Numbers - Javascript </h2>
+        
+        <script>
+          var n = new Number('10');
+          console.log(n);
+          console.log("Max value: ", Number.MAX_VALUE);
+          console.log("Min value: ", Number.MIN_VALUE);
+          console.log(" 2 * 10 * 10 * 10 =", 2e+3);
+          n = 12345.6789;
+          console.log(n.toFixed(2)) // Vai pegar trazer o número até 2 números após a virgula
+          console.log(n.toFixed(10)) // Caso for maior será acrescentado 0
+          n = 12.345;
+          console.log(n.toPrecision(2)); // Obriga o número ter apenas os 2 primeiros digitos
+          console.log(n.toPrecision(12)); // Obriga o número ter 12 digitos caso não possuir adiciona 0
+          console.log(n.toString(2)); // Trabalhando com número binários, ou seja, transformando o número declarado em binário
+          console.log(n.toString(16)); // Trabalhando com número hexadecimal
+          console.log(n.toExponential()); // Convertendo número para notação científica
+          console.log(n.toExponential(2)); // Parâmetro opcional, elevando a 2 o n
+        </script>
+    </body>
+</html>
