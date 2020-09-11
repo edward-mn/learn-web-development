@@ -1,0 +1,27 @@
+<!doctype html>
+<html>
+    <head>
+        <title>Curso Javascript Completo 2018</title>
+        <meta charset="utf-8">
+
+        <script src="../DOM_Bootstrap/beluga.js"></script>
+        <script>
+          (function(){
+              window.addEventListener('load', init);
+
+              function init(){
+                var img = sortear(4);
+
+                document.querySelector('body').style.backgroundImage = 'url(images/' + img + '.jpg)';
+                /*
+                css - background-image
+                js - backgroundImage - Sempre que houver hífen utilizamos padrão camelCase.
+                */
+              };
+          })();
+        </script>
+    </head>
+    <body>
+        <h1>Curso - Imagens Aleatórias - Javascript</h1> 
+    </body>
+</html>
