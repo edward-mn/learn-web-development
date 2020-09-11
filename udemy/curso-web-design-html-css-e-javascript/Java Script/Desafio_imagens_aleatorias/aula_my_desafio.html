@@ -1,0 +1,41 @@
+<!doctype html>
+<html>
+    <head>
+        <title>Curso Javascript Completo 2018</title>
+        <meta charset="utf-8">
+
+        <style>
+          img{
+            display: block;
+          }
+        </style>
+        
+        <script src="../DOM_Bootstrap/beluga.js"></script>
+        <script>
+          (function(){
+              window.addEventListener('load', init);
+
+              function init(){
+                var $img = document.getElementById('images');
+
+                var $btn = document.getElementById('btn');
+                $btn.addEventListener('click', trocarImg);
+
+                function trocarImg(){
+                  const path = 'images/';
+                  const qtdImg = 4;
+                  var images = path + sortear(qtdImg) + '.jpg';
+                  
+                  $img.setAttribute('src', images);
+                };
+              }
+          })();
+        </script>
+    </head>
+    <body>
+        <h1>Curso - Imagens Aleatórias - Javascript</h1> 
+        
+        <button id="btn"> Sortear </button>
+        <img id="images" src="images/1.jpg">
+    </body>
+</html>
