@@ -1,0 +1,61 @@
+<!doctype html>
+<html lang="pt-br">
+    <head>
+        <title> Curso - Javascript </title>
+        <meta charset="utf-8">
+    </head>
+    <body>
+        <h2> Arrays- Javascript </h2>
+
+        <script>
+          var arr = ['aa', 20, 2, 3, 4, 5, 'teste', 20 , '30'];
+          console.log(arr);
+
+          // every retorna um boolean
+          var sohNumeros = arr.every( function(elemento, indice, obj){
+          /*  console.log(elemento); // Elemento em questão - ÚNICO OBRIGATÓRIO
+            console.log(indice); // Indice em questão
+            console.log(obj); // Obj ou seja proprío array
+          */
+            return typeof(elemento) === 'number';
+          // Caso algum não for número o resultado será false
+          });
+          console.log(sohNumeros);
+
+          // Retorna um boolean
+          var aoMenosUmNumero = arr.some( function(elemento){
+            return typeof(elemento) === 'string';
+          // Caso pelo menos um for string o resultado é true
+          });
+          console.log(aoMenosUmNumero);
+
+          // Retorna um novo array levando em conta o filtro
+          var numeros = arr.filter( function(elemento, i , arr){
+            // console.log(arr); - Array que será filtrado
+            return typeof elemento === 'number';
+          })
+          console.log(numeros);
+
+          // Executando uma função a cada interação
+          arr.forEach( function(elemento, indice, array){
+            console.log('elemento = ', elemento, ' | i = ', indice, ' | i - ', arr.toString());
+          });
+
+          // Retorna a posição deste item dentro do Array
+          var posicaoStr1 = arr.indexOf('teste');
+          console.log('posicao ', posicaoStr1);
+
+          // Começando a procurar apartir do indece 6, quando não encontrar retorna -1
+          var posicaoStr2 = arr.indexOf('teste', 6);
+          console.log('posicao ', posicaoStr2);
+
+          // Retorna o último indece que possui valor 20
+          var ultimo20 = arr.lastIndexOf(20);
+          console.log('Ultimo ', ultimo20);
+
+          // // Retorna o último indece que possui valor 20 apartir do indece 5, quando não encontrar retorna -1
+          var ultimo20_ = arr.lastIndexOf(20, 5);
+          console.log('Ultimo ', ultimo20_);
+        </script>
+    </body>
+</html>
