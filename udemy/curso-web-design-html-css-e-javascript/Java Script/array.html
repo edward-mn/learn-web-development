@@ -71,6 +71,24 @@
           // join se comporta igual toString(), porém conseguimos alterar o separador dos itens = 1 --- 2 --- 3 ....
           var str = arr2.join(' --- ');
           console.log(str);
+
+          // Push acrescenta elementos no final do array
+          arr.push('novo', 'item'); // método destrutor - pois ele altera o estado do objeto inicial
+          console.log(arr);
+
+          // Pop retorna o último item do array
+          var ultimoItem = arr.pop(); // método destrutor
+          console.log('pop:', ultimoItem);
+          console.log(arr);
+
+          // Pop retorna o primeiro item do array
+          var primeiroItem = arr.shift(); // método destrutor
+          console.log('shift:', primeiroItem);
+          console.log(arr);
+
+          // Mesmo funcionamento do Push porém adiciona valores no inicio
+          arr.unshift(true, false, 'unshift');
+          console.log(arr);
         </script>
     </body>
 </html>
