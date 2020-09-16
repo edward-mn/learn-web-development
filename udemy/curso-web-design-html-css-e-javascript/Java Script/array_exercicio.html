@@ -1,0 +1,46 @@
+<!doctype html>
+<html lang="pt-br">
+    <head>
+        <title> Curso - Javascript </title>
+        <meta charset="utf-8">
+
+        <script>
+          (function(){ // Adicionando um evento que faz com que o script só seja executado após ser carregado o html
+            window.addEventListener('load', init);
+
+            function init(){
+              const reticencias = '...'
+              var $paragrafos = document.querySelectorAll('p');
+              // console.log($paragrafos); = [p, p, p, p]
+
+              for(i = 0; i <= $paragrafos.length; i++){
+                $paragrafos[i].innerHTML = formataParagrafos($paragrafos[i].textContent);
+              };
+
+              function formataParagrafos(texto){
+                var arr = texto.split(' '); // Removendo todos os espaços em branco e devolvendo um array
+                // console.log(arr);
+
+                if(arr.length > 10){ // Verificando o tamanho do array
+                // console.log('1: ', arr.slice(0, 10) + '...'); // Corta o array na posição 0 a 10 e inseri ' , ' entre cada elemento
+                  return arr.slice(0, 10).join(' ') + '...'; // Cortando o array da) // Corta o array na posição 0 a 10 e inseri ' ' entre cada elemento
+                };
+                
+                return texto;
+              }
+            }
+          })();
+        </script>
+    </head>
+    <body>
+        <h2> String - Limitar 200 e Adicionar ... [array] - Javascript </h2>
+
+        <p> Lorem ipsum dolor sit amet, <b>consectetur adipiscing elit. Proin eu felis sit amet lacus maximus pulvinar. Fusce finibus turpis in est efficitur, vitae semper nibh interdum. Aliquam ut leo hendrerit, vulputate nunc ut, suscipit arcu. Fusce in nisi imperdiet, gravida arcu et, lobortis augue. Nullam sed nunc egestas, congue risus non, feugiat tortor. Integer faucibus,</b> felis tempor euismod tempor, tellus arcu tincidunt sem, eu pellentesque felis dolor nec diam. Quisque egestas eros eget cursus tempor. Aenean feugiat nunc suscipit, facilisis quam vel, tempus dolor. Praesent sit amet nulla dui. Nunc vitae vulputate sapien. </p>
+
+        <p> Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin eu felis sit amet lacus maximus pulvinar. Fusce finibus turpis in est efficitur, vitae semper nibh interdum.   Aliquam ut leo hendrerit, vulputate nunc ut, suscipit arcu. Fusce in nisi imperdiet, gravida arcu et, lobortis augue. Nullam sed nunc egestas, congue risus non, feugiat  tortor. Integer faucibus, felis tempor euismod tempor, tellus arcu tincidunt sem, eu pellentesque felis dolor nec diam. Quisque egestas eros eget cursus tempor. Aenean feugiat  nunc suscipit, facilisis quam vel, tempus dolor. Praesent sit amet nulla dui. Nunc vitae vulputate sapien. </p>
+
+        <p> Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin eu felis sit amet lacus maximus pulvinar. Fusce finibus turpis in est efficitur, vitae semper nibh interdum.   Aliquam ut leo hendrerit, vulputate nunc ut, suscipit arcu. Fusce in nisi imperdiet, gravida arcu et, lobortis augue. Nullam sed nunc egestas, congue risus non, feugiat  tortor. Integer faucibus, felis tempor euismod tempor, tellus arcu tincidunt sem, eu pellentesque felis dolor nec diam. Quisque egestas eros eget cursus tempor. Aenean feugiat  nunc suscipit, facilisis quam vel, tempus dolor. Praesent sit amet nulla dui. Nunc vitae vulputate sapien. </p>
+
+        <p> Lorem ipsum dolor sit amet </p>
+    </body>
+</html>
