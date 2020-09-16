@@ -106,6 +106,17 @@
 
           // Revertendo o array
           console.log(numeros.reverse()); // Também é um método destrutor
+
+          // Slice retorna um pedaço de um array, ou melhor, subarray
+          console.log(arr2.slice(2)); // Retorna valores apartir do 2
+          console.log(arr2.slice(2, 5)) // Retorna valores apartir do 2 até o 5 (5 é incluido)
+
+          // Transformar array (Adiciona, Remove e Cria);
+          console.log(arr2);
+          // splice(indice que será modificado, quantidade de itens que será removido, valores que serão inseridos)
+          var arr3 = arr2.splice(2, 3, 'metodo', 'splite', 'adicionado');
+          console.log('Array 2: ', arr2); // Mostrando array modificado com splice
+          console.log('Array 3: ', arr3); //Retorna os itens removidos
         </script>
     </body>
 </html>
