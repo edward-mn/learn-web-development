@@ -1,0 +1,28 @@
+<!doctype html>
+<html lang="pt-br">
+    <head>
+        <title> Curso - Javascript </title>
+        <meta charset="utf-8">
+
+        <script src="DOM_Bootstrap/beluga.js"></script>
+    </head>
+    <body>
+        <h2> Array - Arrow functions- Javascript </h2>
+
+        <script>
+        // Novo modo de declaramos funçãos mais sucinta
+
+          var numeros = [1, 2 ,3 , 4];
+
+          // Normal function
+          var temTresNormal = numeros.some( function(numero){
+            return numero === 3;
+          });
+          console.log('Normal: ', temTresNormal);
+
+          // Arrow function
+          var temTresArrow = numeros.some( numero => numero === 3); // Declarando uma arrow function (Nesse caso podemos declarar toda inline pois apenas fazemos uma verificação, ou seja, a função possui uma única linha, se possuisse mais devemos fazer o trabamento normal com { } e return)
+          console.log('Arrow: ', temTresArrow); 
+        </script>
+    </body>
+</html>
