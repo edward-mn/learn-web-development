@@ -89,6 +89,23 @@
           // Mesmo funcionamento do Push porém adiciona valores no inicio
           arr.unshift(true, false, 'unshift');
           console.log(arr);
+
+          // Reduce geralmente utilizamos para reduzir o array fazendo determinada ação - No caso abaixo será soma
+          var SomaDeArr = numeros.reduce( function(anterior, atual, indice){
+            console.log('Anterior: ', anterior, 'Atual: ', atual, 'Indice: ', indice);
+            return anterior + atual;
+          }, 10); // Este parâmetro irá somar adicionar 10 no array, ou seja, resultado vai ser soma + 10 
+          console.log(numeros);
+          console.log(SomaDeArr);
+
+          // Concatenando o valor, porém começa da direita pra esquerda
+          var testeReduce = ['1', '2', '3'].reduceRight( function(indice, atual){
+            return indice + atual; 
+          });
+          console.log(testeReduce);
+
+          // Revertendo o array
+          console.log(numeros.reverse()); // Também é um método destrutor
         </script>
     </body>
 </html>
