@@ -56,6 +56,21 @@
           // // Retorna o último indece que possui valor 20 apartir do indece 5, quando não encontrar retorna -1
           var ultimo20_ = arr.lastIndexOf(20, 5);
           console.log('Ultimo ', ultimo20_);
+
+          // Map retorna um array e faz uma alteração cada um dos elementos
+          console.log(numeros);
+          mapNumbers = numeros.map( function(elemento, indice, array){
+            return elemento * indice;
+          });
+          console.log(mapNumbers);
+
+          // Concatenando array e adicionando valores neles
+          var arr2 = numeros.concat(mapNumbers, 'ola', 'array2', 23, 2.5);
+          console.log(arr2);
+
+          // join se comporta igual toString(), porém conseguimos alterar o separador dos itens = 1 --- 2 --- 3 ....
+          var str = arr2.join(' --- ');
+          console.log(str);
         </script>
     </body>
 </html>
