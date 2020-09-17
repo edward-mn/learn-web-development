@@ -1,0 +1,40 @@
+<!doctype html>
+<html lang="pt-br">
+    <head>
+        <title> Curso - Javascript </title>
+        <meta charset="utf-8">
+    </head>
+    <body>
+        <h2> Curso - Data Métodos- Javascript </h2>
+        <script>
+        /* Importante lembrar que os métodos utilizados vão pegar as informação de quando o objeto foi instanciado */
+          var minhaData = new Date(); // Sempre teremos que instanciar um objeto do tipo data para utilizar seus métodos
+          console.log(minhaData); // Thu Sep 17 2020 14:56:35 GMT-0300 (Horário Padrão de Brasília) - Data e localidade atual
+          console.log('Dia semana: ', minhaData.getDay()); // Retorna o dia da semana, porém começa em 0, ou seja, 0 = Domingo.
+          console.log('Dia mês: ', minhaData.getDate()); // Retorna o dia do mês.
+          console.log('Mês: ', minhaData.getMonth()); // Retorna o mês do ano, porém também começa em 0, ou seja, 0 = Janeiro.
+          console.log('Ano após 1900: ', minhaData.getYear()); // Retorna o ano após 1900, ou seja, 1900 + resultado do console = Ano atual.
+          console.log('Ano: ', minhaData.getFullYear()); // Retorna o ano que foi instanciado o objt atual.
+          console.log('Hora: ', minhaData.getHours()); // Retorna hora
+          console.log('Minutos: ', minhaData.getMinutes()); // Retorna minutos
+          console.log('Segundos: ', minhaData.getSeconds()); // Retorna segundos
+          console.log('Time stamp: ', minhaData.getTime()); // Retorna os milesegundos passados de 1 jan de 1970
+          console.log('Time stamp: ', +new Date()); // Retorna os milesegundos passados de 1970 - pode dar diferença no de cima pois são objetos criados em momentos diferentes
+          minhaData.setTime(0);
+          console.log('Alterando Time: ', minhaData); // Retorna o primeiro dia - Wed Dec 31 1969 21:00:00 GMT-0300 (Horário Padrão de Brasília)
+          minhaData.setDate(2);
+          console.log('Alterando Data: ', minhaData); // Retorna o dia do Mês alterado - Tue Dec 02 1969 21:00:00 GMT-0300 (Horário Padrão de Brasília)
+          minhaData.setMonth(1);
+          console.log('Alterando mês: ', minhaData); // Retorna o mês alterado - Tue Feb 02 1970 21:00:00 GMT-0300 (Horário Padrão de Brasília)
+          minhaData.setYear(1970);
+          console.log('Alterando Ano: ', minhaData); // Retorna o ano alterado - Tue Dec 02 1970 21:00:00 GMT-0300 (Horário Padrão de Brasília)
+          minhaData = new Date();
+          console.log('Data atual: ', minhaData); // Sempre irá retornar data atual, pois estamos instanciando um novo objt
+          // Os messes em js vai até 11, porém se colocar 12 ele vai 1 mês para frente, ou seja, resultado Janeiro
+          minhaData = new Date(2020, 12 ,17); // Setando informações já na criação do obj
+          console.log('Setando data - Correto: ', minhaData); // Sun Jan 17 2021 00:00:00 GMT-0300 (Horário Padrão de Brasília)
+          minhaData = new Date('2020/12/17'); // Setando informações já na criação do obj
+          console.log('Setando data - String: ', minhaData); //  Thu Dec 17 2020 00:00:00 GMT-0300 (Horário Padrão de Brasília)
+        </script>
+    </body>
+</html>
