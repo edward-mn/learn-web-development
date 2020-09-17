@@ -1,0 +1,44 @@
+<!doctype html>
+<html lang="pt-br">
+    <head>
+        <title> Curso - Javascript </title>
+        <meta charset="utf-8">
+
+        <style>
+          .destaque {
+            padding: 15px;
+            display: inline-block;
+            background-color: yellow;
+          }
+        </style>
+
+        <script>
+          (function(){ // Adicionando um evento que faz com que o script só seja executado após ser carregado o html
+            window.addEventListener('load', init);
+
+            function init(){
+              var $paragrafos = document.querySelectorAll('p');
+              // console.log($paragrafos); = [p, p, p, p]
+
+              for(i = 0; i <= $paragrafos.length; i++){
+              // Pegamos o parágrafo e convertemos ele para lowercase, depois varemos o array, ou seja, p buscando pela palavra javascript, caso o encontre irá retonar maior que 0, ou seja, True se não será False
+                var temJS = $paragrafos[i].textContent.toLowerCase().indexOf('javascript') >= 0;
+              // $paragrafos[i].classList.add(); Também é possível utilizarmos - Adiciona
+                $paragrafos[i].className += temJS ? ' destaque' : ''; // Seta essa classe, então devemos concatenar e não passa-lo diretamente pois ira subistitui-lo
+              };
+            };
+          })();
+        </script>
+    </head>
+    <body>
+        <h2> String - Inserindo classe no parágrafo que contém palava JS - Javascript </h2>
+
+        <p class = 'original'> Lorem ipsum dolor sit amet, <b>consectetur adipiscing elit. Proin eu felis sit amet lacus maximus pulvinar. Fusce finibus turpis in est efficitur, vitae semper nibh interdum. Aliquam ut leo hendrerit, vulputate nunc ut, suscipit arcu. Fusce in nisi imperdiet, gravida arcu et, lobortis augue. Nullam sed nunc egestas, congue risus non, feugiat tortor. Integer faucibus,</b> felis tempor euismod tempor, tellus arcu tincidunt sem, eu pellentesque felis dolor nec diam. Quisque egestas eros eget cursus tempor. Aenean feugiat nunc suscipit, facilisis quam vel, tempus dolor. Praesent sit amet nulla dui. Nunc vitae vulputate sapien. </p>
+
+        <p class = 'original'> Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin eu felis sit amet lacus maximus pulvinar. Fusce finibus turpis in est efficitur, vitae semper nibh interdum.   Aliquam ut leo hendrerit, vulputate nunc ut, suscipit arcu. Fusce in nisi imperdiet, Javascript et, lobortis augue. Nullam sed nunc egestas, congue risus non, feugiat  tortor. Integer faucibus, felis tempor euismod tempor, tellus arcu tincidunt sem, eu pellentesque felis dolor nec diam. Quisque egestas eros eget cursus tempor. Aenean feugiat  nunc suscipit, facilisis quam vel, tempus dolor. Praesent sit amet nulla dui. Nunc vitae vulputate sapien. </p>
+
+        <p class = 'original'> Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin eu felis sit amet lacus maximus pulvinar. Fusce finibus turpis in est efficitur, vitae semper nibh interdum.   Aliquam ut leo hendrerit, vulputate nunc ut, suscipit arcu. Fusce in nisi imperdiet, gravida arcu et, lobortis augue. Nullam sed nunc egestas, congue risus non, feugiat  tortor. Integer faucibus, felis tempor euismod tempor, tellus arcu tincidunt sem, eu pellentesque felis dolor nec diam. Quisque egestas eros eget cursus tempor. Aenean feugiat  nunc suscipit, facilisis quam vel, tempus dolor. Praesent sit amet nulla dui. Nunc vitae vulputate sapien. </p>
+
+        <p class = 'original'> Lorem ipsum dolor sit amet Javascript</p>
+    </body>
+</html>
