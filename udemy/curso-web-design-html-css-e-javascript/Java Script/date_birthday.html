@@ -1,0 +1,52 @@
+<!doctype html>
+<html lang="pt-br">
+    <head>
+        <title> Curso - Javascript </title>
+        <meta charset="utf-8">
+
+        <script>
+          (function (){
+            var dataAtual = new Date();
+            dataAtual.setHours(0);
+            dataAtual.setMinutes(0);
+            dataAtual.setSeconds(0);
+            dataAtual.setMilliseconds(0);
+
+            console.log('data Atual: ', dataAtual);
+
+            var AnoAtual = dataAtual.getFullYear();
+            console.log('Ano Atual: ', AnoAtual);
+
+            var dataNiver = new Date(AnoAtual, 8, 19);
+            console.log('Data Niver', dataNiver);
+
+            var dataAtualTS = dataAtual.getTime();
+            console.log('Data Atual Time Stamp: ', dataAtualTS);
+
+            var dataNiverTS = dataNiver.getTime();
+            console.log('Data Niver Time Stamp: ', dataNiverTS);
+
+            if(dataNiverTS === dataAtualTS){
+              alert('Parabéns seu niver');
+              return;
+            }
+
+            if(dataNiverTS < dataAtualTS){ // Menor significa que já pssou meu niver 
+              dataNiver.setFullYear(++AnoAtual); //Pré incremento
+              console.log('Data Niver Verificação: ', dataNiver);
+              dataNiverTS = dataNiver.getTime();
+              console.log('Data Niver Time Stamp +1: ', dataNiverTS);
+            };
+
+            // Descobrindo quantos milesegundos possui um dia
+            const UM_DIA_TS = 24 * 60 * 60 * 1000;
+            console.log('Dia em Milesegundos: ', UM_DIA_TS);
+            var diferenca = dataNiverTS - dataAtualTS;
+            console.log('Diferença / um dia) = ', diferenca / UM_DIA_TS); // Mostra quantidade de dias para a chegada do aniversário
+          })();
+        </script>
+    </head>
+    <body>
+        <h2> Curso - Aniversário - Javascript </h2>
+    </body>
+</html>
