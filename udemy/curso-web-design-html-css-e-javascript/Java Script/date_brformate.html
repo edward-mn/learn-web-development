@@ -1,0 +1,27 @@
+<!doctype html>
+<html lang="pt-br">
+    <head>
+        <title> Curso - Javascript </title>
+        <meta charset="utf-8">
+    </head>
+    <body>
+        <h2> Curso - BR date - Javascript </h2>
+
+        <script>
+          'use strict';
+          (function(){
+            var dataAtual = new Date();
+            console.log('BR - DD/MM/AAAA');
+            console.log(formataData(dataAtual));
+            
+            function formataData(data){
+              var dia = data.getDate();
+              var mes = data.getMonth() +1;
+              var ano = data.getFullYear();
+            
+              return dia + "/" + mes + "/" + ano;
+            }
+          })();
+        </script>
+    </body>
+</html>
