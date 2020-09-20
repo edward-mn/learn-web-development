@@ -1,0 +1,40 @@
+<!doctype html>
+<html lang="pt-br">
+    <head>
+        <title> Curso - Javascript </title>
+        <meta charset="utf-8">
+    </head>
+    <body>
+        <h2> Curso - Timers and Single Thread - Javascript </h2>
+        <div></div>
+        <script>
+          // Ficam penduradas na window
+
+          function somaUm(){
+            console.log('n: ', ++n);
+
+            if(n => 5){
+              clearInterval(intervalo);
+            }
+          }
+          var n = 0;
+          // setTimeout(funcao, tempo em milesegundos)
+          var timeout = setTimeout( somaUm, 1000); // Deve demorar 1 segundo para executar a função
+          console.log(timeout) // Retorna ID do timeout
+          // setInterval(funcao, tempo em milesegundos)
+          var intervalo = setInterval( somaUm, 5000); // Executa a função sempre que chegar no tempo, ou seja, de 5 em 5 seg
+          console.log(intervalo); // Retorna ID do intervalo
+
+          var str = '';
+          var d = document.querySelector('div');
+
+          // Lembrar que o JS é single thread, ou seja, apesar definirmos funções que alteram estados, tudo será colocado em uma fila, porém só será executado quando chegar a vez dessa função em questão
+          var timeoutTeste = setTimeout(() => {
+            for(var i = 0; i < 1000; i ++){
+              str += 'i: ' + i + '---'; 
+              d.textContent += str;
+            }
+          }, 3000);
+        </script>
+    </body>
+</html>
