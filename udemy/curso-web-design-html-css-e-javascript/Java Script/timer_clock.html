@@ -1,0 +1,38 @@
+<!doctype html>
+<html lang="pt-br">
+    <head>
+        <title> Curso - Javascript </title>
+        <meta charset="utf-8">
+    </head>
+    <body>
+        <h2> Curso - Clock 1 seg - Javascript </h2>
+        <div id="timer"></div>
+
+        <script>
+          (function(){
+            var $timer = document.getElementById('timer');
+            const oneSec = 1000;
+
+            function getHour(){
+              var date = new Date(); // Necessário deixar instanciar dentro da função, pois acada chamada é um novo objt, ou melhor uma nova hora e com isso conseguimos mostrar nosso clock
+              var hour = addDecimalPlace(date.getHours());
+              var minutes = addDecimalPlace(date.getMinutes());
+              var seconds = addDecimalPlace(date.getSeconds());
+
+              return hour + ":" + minutes + ":" + seconds;
+            }
+
+            function addDecimalPlace(time){
+              return time < 10 ? '0' + time : time;
+            }
+
+            function showClock(actualDate){
+              return $timer.textContent = actualDate;
+            };
+
+            // É necessário ser uma função anonima
+            setInterval(() => showClock(getHour()), oneSec);
+          })();
+        </script>
+    </body>
+</html>
