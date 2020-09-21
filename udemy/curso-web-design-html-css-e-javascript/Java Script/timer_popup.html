@@ -1,0 +1,73 @@
+<!doctype html>
+<html lang="pt-br">
+    <head>
+        <title> Curso - Javascript </title>
+        <meta charset="utf-8">
+
+        <style>
+          .banner_up{
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            box-shadow: 0 0 0 1000px rgba(0, 0, 0, .8);
+            text-align: justify;
+            display: none;
+          }
+
+          .banner_close{
+            position: absolute;
+            top: 5px;
+            right: 5px;
+          }
+
+          .banner_up button{
+            color: white;
+            background-color: brown;
+            margin-top: 15px;
+            border-radius: 25%;
+            transition: background-color .3s;
+          }
+
+          .banner_up button:hover{
+            background-color: rgba(165, 42, 42, .8);
+          }
+        </style>
+    </head>
+    <body>
+      <h1> Curso - Popup 5 seg UP and 10 seg DOWN - Javascript </h1>
+
+      <div class="banner_up">
+        <h2>Banner Irritantes</h2>
+          <button class="banner_close">X</button>
+          <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Ullam quas mollitia reiciendis porro distinctio numquam nobis delectus similique. Esse, ullam officia ea neque nobis vero unde ducimus blanditiis cumque perspiciatis!</p>
+          <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Ullam quas mollitia reiciendis porro distinctio numquam nobis delectus similique. Esse, ullam officia ea neque nobis vero unde ducimus blanditiis cumque perspiciatis!</p>
+          <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Ullam quas mollitia reiciendis porro distinctio numquam nobis delectus similique. Esse, ullam officia ea neque nobis vero unde ducimus blanditiis cumque perspiciatis!</p>  
+      </div>
+
+      <script>
+        (function(){
+          var $banner = document.querySelector('.banner_up');
+          var $bannerBtn = document.querySelector('.banner_close');
+          var intervaloEsconde = null;
+
+          $bannerBtn.addEventListener('click', escondeBanner);
+          
+          function mostraBanner(){
+            $banner.style.display = 'block'; // Mostrando o banner
+
+            intervaloEsconde = setTimeout(escondeBanner, 4000);
+          };
+
+          function escondeBanner(){
+            $bannerBtn.removeEventListener('click', escondeBanner); // É necessário também remover afunção por questão de performace
+            $banner.parentNode.removeChild($banner); // Removendo o banner
+
+            clearTimeout(intervaloEsconde); // Limpando timeOut para resolver o erro ao tentar excluir o child quando clicamos no X do botão
+          };
+
+          setTimeout(mostraBanner, 2000);
+        })();
+      </script>
+    </body>
+</html>
