@@ -1,0 +1,51 @@
+<!doctype html>
+<html>
+    <head>
+        <title>Logica de Programação Javascript</title>
+        <meta charset="utf-8">
+    </head>
+    <body>
+      <h2> Curso - Chronometer - Javascript </h2>
+      
+      <input type="text" id="cronometro">
+      <button id="iniciar">Iniciar</button>
+      <button id="pausar">Pausar</button>
+      <button id="parar">Parar</button>
+      
+      <script>
+          
+          (function(){
+              
+              var $inputCronometro = document.querySelector('#cronometro');
+              var $iniciar = document.querySelector('#iniciar');
+              var $pausar = document.querySelector('#pausar');
+              var $parar = document.querySelector('#parar');
+              
+              $iniciar.addEventListener('click', startChronometer);
+              $pausar.addEventListener('click', pauseChronometer);
+              $parar.addEventListener('click', stopChronometer);
+
+              var tsClickStart = 0;
+
+              function chronometer(){
+                setInterval(() => {
+                  var tsNow = Date.now();
+                  var difference = tsNow - tsClickStart;
+                  $inputCronometro.value = difference;
+                }, 100); //10x p segundo;
+              };
+
+              function startChronometer(){
+                tsClickStart = Date.now();
+                chronometer();
+              }
+
+              function pauseChronometer(){
+              }
+
+              function stopChronometer(){
+              }
+          })();
+      </script>
+    </body>
+</html>
