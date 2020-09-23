@@ -27,24 +27,41 @@
 
               var tsClickStart = 0;
 
+              function formataTS(time){
+                const miliSecond = 60000, second = 1000, minute = 60;
+                
+                if(time < second){
+                  return time;
+                } else if(time < miliSecond){ // 30500
+                  var seconds = partseInt(time / second); // 30
+                  var hundredth = time - (seconds * second) // 30500 - (30000) = 500
+                  return seconds + ":" + hundredth;
+                } else { // Maior que minuto
+                  var minutes = parseInt(time / miliSecond); // Minute
+                  var seconds = parseInt((time / second) - (minutes * minute)); // 
+                  var hundredth = time - (seconds * second) - (minutes * minute * second); //
+                  return minutes + ":" + seconds + ":" + hundredth;
+                }
+              };
+
               function chronometer(){
                 setInterval(() => {
                   var tsNow = Date.now();
                   var difference = tsNow - tsClickStart;
-                  $inputCronometro.value = difference;
+                  $inputCronometro.value = formataTS(difference);
                 }, 100); //10x p segundo;
               };
 
               function startChronometer(){
                 tsClickStart = Date.now();
                 chronometer();
-              }
+              };
 
               function pauseChronometer(){
-              }
+              };
 
               function stopChronometer(){
-              }
+              };
           })();
       </script>
     </body>
