@@ -78,6 +78,12 @@
               };
 
               function stopChronometer(){
+                tsClickPause = 0;
+                tsClickStart = 0;
+                tsTimeElapsed = 0;
+                couting = false;
+                clearInterval(interval);
+                $inputCronometro.value = '';
               };
           })();
       </script>
