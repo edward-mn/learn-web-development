@@ -58,12 +58,14 @@
               };
 
               function startChronometer(){
+                if(couting) return; // Se estiver rodando sai da função
                 tsClickStart = Date.now();
                 chronometer();
                 couting = true;
               };
 
               function pauseChronometer(){
+                if (!$inputCronometro.value) return;
                 if(couting){
                   couting = false; // Desativando o contador de tempo
                   clearInterval(interval);
