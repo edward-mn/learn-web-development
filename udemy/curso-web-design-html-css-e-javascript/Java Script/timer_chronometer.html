@@ -8,22 +8,22 @@
       <h2> Curso - Chronometer - Javascript </h2>
       
       <input type="text" id="cronometro">
-      <button id="iniciar">Iniciar</button>
-      <button id="pausar">Pausar</button>
-      <button id="parar">Parar</button>
+      <button id="start">Start</button>
+      <button id="pause">Pause</button>
+      <button id="stop">Stop</button>
       
       <script>
           
           (function(){
               
               var $inputCronometro = document.querySelector('#cronometro');
-              var $iniciar = document.querySelector('#iniciar');
-              var $pausar = document.querySelector('#pausar');
-              var $parar = document.querySelector('#parar');
+              var $start = document.querySelector('#start');
+              var $pause = document.querySelector('#pause');
+              var $stop = document.querySelector('#stop');
               
-              $iniciar.addEventListener('click', startChronometer);
-              $pausar.addEventListener('click', pauseChronometer);
-              $parar.addEventListener('click', stopChronometer);
+              $start.addEventListener('click', startChronometer);
+              $pause.addEventListener('click', pauseChronometer);
+              $stop.addEventListener('click', stopChronometer);
 
               var interval = null;
               var tsClickStart = 0;
@@ -32,19 +32,18 @@
               var couting = false;
 
               function formataTS(time){
-                const miliSecond = 60000, second = 1000, minute = 60;
+                const MINUTE = 60000, SECOND = 1000;
                 
-                if(time < second){
+                if(time < SECOND){
                   return time;
-                } else if(time < miliSecond){ // 30500
-                  var seconds = partseInt(time / second); // 30
-                  var hundredth = time - (seconds * second) // 30500 - (30000) = 500
+                } else if(time < MINUTE){ // 30500
+                  var seconds = partseInt(time / SECOND); // 30
+                  var hundredth = time - (seconds * SECOND) // 30500 - (30000) = 500
                   return seconds + ":" + hundredth;
-                } else { // Maior que minuto
-                  var minutes = parseInt(time / miliSecond); // Minute
-                  var seconds = parseInt((time / second) - (minutes * minute)); // 
-                  var hundredth = time - (seconds * second) - (minutes * minute * second); //
-                  return minutes + ":" + seconds + ":" + hundredth;
+                } else { // Maior que minute
+                  var minutes = parseInt(time / MINUTE); // Minute
+                  // Utilizando a recursividade da função
+                  return minutes + ":" + formataTS(time - (minutes * MINUTE)); // Resultado = seconds + ":" + hundredth;
                 }
               };
 
@@ -59,6 +58,7 @@
 
               function startChronometer(){
                 if(couting) return; // Se estiver rodando sai da função
+                stopChronometer();
                 tsClickStart = Date.now();
                 chronometer();
                 couting = true;
@@ -67,16 +67,15 @@
               function pauseChronometer(){
                 if (!$inputCronometro.value) return;
                 if(couting){
-                  couting = false; // Desativando o contador de tempo
                   clearInterval(interval);
                   tsClickPause = Date.now(); // Armazena o momento da pausa
                   tsTimeElapsed += tsClickPause - tsClickStart; // Descobrindo o tempo decorrido
-                  // $pausar.textContent = "Despausar";
+                  // $pause.textContent = "Despause";
                 } else {
-                  couting = true; // Ativando o contador de tempo
                   tsClickStart = Date.now(); // Resetar o valor inicial
                   chronometer(tsTimeElapsed); // Iniciando o chronometro com tempo decorrido
                 }
+                couting = !couting;
               };
 
               function stopChronometer(){
