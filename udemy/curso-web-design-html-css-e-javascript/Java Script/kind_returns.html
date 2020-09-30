@@ -1,0 +1,57 @@
+<!doctype html>
+<html lang="pt-br">
+    <head>
+        <title> Curso - Javascript </title>
+        <meta charset="utf-8">
+    </head>
+    <body>
+        <h2> Curso - How to return values - Javascript </h2>
+
+        <script>
+          function testeJumps(){
+            for(var i = 0; i< 10; i++){
+              console.log(i);
+              if(i === 5){
+                return 'Saindo..'; //Sai da função e retorna
+              }
+            }
+            var teste = testeJumps();
+            console.log(teste);
+          }
+
+          function testeJumps2(){
+            for(var i = 0; i< 10; i++){
+              console.log(i);
+              if(i === 5){
+                console.log('continuando');
+                continue; // Continuando o loop
+              }
+              else if(i === 8){
+                break; //Sai da fora do loop
+              }
+            }
+            console.log("Até aq"); // Consegue executar códigos após o loop
+          }
+
+          var n = 10;
+
+          switch(n){
+            case 0:
+              console.log('Switch 0');
+              break;
+            case 10:
+              console.log('Switch 10');
+              break;
+            case 20:
+              console.log('Switch 20');
+              break;
+            case 30:
+              console.log('Switch 30');
+              break;
+            default:
+              console.log('Default');
+              break;
+          }
+        </script>
+    </body>
+</html>
