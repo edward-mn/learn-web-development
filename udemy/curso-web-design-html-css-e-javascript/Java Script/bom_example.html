@@ -1,0 +1,60 @@
+<!doctype html>
+<html lang="pt-br">
+    <head>
+        <title> Curso - Javascript </title>
+        <meta charset="utf-8">
+    </head>
+    <body>
+        <h2> Curso - BOM and Events - Javascript </h2>
+
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Nulla magni neque deleniti voluptatibus veniam repellat vitae nostrum explicabo aliquid quia. Earum debitis sunt eveniet cupiditate! Dolorem quam iusto aliquam iure.m</p>
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Nulla magni neque deleniti voluptatibus veniam repellat vitae nostrum explicabo aliquid quia. Earum debitis sunt eveniet cupiditate! Dolorem quam iusto aliquam iure.m</p>
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Nulla magni neque deleniti voluptatibus veniam repellat vitae nostrum explicabo aliquid quia. Earum debitis sunt eveniet cupiditate! Dolorem quam iusto aliquam iure.m</p>
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Nulla magni neque deleniti voluptatibus veniam repellat vitae nostrum explicabo aliquid quia. Earum debitis sunt eveniet cupiditate! Dolorem quam iusto aliquam iure.m</p>
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Nulla magni neque deleniti voluptatibus veniam repellat vitae nostrum explicabo aliquid quia. Earum debitis sunt eveniet cupiditate! Dolorem quam iusto aliquam iure.m</p>
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Nulla magni neque deleniti voluptatibus veniam repellat vitae nostrum explicabo aliquid quia. Earum debitis sunt eveniet cupiditate! Dolorem quam iusto aliquam iure.m</p>
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Nulla magni neque deleniti voluptatibus veniam repellat vitae nostrum explicabo aliquid quia. Earum debitis sunt eveniet cupiditate! Dolorem quam iusto aliquam iure.m</p>
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Nulla magni neque deleniti voluptatibus veniam repellat vitae nostrum explicabo aliquid quia. Earum debitis sunt eveniet cupiditate! Dolorem quam iusto aliquam iure.m</p>
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Nulla magni neque deleniti voluptatibus veniam repellat vitae nostrum explicabo aliquid quia. Earum debitis sunt eveniet cupiditate! Dolorem quam iusto aliquam iure.m</p>
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Nulla magni neque deleniti voluptatibus veniam repellat vitae nostrum explicabo aliquid quia. Earum debitis sunt eveniet cupiditate! Dolorem quam iusto aliquam iure.m</p>
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Nulla magni neque deleniti voluptatibus veniam repellat vitae nostrum explicabo aliquid quia. Earum debitis sunt eveniet cupiditate! Dolorem quam iusto aliquam iure.m</p>
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Nulla magni neque deleniti voluptatibus veniam repellat vitae nostrum explicabo aliquid quia. Earum debitis sunt eveniet cupiditate! Dolorem quam iusto aliquam iure.m</p>
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Nulla magni neque deleniti voluptatibus veniam repellat vitae nostrum explicabo aliquid quia. Earum debitis sunt eveniet cupiditate! Dolorem quam iusto aliquam iure.m</p>
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Nulla magni neque deleniti voluptatibus veniam repellat vitae nostrum explicabo aliquid quia. Earum debitis sunt eveniet cupiditate! Dolorem quam iusto aliquam iure.m</p>
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Nulla magni neque deleniti voluptatibus veniam repellat vitae nostrum explicabo aliquid quia. Earum debitis sunt eveniet cupiditate! Dolorem quam iusto aliquam iure.m</p>
+
+        <img src="https://www.google.com/imgres?imgurl=https%3A%2F%2Fupload.wikimedia.org%2Fwikipedia%2Fcommons%2Fthumb%2F9%2F99%2FUnofficial_JavaScript_logo_2.svg%2F1200px-Unofficial_JavaScript_logo_2.svg.png&imgrefurl=https%3A%2F%2Fpt.wikipedia.org%2Fwiki%2FJavaScript&tbnid=imsyna4i1ZfCQM&vet=12ahUKEwi6vsXN1o_sAhXDL7kGHStpC50QMygAegUIARClAQ..i&docid=sfCSW9zT8CoOUM&w=1200&h=1200&q=javascript&ved=2ahUKEwi6vsXN1o_sAhXDL7kGHStpC50QMygAegUIARClAQ" alt="JS">
+
+        <script>
+          window.addEventListener('load', () => {
+            console.log('load disparado');
+          });
+
+          window.addEventListener('resize', (e) => {
+            console.log('Resize disparado');
+            console.log(e);
+          });
+
+          window.addEventListener('scroll', (e) => {
+            console.log('Scroll disparado');
+            console.log('Valor do scroll Y: ', pageYOffset);
+            console.log(e);
+          });
+
+          window.addEventListener('DOMContentLoaded', () => {
+            console.log('DOM Content disparado'); // É disparado quando a estrutura do HTML estiver pronta
+          });
+
+          // O debugger consegue visualzar a execusão desses eventos abaixo
+          window.addEventListener('unload', () => {
+            console.log('Unload disparado');
+            // alert('Unload aqui'); - É ignorado por eventos já protegidos pelo próprio browser
+          });
+
+          window.addEventListener('beforeunload', () => {
+            console.log('beforeunload disparado');
+            // alert('Beforeunload aqui'); - É ignorado por eventos já protegidos pelo próprio browser
+          });
+        </script>
+    </body>
+</html>
