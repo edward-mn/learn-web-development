@@ -1,0 +1,67 @@
+<!doctype html>
+<html lang="pt-br">
+    <head>
+        <title> Curso - Javascript </title>
+        <meta charset="utf-8">
+
+        <style>
+          body {
+            padding-top: 120px;
+          }
+
+          .menu{
+            height: 150px;
+            background-color: red;
+            width: 100%;
+            transition: all 1s;
+            position: fixed;
+            top: 0;
+            left: 0;
+            opacity: .6;
+          }
+
+          .fx .menu{
+            height: 50px;
+            opacity: 1;
+          }
+        </style>
+    </head>
+    <body>
+      
+      <div class="menu"></div>
+      <h2> Curso - Menu colapsed with scrool of mouse - Javascript </h2>
+        <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Dignissimos optio beatae molestias quibusdam quasi libero alias officia eos perspiciatis cumque, repudiandae enim ex ullam a tenetur, eum corrupti omnis. Architecto?</p>
+        <p>Perferendis voluptas odio facere ratione iste repudiandae repellendus, ea illo vero aut? Nemo aut sapiente incidunt inventore mollitia exercitationem ad fuga. Ipsam minima, repellat debitis nam maiores accusantium? Blanditiis, repellat.</p>
+        <p>Necessitatibus consequuntur facere aut exercitationem distinctio illum laudantium voluptatibus doloribus repellendus et reiciendis maiores voluptate minima molestiae, dolorem saepe sint quaerat cupiditate iste esse aliquam hic? Quaerat expedita eveniet quia?</p>
+        <p>Et totam deleniti placeat quod, quas illum voluptates? Repellendus repudiandae obcaecati sed repellat accusamus molestias ratione aspernatur possimus, blanditiis atque ut autem rem quae distinctio quam iusto culpa in voluptas?</p>
+        <p>Quae quis eum architecto ut autem sed repudiandae vitae nemo, reprehenderit maxime possimus illo omnis quia. Quae, tenetur dolore nesciunt sit excepturi aperiam omnis iusto, quasi, illum consequatur quibusdam praesentium.</p>
+        <p>Quod id accusantium recusandae odio veniam corporis harum quisquam explicabo velit? Exercitationem recusandae iusto, laborum error delectus illum doloribus eos eum, harum omnis odit aut minus earum nobis quos? Commodi.</p>
+        <p>Illo voluptas tempora hic, alias explicabo suscipit molestias quisquam minima et consequuntur tempore vitae ducimus ipsa incidunt aperiam beatae debitis facere a, voluptate nam quam. Doloribus reiciendis corporis impedit. Eos!</p>
+        <p>Tempore aperiam, doloribus ullam rem aliquid quas aliquam architecto omnis qui tenetur corporis, illo dolorem ducimus sunt recusandae eos amet, quisquam inventore dolor perferendis saepe. Ipsa, id quasi. Cupiditate, tempore.</p>
+        <p>Et reiciendis hic ipsam laboriosam corporis quis necessitatibus iusto, fugiat vel cupiditate, exercitationem sapiente? Vel molestias cum deleniti unde magnam modi error ad obcaecati, libero, molestiae non laborum dolores dolor.</p>
+        <p>Veniam tempora, eaque reprehenderit rerum beatae sapiente officiis accusantium ad. Non doloremque eveniet eaque, sapiente sed temporibus corrupti eos iure nihil sint ratione tempora. Nostrum repellat veritatis pariatur inventore beatae.</p>
+        <p>Neque velit, obcaecati corrupti quos deleniti eum dolores dolore ullam magni vel dicta nulla tempora quod voluptas dolor consequuntur quidem. Eveniet amet minus eius doloremque eos temporibus, nihil dolore magnam.</p>
+        <p>Odit doloremque, accusamus fugiat ut perspiciatis odio illum accusantium minima totam consequuntur mollitia veniam fuga earum esse non exercitationem, voluptatibus maiores quis molestiae sequi consequatur magni, corporis neque nemo. Perferendis!</p>
+        <p>Blanditiis et error ducimus, sunt dolorum quae quibusdam eos minima distinctio voluptatem nisi perferendis dolore quas obcaecati hic ut laudantium pariatur praesentium. Ullam cupiditate veniam quo id? Sunt, ab esse.</p>
+        <p>Excepturi blanditiis eum quae aperiam alias quas, ipsa totam, accusantium in porro quod! Officiis accusantium libero deleniti facere magni recusandae voluptatum perferendis magnam reiciendis, ullam adipisci, delectus similique quos debitis?</p>
+        <p>Eum sapiente dolores doloremque non eos, voluptas reiciendis quam maiores necessitatibus, saepe consequatur? Ducimus necessitatibus odit consequuntur enim nesciunt pariatur rem inventore earum, eligendi ipsam non, minus, in consectetur repudiandae.</p>
+        <p>Reiciendis, eum! Excepturi tempora, doloremque magni atque molestiae quaerat, nulla modi aperiam dolores, odit voluptate reiciendis laboriosam? Neque expedita quae voluptates recusandae inventore aliquam, nobis asperiores, aperiam id tempore veritatis!</p>
+        <p>Blanditiis molestias labore ab officiis. Sed ut sequi consequuntur dolore blanditiis inventore sunt velit quae et possimus porro doloribus, ex dolorum tenetur architecto suscipit commodi unde deleniti ratione similique animi?</p>
+        <p>Qui incidunt vero, quae expedita similique debitis, sit aspernatur alias aliquid ab, adipisci non? Dolorem quisquam necessitatibus, accusamus, commodi quam nesciunt eum culpa molestias animi, illo quos id omnis sint.</p>
+        <p>Delectus error est voluptas quisquam voluptatem facere recusandae libero reiciendis veniam, cumque culpa animi corporis hic, at a. Odit cum commodi animi dicta libero ex officiis omnis eveniet placeat id?</p>
+        <p>Expedita distinctio illo culpa itaque laboriosam tempore quod tempora enim sapiente! Corporis, quo, cupiditate tempora, esse eum quisquam natus nobis temporibus sapiente quos dolorem nulla similique alias velit voluptatibus facere.</p>
+
+        <script>
+          var $body = document.querySelector('body');
+
+          window.addEventListener('scroll', () => {
+            if(pageYOffset > 50){
+              $body.classList.toggle('fx');
+            }
+            else {
+              $body.classList.remove('fx');
+            }
+          });
+        </script>
+    </body>
+</html>
