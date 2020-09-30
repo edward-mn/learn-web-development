@@ -1,0 +1,56 @@
+<!doctype html>
+<html lang="pt-br">
+    <head>
+        <title> Curso - Javascript </title>
+        <meta charset="utf-8">
+
+        <style>
+          .teste {
+            background-color: red;
+          }
+        </style>
+    </head>
+    <body>
+        <h2> Curso - Estilização e Controle de Fluxo - Javascript </h2>
+
+        <div class="teste" style="background-color: blue;">Apenas um teste</div>
+
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Assumenda, et veritatis dolor suscipit consequatur officiis officia saepe aut maiores. Quasi fugit ea culpa temporibus enim facere provident incidunt amet nam!</p>
+
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Vero, necessitatibus quos. Eum harum nisi accusamus consequatur sit, et ratione consectetur odit ex eveniet explicabo! Expedita eos ullam eaque fugit voluptatum!</p>
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Vero, necessitatibus quos. Eum harum nisi accusamus consequatur sit, et ratione consectetur odit ex eveniet explicabo! Expedita eos ullam eaque fugit voluptatum!</p>
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Vero, necessitatibus quos. Eum harum nisi accusamus consequatur sit, et ratione consectetur odit ex eveniet explicabo! Expedita eos ullam eaque fugit voluptatum!</p>
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Vero, necessitatibus quos. Eum harum nisi accusamus consequatur sit, et ratione consectetur odit ex eveniet explicabo! Expedita eos ullam eaque fugit voluptatum!</p>
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Vero, necessitatibus quos. Eum harum nisi accusamus consequatur sit, et ratione consectetur odit ex eveniet explicabo! Expedita eos ullam eaque fugit voluptatum!</p>
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Vero, necessitatibus quos. Eum harum nisi accusamus consequatur sit, et ratione consectetur odit ex eveniet explicabo! Expedita eos ullam eaque fugit voluptatum!</p>
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Vero, necessitatibus quos. Eum harum nisi accusamus consequatur sit, et ratione consectetur odit ex eveniet explicabo! Expedita eos ullam eaque fugit voluptatum!</p>
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Vero, necessitatibus quos. Eum harum nisi accusamus consequatur sit, et ratione consectetur odit ex eveniet explicabo! Expedita eos ullam eaque fugit voluptatum!</p>
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Vero, necessitatibus quos. Eum harum nisi accusamus consequatur sit, et ratione consectetur odit ex eveniet explicabo! Expedita eos ullam eaque fugit voluptatum!</p>
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Vero, necessitatibus quos. Eum harum nisi accusamus consequatur sit, et ratione consectetur odit ex eveniet explicabo! Expedita eos ullam eaque fugit voluptatum!</p>
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Vero, necessitatibus quos. Eum harum nisi accusamus consequatur sit, et ratione consectetur odit ex eveniet explicabo! Expedita eos ullam eaque fugit voluptatum!</p>
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Vero, necessitatibus quos. Eum harum nisi accusamus consequatur sit, et ratione consectetur odit ex eveniet explicabo! Expedita eos ullam eaque fugit voluptatum!</p>
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Vero, necessitatibus quos. Eum harum nisi accusamus consequatur sit, et ratione consectetur odit ex eveniet explicabo! Expedita eos ullam eaque fugit voluptatum!</p>
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Vero, necessitatibus quos. Eum harum nisi accusamus consequatur sit, et ratione consectetur odit ex eveniet explicabo! Expedita eos ullam eaque fugit voluptatum!</p>
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Vero, necessitatibus quos. Eum harum nisi accusamus consequatur sit, et ratione consectetur odit ex eveniet explicabo! Expedita eos ullam eaque fugit voluptatum!</p>
+
+        <div class="teste2">Segundo</div>
+
+        <script>
+          var $teste = document.querySelector('.teste');
+          var $teste2 = document.querySelector('.teste2')
+          var $p = document.querySelector('p');
+
+          console.log('bg:', $teste.style.backgroundColor); // Só funciona Recuparar ou Definir propriedades inline
+
+          // Pegando os estilos computados
+          console.log('Computado: ', getComputedStyle($teste).background); // Resultado final de toda formatação que foi aplicado com CSS
+
+          // informações de onde o Parágrafo está sendo posicionados no browser
+          console.log('Height: ', $p.offsetHeight, 'Width: ', $p.offsetWidth);
+          console.log('Left: ', $p.offsetLeft, 'Top: ', $p.offsetTop);
+
+          // Pegando informações de um elemento específico de acordo com a view port
+          console.log('Info View Port: ', $teste2.getBoundingClientRect());
+        </script>
+    </body>
+</html>
