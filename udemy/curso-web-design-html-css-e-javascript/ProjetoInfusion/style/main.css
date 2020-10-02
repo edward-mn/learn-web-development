@@ -3,6 +3,10 @@ body{
   font-family: 'Open Sans', sans-serif;
 }
 
+img{
+  max-width: 100%;
+}
+
 .header{
   background-color: #fff;
   width: 100%
@@ -19,10 +23,6 @@ body{
   text-decoration: none;
   font-weight: bold;
   color: #fff;
-}
-
-.header__btnMenu{
-
 }
 
 .header__nav{
@@ -55,4 +55,50 @@ body{
 .header__nav li a:hover{
   cursor: pointer;
   color: #63c6ae;
+}
+
+.header__btnMenu{
+
+}
+
+.hero{
+  height: 80vh; /* 80% view port */
+  padding: 40px 20px;
+  text-align: center;
+  background-image: url("../img/01.jpg");
+  background-size: cover;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.hero__title{
+ background-color: #63c6ae;
+ color: white;
+ font-size: 28px;
+ font-weight: 600;
+ padding: 30px 20px;
+ text-transform: uppercase;
+}
+
+.hero__text{
+  background-color: #242a2c;
+  margin: 50px 30px 35px;
+  color: white;
+  padding: 20px;
+  font-size: 16px;
+}
+
+.hero__btn{
+  border: 1px solid rgba(255, 255, 255, 255, .3);
+  background-color: rgba(0, 0, 0, .2);
+  border-radius: 5px;
+  padding: 15px 25px;
+  display: inline-block;
+  color: white;
+  text-decoration: none;
+  font-size: 16px;
+  font-weight: 600;
+  text-transform: uppercase;
 }
