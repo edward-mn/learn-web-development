@@ -37,7 +37,6 @@ body{
 .header__nav li{
   list-style-type: none;
   background-color: #242c2c;
-  padding: 25px 0;
   text-align: center;
   border-bottom: 1px dotted rgba(255, 255, 255, 255, .2);
 }
@@ -48,4 +47,12 @@ body{
   font-size: 14px;
   font-weight: 600;
   text-decoration: none;
+  display: block;
+  padding: 25px 0;
+  transition: .5s ease;
+}
+
+.header__nav li a:hover{
+  cursor: pointer;
+  color: #63c6ae;
 }
