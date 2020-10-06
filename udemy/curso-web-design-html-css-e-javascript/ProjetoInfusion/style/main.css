@@ -132,7 +132,7 @@ img{
 }
 
 .people-cards__card:hover .people-cards__avatar img{
-  transform: translateY(-50%);
+  transform: translateY(-50%); /* Subistituindo imagem para dar efeito de hover */
 }
 
 .people-cards__card:hover .people-cards__title, 
