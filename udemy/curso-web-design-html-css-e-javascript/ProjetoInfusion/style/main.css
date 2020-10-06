@@ -235,3 +235,18 @@ img{
   display: block;
   width: 100%;
 }
+
+.laptop-slider{
+  background-color: #242a2c;
+  padding: 125px 0 100px;
+  width: 100%;
+  overflow: auto; /* Adiciona barra de rolagem na div caso JS esteja desabilitado */
+}
+
+.slideshow{
+  white-space: nowrap; /* Como o espaço embrando deve se comportar */
+}
+
+.slideshow figure{
+  display: inline-block;
+}
