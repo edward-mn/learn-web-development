@@ -123,7 +123,21 @@ img{
 }
 
 .people-cards__card{
-  
+  margin-top: .5em;
+}
+
+.people-cards__card:hover{
+  outline: 5px solid #63c6ae; /* Depois da borda */
+  outline-offset: -5px; /* Positivo - Anda para fora / Negativo - Fica por dentro */
+}
+
+.people-cards__card:hover .people-cards__avatar img{
+  transform: translateY(-50%);
+}
+
+.people-cards__card:hover .people-cards__title, 
+.people-cards__card:hover .people-cards__text{
+  color: #63c6ae;
 }
 
 .people-cards__img{
@@ -146,9 +160,11 @@ img{
 .people-cards__title{
   color: #737c85;
   font-size: 21px;
+  font-weight: normal;
 }
 
-.peole-cars__text{
+.peole-cards__text{
   color: #929da5;
   font-size: 14px;
 }
+
