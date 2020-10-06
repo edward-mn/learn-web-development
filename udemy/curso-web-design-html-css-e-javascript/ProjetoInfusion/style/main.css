@@ -274,3 +274,30 @@ img{
   background-color: red;
   margin-top: 250em;
 }
+
+.footer{
+  background-color: #242a2c;
+  padding: 50px 0 250px 0;
+  color: #454e51;
+  font-size: 14px;
+}
+
+.footer h2{
+  color: #487e6e;
+}
+
+.footer__links li{
+  list-style: none;
+}
+
+.footer__links a{
+  color: #454e51;
+  display: block;
+  font-weight: 600;
+  text-decoration: none;
+  transition: color .5s;
+}
+
+.footer__links a:hover{
+  color: #68b9a1;
+}
