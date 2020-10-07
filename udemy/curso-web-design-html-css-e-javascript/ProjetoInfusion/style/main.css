@@ -301,3 +301,42 @@ img{
 .footer__links a:hover{
   color: #68b9a1;
 }
+
+/* Queries */
+
+@media screen and (min-width: 1024px){
+  .header{
+    position: fixed;
+  }
+
+  .logo-text{
+    box-sizing: border-box; /* Removendo a soma automática */
+    width: 25%;
+    text-align: center;
+  }
+
+  .header__btnMenu{
+    display: none;
+  }
+
+  .header__nav{
+    clear: none;
+    float: left;
+    width: 75%;
+    max-width: 800px;
+  }
+
+  .header__nav ul{
+    display: flex;
+    justify-content: space-around;
+  }
+
+  .header__nav li{
+    border-bottom: none;
+    flex-grow: 1; /* Expandindo a area do click, ou seja, oculpando todo espaço do space-around */
+  }
+
+  .header__nav a{
+    background-color: white;
+  }
+}
