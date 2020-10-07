@@ -16,6 +16,11 @@ img{
   max-width: 980px;
 }
 
+.js .header{
+  position: fixed;
+  width: 100%
+}
+
 .header{
   background-color: #fff;
   width: 100%
