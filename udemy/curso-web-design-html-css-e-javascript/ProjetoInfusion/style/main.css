@@ -285,6 +285,7 @@ img{
 
 .footer h2{
   color: #487e6e;
+  text-transform: uppercase;
 }
 
 .footer__links li{
@@ -355,5 +356,13 @@ img{
 
   .last-articles__thumbs{
     grid-template-columns: repeat(6, 1fr);
+  }
+
+  .footer .container{
+    display: flex;
+  }
+
+  .footer .container > * { /*Aplicando uma margim nos filhos direto de container */
+    margin: 1.5em;
   }
 }
