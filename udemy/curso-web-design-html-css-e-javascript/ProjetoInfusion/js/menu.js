@@ -1,55 +1,57 @@
+function Menu(config) {
+  this.nav =
+    typeof config.container === "string"
+      ? document.querySelector(config.container)
+      : config.container;
 
-function Menu(config){
-  this.nav = (typeof config.container === 'string')
-    ? document.querySelector(config.container)
-    : config.container;
-  
-  this.btn = (typeof config.toggleBtn === 'string')
-    ? document.querySelector(config.toggleBtn)
-    : config.toggleBtn;
+  this.btn =
+    typeof config.toggleBtn === "string"
+      ? document.querySelector(config.toggleBtn)
+      : config.toggleBtn;
 
   this.maxWidth = config.widthEnabled || false;
 
   var _opened = false;
   var _this = this;
 
-  this.btn.removeAttribute('style');
+  this.btn.removeAttribute("style");
   closeMenu();
-  this.btn.addEventListener('click', openOrClose);
+  this.btn.addEventListener("click", openOrClose);
 
-  function openOrClose(){
-    if(!_opened){
+  function openOrClose() {
+    if (!_opened) {
       openMenu();
     } else {
       closeMenu();
     }
   }
 
-  function openMenu(){
-    var top = _this.nav.getBoundingClientRect().top + 'px';
+  function openMenu() {
+    var top = _this.nav.getBoundingClientRect().top + "px";
 
     var _style = {
-      maxHeight: 'calc(100vh - ' + top + ')',
-      overflow: 'hidden',
-    }
+      maxHeight: "calc(100vh - " + top + ")",
+      overflow: "hidden",
+    };
 
     applyStyleToNav(_style);
     _opened = true;
   }
 
-  function closeMenu(){
+  function closeMenu() {
     var _style = {
-      maxHeight: '0px',
-      overflow: 'hidden',
-    }
+      maxHeight: "0px",
+      overflow: "hidden",
+    };
 
     applyStyleToNav(_style);
     _opened = false;
   }
 
-  function applyStyleToNav(theStyle){
-    Object.keys(theStyle).forEach( stl => { /* Aplicando o obj _style */
+  function applyStyleToNav(theStyle) {
+    Object.keys(theStyle).forEach((stl) => {
+      /* Aplicando o obj _style */
       _this.nav.style[stl] = theStyle[stl];
-    })
+    });
   }
 }
