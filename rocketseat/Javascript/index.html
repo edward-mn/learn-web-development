@@ -102,6 +102,16 @@
       x++;
     }
 
+    // Interval and Timeout
+
+    function exibeAlgo(){
+      console.log('Hello World');
+    };
+
+    // Não colocamos (), pois ira executar não queremos passar a função mas sim que ela seja executada
+    setTimeout(exibeAlgo, 3000); // Delay 3s
+
+    setInterval(exibeAlgo, 3000); // Eternamente de 3 em 3 s
   </script>
 </body>
 </html>
