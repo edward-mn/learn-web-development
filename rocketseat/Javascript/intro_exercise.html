@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Curso Javascript | Rocketseat</title>
+  </head>
+  <body>
+    <script>
+      let endereco = {
+        rua: "Rua dos pinheiros",
+        numero: 1234,
+        bairro: "Centro",
+        cidade: "São Paulo",
+        uf: "SP",
+      };
+
+      function enderecoCompleto() {
+        let fullAddress;
+
+        fullAddress =
+          "O usuário mora em " +
+          endereco.cidade +
+          " / " +
+          endereco.uf +
+          ", no bairro " +
+          endereco.bairro +
+          ", na rua " +
+          '"' +
+          endereco.rua +
+          '"' +
+          " no nº " +
+          endereco.numero +
+          ".";
+
+        console.log(fullAddress);
+      };
+
+      enderecoCompleto();
+
+      function pares(x, y) {
+        if (!x || !y) {
+          return console.log("Informe X e Y");
+        }
+
+        for (var i = x; i <= y; i++) {
+          var numero = "Número analisizado foi: " + i;
+          var par = i % 2 === 0;
+          var final = numero + " é par? - " + par;
+          console.log(final);
+        }
+      };
+
+      pares(1, 10);
+
+      function temHabilidade(skills) {
+        return console.log(skills.indexOf("Javascript") == 0);
+      };
+
+      var skills = ["Javascript", "ReactJS", "React Native"];
+      temHabilidade(skills);
+
+      function experiencia(anos) {
+        let result;
+        if(anos >= 0 && anos <= 1){
+          result = 'Iniciante';
+        } else if(anos > 1 && anos <= 3){
+          result = 'Intermediário';
+        } else if(anos > 3 && anos <= 6){
+          result = 'Avançado';
+        } else {
+          result = 'Jedi Master';
+        }
+        console.log(result);
+      }
+
+      let anosEstudo = 3;
+      experiencia(anosEstudo);
+
+      var usuarios = [
+        {
+          nome: "Edward",
+          habilidades: ["Javascript", "ReactJS", "Redux"],
+        }, 
+        {
+          nome: "Diego",
+          habilidades: ["VueJS", "Ruby on Rails", "Elixi"],
+        }
+      ];
+
+      function habilidadesUsuarios(){
+        for(usuarios of usuarios.length){
+          console.log('aa');
+        }
+      }
+
+      console.log(usuarios.join());
+
+    </script>
+  </body>
+</html>
