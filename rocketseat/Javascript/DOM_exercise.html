@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Curso Javascript | Rocketseat</title>
+
+  <style>
+    button, input{
+      padding: 5px;
+      display: inline-block;
+    }
+  </style>
+</head>
+<body>
+  <button id="addQuadrado">Add</button>
+  <button id="showNames">Show names</button>
+  <label for="todo"> Add another To-do:
+    <input type="text" name="todo" id="todo"/>
+  </label>
+  <button id="addTodo" onclick="adicionar()">Add</button>
+    <div id="main"></div>
+    <div id="names"></div>
+  <script>
+    // 1
+    let botaoQuadrado = document.querySelector('#addQuadrado');
+    let botaoNomes = document.querySelector('#showNames');
+    let containerQuadrado = document.querySelector("#main");
+    let containerNomes = document.querySelector("#names");
+    let count = 0;
+    
+    botaoQuadrado.onclick = addQuadrado;
+    //botaoNomes.onclick = addQuadrado;
+    
+    function addQuadrado() {
+      let quadrado = document.createElement("div");
+      quadrado.setAttribute('class', 'randomColor');
+      quadrado.style.width = "100px";
+      quadrado.style.height = "100px"; 
+      quadrado.style.marginTop = "20px";
+      quadrado.style.backgroundColor = '#f00';
+      quadrado.style.color = '#fff';
+      quadrado.style.textAlign = 'center';
+      quadrado.innerText = count++;
+
+      containerQuadrado.appendChild(quadrado);
+
+      // Chamando function para exercício 2
+      quadrado.onmouseover = () => {
+        quadrado.style.backgroundColor = getRandomColor();
+      }
+    };
+
+    //2
+    function getRandomColor() {
+      var letters = "0123456789ABCDEF";
+      var color = "#";
+
+      for(var i = 0; i < 6; i++){
+        color += letters[Math.floor(Math.random() * 16)];
+      }
+      return color;
+    }
+
+    //3
+    let nomes = ["Edward", "Diego", "Mayk"];
+    botaoNomes.onclick = addList;
+
+    function addList() {
+      let ul = document.createElement('ul');
+
+      for(var i = 0; i < nomes.length; i++){
+        let li = document.createElement("li");
+        let nome = document.createTextNode(nomes[i]);
+        li.appendChild(nome);
+        ul.appendChild(li);
+      };
+
+      containerNomes.appendChild(ul);
+    }
+
+    // 4
+  </script>
+</body>
+</html>
