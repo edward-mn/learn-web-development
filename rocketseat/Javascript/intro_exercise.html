@@ -7,6 +7,7 @@
   </head>
   <body>
     <script>
+      // 1
       let endereco = {
         rua: "Rua dos pinheiros",
         numero: 1234,
@@ -38,28 +39,31 @@
 
       enderecoCompleto();
 
+      // 2
       function pares(x, y) {
         if (!x || !y) {
           return console.log("Informe X e Y");
         }
 
-        for (var i = x; i <= y; i++) {
-          var numero = "Número analisizado foi: " + i;
-          var par = i % 2 === 0;
-          var final = numero + " é par? - " + par;
+        for (let i = x; i <= y; i++) {
+          let numero = "Número analisizado foi: " + i;
+          let par = i % 2 === 0;
+          let final = numero + " é par? - " + par;
           console.log(final);
         }
       };
 
       pares(1, 10);
 
+      // 3
       function temHabilidade(skills) {
         return console.log(skills.indexOf("Javascript") == 0);
       };
 
-      var skills = ["Javascript", "ReactJS", "React Native"];
+      let skills = ["Javascript", "ReactJS", "React Native"];
       temHabilidade(skills);
 
+      // 4
       function experiencia(anos) {
         let result;
         if(anos >= 0 && anos <= 1){
@@ -77,7 +81,8 @@
       let anosEstudo = 3;
       experiencia(anosEstudo);
 
-      var usuarios = [
+      // 5 
+      let usuarios = [
         {
           nome: "Edward",
           habilidades: ["Javascript", "ReactJS", "Redux"],
@@ -89,13 +94,15 @@
       ];
 
       function habilidadesUsuarios(){
-        for(usuarios of usuarios.length){
-          console.log('aa');
+        for(let usuario of usuarios){
+          let msg;
+          msg = "O " + usuario.nome;
+          msg += " possui as habilidades: " + usuario.habilidades.join();
+          console.log(msg);
         }
       }
 
-      console.log(usuarios.join());
-
+      habilidadesUsuarios();
     </script>
   </body>
 </html>
