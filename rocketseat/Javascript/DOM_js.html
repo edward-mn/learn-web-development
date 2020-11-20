@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Curso Javascript | Rocketseat</title>
+</head>
+<body>
+  <div id="app">
+    <input type="text" name="nome" id="nome" />
+    <button class="botao">Adicionar</button>
+
+    <input type="text" name="remover" id="remove">
+  </div>
+
+  <script>
+    let inputElement = document.querySelector('input[name=nome]');
+    console.log(inputElement);
+
+    let btnElement = document.querySelector('button.botao');
+    btnElement.onclick = mostraAlerta;
+
+    function mostraAlerta(){
+      alert('Botão foi clicado com o texto - ' + inputElement.value);
+      inputElement.value = '';
+    }
+
+    let linkElement = document.createElement('a');
+
+    // linkElement.href = 
+    linkElement.setAttribute('href', 'http://rocketseat.com.br');
+    linkElement.setAttribute('Title', 'Site da Rocket');
+    linkElement.style.textDecoration = 'none';
+    linkElement.style.color = 'purple';
+
+    let textElement = document.createTextNode('Acessar site da Rocket');
+    linkElement.appendChild(textElement);
+
+    let containerElement = document.querySelector('#app');
+    containerElement.appendChild(linkElement);
+
+    let inputRemove = document.querySelector('#remove');
+    containerElement.removeChild(inputRemove);
+  </script>
+</body>
+</html>
