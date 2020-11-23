@@ -10,6 +10,10 @@
       padding: 5px;
       display: inline-block;
     }
+
+    li {
+      cursor: pointer;
+    }
   </style>
 </head>
 <body>
@@ -80,6 +84,31 @@
     }
 
     // 4
+    let todoInput = document.getElementById('todo');
+    let btnAdd = document.querySelector('#addTodo');
+    
+    function adicionar() {
+      let ul = document.getElementsByTagName('ul')[0];
+      let newLi = document.createElement('li');
+      let liText = document.createTextNode(todoInput.value);
+      console.log(todoInput.value != "");
+      if(todoInput.value != ""){
+        newLi.appendChild(liText);
+        ul.appendChild(newLi);
+        todoInput.value = '';
+        todoInput.focus();
+      }
+      removeElement(ul);
+    }
+    
+    function removeElement(ul) {
+      console.log(ul);
+      ul.addEventListener('click', function(e) {
+        let currentLi = e.target;
+        console.log(currentLi);
+        currentLi.parentNode.removeChild(currentLi);
+      })
+    }
   </script>
 </body>
 </html>
