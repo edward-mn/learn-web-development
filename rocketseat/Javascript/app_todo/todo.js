@@ -32,6 +32,11 @@ buttonElement.onclick = addTodo;
 function addTodo() {
   var todoText = inputElement.value;
 
+  if (todoText === "") {
+    // not allow inser empty todo
+    return;
+  }
+
   todos.push(todoText);
   inputElement.value = "";
   renderTodos();
