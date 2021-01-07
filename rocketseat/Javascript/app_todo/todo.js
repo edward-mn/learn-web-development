@@ -5,6 +5,7 @@ var buttonElement = document.querySelector("#app button");
 // Transform JSon in Array
 var todos = JSON.parse(localStorage.getItem("list_todos")) || []; // Is necessary parse the Json to show in our aplication
 
+inputElement.setAttribute("maxlength", "65");
 renderTodos();
 
 function renderTodos() {
@@ -17,6 +18,7 @@ function renderTodos() {
     var linkText = document.createTextNode("Excluir");
     var pos = todos.indexOf(todo);
 
+    linkElement.setAttribute("class", "deleteTodo");
     linkElement.setAttribute("onclick", "removeTodo(" + pos + ")"); // Creating and pass the pos
     linkElement.setAttribute("href", "#");
     linkElement.appendChild(linkText);

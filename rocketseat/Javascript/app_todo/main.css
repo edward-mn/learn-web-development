@@ -1,0 +1,116 @@
+* {
+  box-sizing: border-box;
+}
+
+html {
+  background-color: rgba(0, 0, 0, 0.1);
+}
+
+body {
+  font-family: sans-serif;
+}
+
+#app {
+  padding: 15px;
+}
+
+h1 {
+  padding: 5px;
+  text-align: center;
+  font: 700 50px "Dancing Script", cursive;
+  transition: all 0.5s;
+}
+
+h1:hover {
+  box-shadow: 0 0px 10px 0px;
+  border-radius: 5px;
+}
+
+.inputblock {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+li {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+li,
+input {
+  font: 30px "East Sea Dokdo", cursive;
+}
+
+input {
+  width: 70%;
+  height: 40px;
+  padding: 10px;
+  outline: none;
+  border: 1px solid #ddd;
+  border-radius: 5px;
+  margin-right: 10px;
+  box-shadow: 0 2px 3px 1px;
+}
+
+button {
+  width: 130px;
+  height: 50px;
+  font-weight: bold;
+  font-size: 14px;
+  transition: all 0.4s;
+  border: 1px solid #ddd;
+  border-radius: 10px;
+  outline: none;
+  background-color: white;
+}
+
+button:hover {
+  background-color: rgb(73, 163, 73);
+  border: 0;
+  color: white;
+}
+
+button,
+footer {
+  font: 700 "Nunito", sans-serif;
+}
+
+li + li {
+  margin-top: 10px;
+}
+
+li:last-child {
+  margin-bottom: 30px;
+}
+
+a {
+  text-align: center;
+  text-decoration: none;
+  padding: 10px;
+}
+.deleteTodo {
+  color: white;
+  background-color: rgb(107, 34, 107);
+  border-radius: 10px;
+  transition: background-color 0.3s;
+  font-weight: bold;
+  width: 130px;
+}
+
+a:hover {
+  background-color: rgb(158, 45, 158);
+}
+
+.linkRocketseat {
+  position: fixed;
+  left: 0;
+  bottom: 0;
+  width: 100%;
+  background-color: rgb(107, 34, 107);
+  border-radius: 10px 10px 0px 0px;
+  margin-top: 5px;
+  color: white;
+  text-align: center;
+}
