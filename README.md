@@ -9,6 +9,8 @@ Repository created for my learning on Web Development (**HTML5, CSS3 and JavaScr
   - [X] Responsive Web Design Certification: [**Link**][FreeCode-webCertificate] :heavy_check_mark:
   - [X] JavaScript Algorithms and Data Structures Certification: [**Link**][FreeCode-jsCertificate] :heavy_check_mark:
 - [X] Curso Web Design Completo: HTML5, CSS3 e JS + 5 Projetos: [**Link**][Udemy-webCertificate] :heavy_check_mark:
+- [X] Curso Javascript - Rocketseat🚀: [**Link**][Rocketseat-jsFolder] :heavy_check_mark:
+- [X] Curso Nodejs🍃 - Udemy: [**Link**][Udemy-nodeFolder] :heavy_check_mark:
 - [ ] Curso programação Web(HTML5): [**Link**][CursoVideo-webYoutube]
 - [ ] Curso programação Web(HTML5, CSS3 e JavaScript): [**Link**][ChiefDev-webYoutube]
 - [ ] Curso programação Web(JavaScript): [**Link**][CursoVideo-jsYoutube]
@@ -37,3 +39,6 @@ Repository created for my learning on Web Development (**HTML5, CSS3 and JavaScr
 [CursoVideo-webYoutube]: https://www.youtube.com/watch?v=epDCjksKMok&list=PLHz_AreHm4dlAnJ_jJtV29RFxnPHDuk9o
 [ChiefDev-webYoutube]: https://www.youtube.com/watch?v=EiZbhsVY2Dk&list=PLwgL9IEA0PxUjbhob9UMdpVq12sGrjgU6
 [CursoVideo-jsYoutube]: https://www.youtube.com/watch?v=Ptbk2af68e8&list=PLHz_AreHm4dlsK3Nr9GVvXCbpQyHQl1o1&index=4
+
+[Rocketseat-jsFolder]: /rocketseat/Javascript/
+[Udemy-nodeFolder]: /udemy/node/
